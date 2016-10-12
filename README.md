@@ -77,3 +77,18 @@ Para escribir varias lineas de citas solamente las concatenamos en la siguiente 
 Sino utilizamos una cita en una linea con mayor que `>`:
 
 > Y si me matas, ¿Me muero?
+
+## Saltos de linea
+
+Para utilizar un salto de linea debemos utilizar mas de 3 veces el caracter `-`
+
+---
+
+O el caracter `*`
+***
+
+O el caracter `__`
+
+___
+
+> Otro quote :) 
