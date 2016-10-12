@@ -45,4 +45,10 @@ var mensaje="Hola mundo";
 > apt-get update paquete
 ```
 
+* Bloque de HTML
+
+```
+<html>
+</html>
+```
 
