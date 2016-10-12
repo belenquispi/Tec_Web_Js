@@ -20,5 +20,13 @@ Este repositorio forma parte del  [curso de tecnologias web](https://github.com/
   1. Esta es la segunda lista ordenada (con dos espacios " " antes de los numeros )
 4. no Importa
 
+## Links 
+
+Para utilizar un [Link](https://github.com/adrianeguez/Tec_Web_Js_2016_B) debemos de encerrar el texto en brackets [] seguido del URL en parentesis ()
+
+## Imagenes 
+
+Para nosotros utilizar imagenes debemos de colocar un texto alternativo en brackets[] despues del caracter de exclamacion ! y el link de la imagen entre parentesis () 
+![Imagen de Js en color amarillo](http://photos4.meetupstatic.com/photos/event/5/7/d/3/highres_436702483.jpeg "Javascript")
 
 
