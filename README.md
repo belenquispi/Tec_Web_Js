@@ -28,8 +28,12 @@ Para utilizar un [Link](https://github.com/adrianeguez/Tec_Web_Js_2016_B) debemo
 
 Para nosotros utilizar imagenes debemos de colocar un texto alternativo en brackets[] despues del caracter de exclamacion ! y el link de la imagen entre parentesis () 
 ![Imagen de Js en color amarillo](http://photos4.meetupstatic.com/photos/event/5/7/d/3/highres_436702483.jpeg "Javascript")
-
 ## Formateo de Highlighting
 Para nosotros utilizar el formateo de codigo dentro de texto plano debemos de utilizar el caracter `Tilde invertida`
 
+Para utilizar el formateo de codigo en un bloque de codigo necesitamos utilizar 3 `Tildes invertidas` donde se puede especificar el lenguaje de programacion a usarse para el formateo del codigo, justo despues de las 3 `Tildes invertidas`
+
+```javascript
+var mensaje="Hola mundo";
+```
 
