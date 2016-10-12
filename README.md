@@ -63,3 +63,15 @@ Para usar tablas necesitamos definir las filas con |
 |Valor 2 C1|Valor 2 C2|Valor 2 C3|Valor 2 C4|
 |Valor 3 C1|Valor 3 C2|Valor 3 C3|Valor 3 C4|
 |Valor 4 C1|Valor 4 C2|Valor 4 C3|Valor 4 C4|
+
+
+## Citas (no de humanos sino de texto)
+
+Para escribir varias lineas de citas solamente las concatenamos en la siguiente linea utlizando mayor que `>`:
+
+> Yo solo se, que nada se.
+> Un filosofo random
+
+Sino utilizamos una cita en una linea con mayor que `>`:
+
+> Y si me matas, ¿Me muero?
