@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Aprendiendo CSS</title>
-    <link rel="stylesheet" href="Estilos/estilos.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 <!--
     Para referenciar archivos de diferentes carpetas se mantiene ctrl + la barra espaciadora, esto para carpetas que esten mas abajo
     Para ir mas arriba se usa ..
@@ -12,23 +12,94 @@
       Pero no se puede acceder a carpetas   que se encuentren fuera de la carpeta de la raíz del servidor. 
     
 -->
-     <link rel="stylesheet" href="Estilos/estilos2.css">
-     
-     <link rel="stylesheet" href="Estilos/estilos3.css">
-<!--Cuando se tiene vaios estilos, se ejecuta de manera cascada, es decir , se queda con el ultimo estilo que fue ejecutado -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+   
+   <style>
+       .borde{
+           border: black solid 2px;
+       }
+    </style>
+   
 </head>
 <body>
 
     <h1>Hola</h1>
-    <p class="nombreClaseRojo">Parrafo Rojo</p>
-    <h1 class="nombreClaseAmarilla">Amigos</h1>
-    <p class="nombreClaseVerde" >Parrafo Verde </p>
-    <h1>Politecnicos</h1>
-    <p class="nombreClaseAmarillo" id="parrafoazul" >Parrafo Amarillo</p>
+<!--    .container -->
+    <div class="container" style="background-color:green">
+      <!--        .row*3-->
+  
+        <div class="row" style="background-color:yellow">
+           
+<!--
+           1 1 1 1 1 1 1 1 1 1 1 1 1 1 =12
+           
+           2   2   2   2   2   2     2 =12
+           
+            3    3     3    3          =12 
+-->
+          
+<!--           .col-md-4*3>h2-->
+           <div class="col-md-4 borde">
+               <h2>Columna md 4 -1 </h2>
+           </div>
+           <div class="col-md-4 borde">
+               <h2>Columna md 4 -2</h2>
+           </div>
+           <div class="col-md-4 borde">
+               <h2>Columna md 4 -3</h2>
+           </div>
+            <h1>Fila 1</h1>
+        </div>
         
-    <p>ULTIMO PARRAFO SIN CLASES</p>
-    <cualquiera>Hola</cualquiera>
-
+        <div class="row" style="background-color:voilet">
+            <h1>Fila 2</h1>
+<!--
+            
+            .col-sm-3.borde*4h3 EMMET
+-->
+       
+       <div class="col-sm-3 borde">
+           <h3>CSM 1 </h3>
+       </div>
+       <div class="col-sm-3 borde">
+           <h3>CSM 2 </h3>
+       </div>
+       <div class="col-sm-3 borde">
+           <h3>CSM 3 </h3>
+       </div>
+       <div class="col-sm-3 borde">
+           <h3>CSM 4 </h3>
+       </div>
+        </div>
+        
+        <div class="row" style="background-color:pink">
+            <h1>Fila 3</h1>
+<!--            .col-lg-6.borde*2>h3 EMMET-->
+           <div class="col-lg-6 borde">
+               <h3>Columna large 1</h3>
+           </div>
+           <div class="col-lg-6 borde">
+               <h3>Columna large 2</h3>
+           </div>
+            
+        </div>
+        
+<!--         .row>.col-xs-2.borde+.col-xs-5.borde*2>h2-->
+      
+      <div class="row">
+          <div class="col-xs-2 borde"></div>
+          <div class="col-xs-5 borde">
+              <h2>Col ex 1</h2>
+          </div>
+          <div class="col-xs-5 borde">
+              <h2>Col ex 2</h2>
+          </div>
+      </div>
+       
+       
+            <h1>Hola estoy dentro del div </h1>
+    </div>
+    
 </body>
 
 </html>
