@@ -6,7 +6,7 @@
 </p>
 
 ### Tema : `Introducción a la Web`
-### Fecha : `2016-10-23`
+### Fecha : `2016-10-28`
 ### Estudiante : `Belén Aracely Quispi Sotamba`
 ### Profesor : `Tania Calle - Adrian Eguez`
 ### Número de informe : `1`
@@ -18,18 +18,18 @@
 - <a href="#objetivos">Objetivos</a>
 - <a href="#marco-teorico">Marco Teorico</a>
     * <a href="#www">Definición de WWW</a>
-    * <a href="wwwwwwConsortium">World Wide Web Consortium</a>
-    * <a href="html">HTML</a>
-        * <a href="definicionHtml">Definición de HTML</a>
-        * <a href="estructuraHtml">Estructura de páginas de HTML</a>
-        * <a href="versionHtml">Versiones de HTML</a>
-        * <a href="tagHtml">Etiquetas de HTML</a>
-    * <a href="css">CSS</a>
-        * <a href="definicionCss">Definición de CSS</a>
-    * <a href="http">HTTP</a>
-        * <a href="definicionHttp">Definición de HTTP</a>
-        * <a href="metodosHttp">Métodos de HTTP</a>
-        * <a href="statusCodeHttp">Status Code HTTP</a>
+    * <a href="#wwwwwwConsortium">World Wide Web Consortium</a>
+    * <a href="#html">HTML</a>
+        * <a href="#definicionHtml">Definición de HTML</a>
+        * <a href="#estructuraHtml">Estructura de páginas de HTML</a>
+        * <a href="#versionHtml">Versiones de HTML</a>
+        * <a href="#tagHtml">Etiquetas de HTML</a>
+    * <a href="#css">CSS</a>
+        * <a href="#definicionCss">Definición de CSS</a>
+    * <a href="#http">HTTP</a>
+        * <a href="#definicionHttp">Definición de HTTP</a>
+        * <a href="#metodosHttp">Métodos de HTTP</a>
+        * <a href="#statusCodeHttp">Status Code HTTP</a>
         
 - <a href="#desarrollo">Desarrollo de la Práctica</a>
 - <a href="#conrec">Conclusiones y Recomendaciones</a>
@@ -37,6 +37,9 @@
 <a name="tema"></a>
 ## Tema
 `Introducción a la Web`
+<br>
+<a href="#cabecera">Ir a la cabecera</a>
+<br>
 
 <a name="objetivos"></a>
 ## Objetivos
@@ -44,7 +47,9 @@
 - Conocer herramientas de desarrollo web como: postman, inspector web.
 - Aprender el uso de lenguaje HTML y CSS.
 - Crear un página web.
-
+<br>
+<a href="#cabecera">Ir a la cabecera</a>
+<br>
 <a name="marco-teorico"></a>
 ## Marco Teorico
 <a name="www"></a>
@@ -101,6 +106,7 @@ HTML es el lenguaje de marcado estándar para la creación de páginas Web.
 |HTML 4.01|1999|
 |XHTML|2000|
 |HTML5|2014|
+(Fuente: [W3School](http://www.w3schools.com/html/html_intro.asp))
 <a href="#cabecera">Ir a la cabecera</a>
 <br>
 
@@ -127,6 +133,8 @@ Las etiquetas HTML son los nombres de elementos rodeados por paréntesis angular
 | `<a>` | Elemento que permite definir links |
 | `<img>`| Elemento que permite definir imágenes |
 | `<br>`| Elemento vacío, sin etiqueta de apertura y define salto de línea |
+(Fuente: [W3School](http://www.w3schools.com/html/html_intro.asp))
+<br>
 <a href="#cabecera">Ir a la cabecera</a>
 <br>
 
@@ -135,10 +143,80 @@ Las etiquetas HTML son los nombres de elementos rodeados por paréntesis angular
 
 <a name="definicionCss"></a>
 ### Definición de CSS
-CSS es un lenguaje que describe el estilo de un documento HTML.
+* CSS es un lenguaje que describe el estilo de un documento HTML.
 
-CSS se describe cómo se deben mostrar los elementos HTML.
+* CSS significa Cascading Style Sheets.
+* CSS describe como los elementos HTML se van a mostrar en la pantalla, papel, o en otros medios.
+* CSS ahorra mucho trabajo. 
+* CSS puede controlar el diseño de varias páginas web a la vez.
+(Fuente: [W3School](http://www.w3schools.com/css/css_intro.asp))
+<br>
+<a href="#cabecera">Ir a la cabecera</a>
+<br>
 
-Este tutorial te enseñará CSS desde básico hasta avanzado.
+<a name="http"></a>
+## HTTP
+
+<a name="definicionHttp"></a>
+### Definición de HTTP
+* El Protocolo de transferencia de hipertexto (HTTP) está diseñado para permitir las comunicaciones entre clientes y servidores.
+
+* HTTP funciona como un protocolo de petición-respuesta entre un cliente y el servidor.
+
+* Un navegador web puede ser el cliente y una aplicación en un equipo que aloja un sitio web puede ser el servidor.
+
+    - `Ejemplo`: Un cliente (navegador) envía una solicitud HTTP al servidor; a continuación, el servidor devuelve una respuesta al cliente. La respuesta contiene información del estado de la solicitud y también puede contener el contenido solicitado.
+<br>
+(Fuente: [W3School](http://www.w3schools.com/tags/ref_httpmethods.asp))
+<br>
+<a href="#cabecera">Ir a la cabecera</a>
+<br>
+
+<a name="metodosHttp"></a>
+### Métodos HTTP
+
+|Método|Descripción|
+|---|---|
+|GET|Solicita datos de un recurso especificado|
+|POSTAL| Envia datos a ser procesados en un recurso especificado|
+|HEAD|Igual que GET para retorna solo encabezados HTTP y no el cuerpo del documento|
+|PUT|Carga una representación a una URI especificada|
+|DELETE|Elimina el recurso especificado|
+|OPTIONS|Retorna los métodos HTTP que el servidor soporta|
+|CONNECT|Convierta la conexión de petición a un túnel TCP/IP transparente|
+(Fuente: [W3School](http://www.w3schools.com/tags/ref_httpmethods.asp))
+<br>
+<a href="#cabecera">Ir a la cabecera</a>
+<br>
+
+<a name="statusCodeHttp"></a>
+### Status Code HTTP
+Cuando un navegador solicita un servicio de un servidor web, se puede producir un error.
+
+A continuación se proporciona una lista de los números con los cuales empiensan los códigos de mensajes de estado HTTP que podrían ser devueltos:
+
+|Código|Significado|
+|---|---|
+|1xx|Información|
+|2xx|Exitosa|
+|3xx|Redirección|
+|4xx|Error de cliente|
+|5xx|Error del servidor|
+
+(Fuente: [W3School](http://www.w3schools.com/tags/ref_httpmessages.asp))
+<br>
+<a href="#cabecera">Ir a la cabecera</a>
+<br>
+
+<a name="desarrollo"></a>
+## Desarrollo de la Práctica
+  1. 
+
+<a name="conrec"></a>
+## Conclusiones y Recomendaciónes 
+
+
+Autor: <a href="https://github.com/belenquispi">Belén Quispi</a>
+
 
 
