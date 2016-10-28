@@ -86,18 +86,19 @@ HTML es el lenguaje de marcado estándar para la creación de páginas Web.
 <br>
 
 <a name="estructuraHtml"></a>
+
 ### Estructura de HTML
-<p align="center">
-<img src="http://kermo.wikispaces.com/file/view/estructura%20html.png/485922800/625x426/estructura%20html.png" width="600" height="300">
-</p>
-(Fuente: [Wikispaces](http://kermo.wikispaces.com/file/view/estructura%20html.png/485922800/625x426/estructura%20html.png))
+
+ <p align="center"> 
+ <img src="IMAGENES/estructura%20html.png" width="600" height="300"> </p>
+
 <br>
 <a href="#cabecera">Ir a la cabecera</a>
 <br>
 
 <a name="versionHtml"></a>
-### Versiones de HTML
 
+### Versiones de HTML
 | Versión | Año |
 |---|---|
 |HTML|1991|
@@ -173,6 +174,7 @@ Las etiquetas HTML son los nombres de elementos rodeados por paréntesis angular
 <br>
 
 <a name="metodosHttp"></a>
+
 ### Métodos HTTP
 
 |Método|Descripción|
@@ -210,39 +212,58 @@ A continuación se proporciona una lista de los números con los cuales empiensa
 
 <a name="desarrollo"></a>
 ## Desarrollo de la Práctica
+
   1. Se abre el navegador de Google Chrome y se dirige a la URL <a href="www.google.com.ec">www.google.com.ec</a>. Tal como se puede ver en la siguiente imagen. 
   <p align="center">
   <img src="IMAGENES/Google%20-%20Google%20Chrome.jpg" > </p>
   2. Despúes se da clic derecho y se selecciona la opción `Inspeccionar`. Tal como lo muestra la siguiente imagen.
   <p align="center">
   <img src="IMAGENES/Inspeccionar.jpg" > </p>
-  
   3. Se procede a seleccionar la pestaña `Network` y se puede observar la variedad de información que se carga al momento de abrir una página HTML.
   <p align="center">
   <img src="IMAGENES/Network.jpg" > </p>
   
   En la imagen anterior se puede observar una tabla que contiene información importante como:
-  * La columna `Name` es  donde se encuentran el nombre de todos los recursos que se deben cargarse para mostrar la página HTML de Google.
-    - Por ejemplo `nav_logo242.png` es una imagen genérica de google. 
-    <p align="center">
-   <img src="IMAGENES/nav_logo.jpg" > </p>
+   * La columna `Name` es  donde se encuentran el nombre de todos los recursos que se deben cargarse para mostrar la página HTML de Google.
+      - Por ejemplo `nav_logo242.png` es una imagen genérica de google. 
+        <p align="center"><img src="IMAGENES/nav_logo.jpg" > </p>
     
-  * La columna `Status` indica el Status Code HTTP de cada recurso que se cargo.
-    - El recurso `nav_logo242.png` devolvió el código 200, lo cual indica que fue exitoso.
-  * La columna `Type` muestra el tipo de cada uno de los recursos.
-    - `nav_logo242.png` es una imagen de tipo png.
-  * La columna `Size`muestra el tamaño de los recursos.
-    - El tamaño de `main.js` es 120KB
-  * La columna `Time` indica el tiempo que se demoro en cargar dicho recurso. 
-    - En el caso `main.js` ha tardado 3ms.
-  * En la barra inferior se puede observar:
-    - 22 peticiones fueron realizadas para cargar la imagen.
-    -  Se transfirio 79.5 KB.
-    - El proceso de carga culminó en 6.54 segundos.
-    
-  4. 
-  5.
-  
+   * La columna `Status` indica el Status Code HTTP de cada recurso que se cargo.
+      - El recurso `nav_logo242.png` devolvió el código 200, lo cual indica que fue exitoso.
+        <p align="center"><img src="IMAGENES/Status.jpg" > </p>
+   * La columna `Type` muestra el tipo de cada uno de los recursos.
+      - `nav_logo242.png` es una imagen de tipo png.
+        <p align="center"><img src="IMAGENES/Type.jpg" > </p>
+   * La columna `Size`muestra el tamaño de los recursos.
+      - El tamaño de `main.js` es 120KB
+      <p align="center"><img src="IMAGENES/main.jpg" > </p>
+   * La columna `Time` indica el tiempo que se demoro en cargar dicho recurso. 
+      - En el caso `main.js` ha tardado 3ms.
+        <p align="center"><img src="IMAGENES/time.jpg" > </p>
+   * En la barra inferior se puede observar:
+      - 38 peticiones fueron realizadas para cargar la imagen.
+      -  Se transfirio 478 KB.
+      -  El proceso de carga culminó en 681 milisegundos.
+      <p align="center"><img src="IMAGENES/barraInferior.jpg" > </p>
+  4. Al dar clic en la pestaña `Elements` se puede ver todos los elementos de la página HTML de Google. Tal como lo muestra la siguiente imagen.
+    <p align="center"><img src="IMAGENES/Elements.jpg" > </p>
+  5. En la primera parte se muestra el código HTML de la página. Como se puede observar en la siguiente imagen.
+    <p align="center">  <img src="IMAGENES/Codigo.jpg" > </p>
+  6. En la segunda parte se muestra los Estilos de la ágina, tal como se puede ver en la siguiente imagen.
+  <p align="center">  <img src="IMAGENES/Styles.jpg" > </p>
+   *  En la parte de estilos de una página HTML se puede modificar ciertos elementos, los cualses no se van a guadar. Esto se debe a que cada vez que se recarga la página, esta vulve a leer el archivo `.hmtl` que se encuentra almacenado en el servidor. 
+      - Un ejemplo de lo que se puede cambiar en los estilos puede ser: cambio de color del fondo de la página de blanco a negro. Solo agragando la siguiente línea de comandos HTML `background-color: black;` en la parte de Styles tal como se ve en la siguiente imagen.
+      <p align="center">  <img src="IMAGENES/background.jpg" > </p>
+  7. Para ver los Métodos que maneja HTTP se va a utilizar Postman. Para ello es necesario la descarga e instalacion de la extensión en Google Chrome, este es el navegador que esta siendo usado en esta práctica. La descarga se la puede realizar dando clik en <a href="https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop"> descarga postman </a>. 
+  <p align="center">  <img src="IMAGENES/Postman.jpg" > </p>
+  8. Una vez descargada e instalada Postman, la ventana principal se ve de la siguiente manera.
+  <p align="center">  <img src="IMAGENES/Postman-I.jpg" > </p>
+  9. En esta aplicación se puede usar los diferente métodos que HTTP posee. Uno de los más usados es el `GET`. Para usarlo tenemos que ingresar alguna URL, en este caso será: `www.facebook.com` y después se hace clic en `send`. 
+  <p align="center">  <img src="IMAGENES/facebook.jpg" > </p>
+ En la imagen anterior se puede ver:
+ * La información que se observa en la sección `Body` corresponde al código HTML de la página.
+ * También se puede ver que el Status Code devolvió `200 OK` y el tiempo que se demoró  fue `1192 ms`.
+ 
 
 <a name="conrec"></a>
 ## Conclusiones y Recomendaciónes 
