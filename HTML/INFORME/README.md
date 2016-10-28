@@ -51,8 +51,11 @@
 <a href="#cabecera">Ir a la cabecera</a>
 <br>
 <a name="marco-teorico"></a>
+
 ## Marco Teorico
 <a name="www"></a>
+
+
 ### Definición de WWW
 
 En informática, la World Wide Web (WWW) o red informática mundial es un sistema de distribución de documentos de hipertexto o hipermedios interconectados y accesibles vía Internet. Con un navegador web, un usuario visualiza sitios web compuestos de páginas web que pueden contener texto, imágenes, vídeos u otros contenidos multimedia, y navega a través de esas páginas usando hiperenlaces. (Fuente: [Wikipedia](https://es.wikipedia.org/wiki/World_Wide_Web))
@@ -340,20 +343,51 @@ A continuación se proporciona una lista de los números con los cuales empiensa
  * Genera una lista ordenada con los datos recibidos.
 
 ---
-  14.  Levantamiento de un servidor HTTP en nuestra máquina, para ello se lleva a caso lo siguiente:  
+14. Levantamiento de un servidor HTTP en nuestra máquina, para ello se lleva a caso lo siguiente:  
    * Dirigimos a la carpeta donde está index.html, presionamos SHIFT y hacemos clic derecho para seleccionar Abrir ventana de comandos aquí.
    
    <p align="center">  <img src="IMAGENES/abrirVentana.jpg" > </p>
    
-   A continuación se escribe los siguiente comandos en la venta de comandos, con estos se levantará un servidor web. 
+15. A continuación se escribe los siguiente comandos en la venta de comandos, con estos se levantará un servidor web. 
+    * `npm install -g http-server`
     <p align="center">  <img src="IMAGENES/SERVER.jpg"> </p>
+    * `http-server -c10`
+    
      <p align="center">  <img src="IMAGENES/SERVER2.jpg" > </p>
   
-<a name="conrec"></a>
-## Conclusiones y Recomendaciónes 
+16. Ahora en el navegador accedemos a nuestra página web mediante localhost:8080. Los resultados son los siguientes:
+  <p align="center">  <img src="IMAGENES/pagina.jpg"> </p>
+     <p align="center">  <img src="IMAGENES/pagina1.jpg" > </p>
+     
+<br>
+<a href="#cabecera">Ir a la cabecera</a>
+<br>
+     
+---
 
+  
+<a name="conrec"></a>
+## Conclusiones y Recomendaciones 
+
+* Se aprendió conocimientos básicos de HTML, CSS y HTTP. 
+* Postman es una herramienta muy util para entender cómo trabajan las páginas web con los métodos de petición.
+* Los inspectores web también permiten ver como trabajan las páginas web. Así también se puede ver los componentes de la páguina HTML.
+* Windows permite levantar un servidor HTTP con la ejecución de dos líneas de código.
+* Se endendió cuales son los mínimos tags que se usan para crear una página web sencilla.
+* Se recomienda tomar apuntes de ciertas cosas que son explicadas en clase para poder incluir en el informe.
+* Se recomienda realizar  commits cada ves que se ingrese nueva información o se haya cambiado alguna parte de los archivos. 
+
+
+
+<br>
+<a href="#cabecera">Ir a la cabecera</a>
+<br>
+
+---
 
 Autor: <a href="https://github.com/belenquispi">Belén Quispi</a>
 
-
+<br>
+<a href="#cabecera">Ir a la cabecera</a>
+<br>
 
