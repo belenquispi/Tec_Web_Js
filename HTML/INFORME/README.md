@@ -210,7 +210,39 @@ A continuación se proporciona una lista de los números con los cuales empiensa
 
 <a name="desarrollo"></a>
 ## Desarrollo de la Práctica
-  1. 
+  1. Se abre el navegador de Google Chrome y se dirige a la URL <a href="www.google.com.ec">www.google.com.ec</a>. Tal como se puede ver en la siguiente imagen. 
+  <p align="center">
+  <img src="IMAGENES/Google%20-%20Google%20Chrome.jpg" > </p>
+  2. Despúes se da clic derecho y se selecciona la opción `Inspeccionar`. Tal como lo muestra la siguiente imagen.
+  <p align="center">
+  <img src="IMAGENES/Inspeccionar.jpg" > </p>
+  
+  3. Se procede a seleccionar la pestaña `Network` y se puede observar la variedad de información que se carga al momento de abrir una página HTML.
+  <p align="center">
+  <img src="IMAGENES/Network.jpg" > </p>
+  
+  En la imagen anterior se puede observar una tabla que contiene información importante como:
+  * La columna `Name` es  donde se encuentran el nombre de todos los recursos que se deben cargarse para mostrar la página HTML de Google.
+    - Por ejemplo `nav_logo242.png` es una imagen genérica de google. 
+    <p align="center">
+   <img src="IMAGENES/nav_logo.jpg" > </p>
+    
+  * La columna `Status` indica el Status Code HTTP de cada recurso que se cargo.
+    - El recurso `nav_logo242.png` devolvió el código 200, lo cual indica que fue exitoso.
+  * La columna `Type` muestra el tipo de cada uno de los recursos.
+    - `nav_logo242.png` es una imagen de tipo png.
+  * La columna `Size`muestra el tamaño de los recursos.
+    - El tamaño de `main.js` es 120KB
+  * La columna `Time` indica el tiempo que se demoro en cargar dicho recurso. 
+    - En el caso `main.js` ha tardado 3ms.
+  * En la barra inferior se puede observar:
+    - 22 peticiones fueron realizadas para cargar la imagen.
+    -  Se transfirio 79.5 KB.
+    - El proceso de carga culminó en 6.54 segundos.
+    
+  4. 
+  5.
+  
 
 <a name="conrec"></a>
 ## Conclusiones y Recomendaciónes 
