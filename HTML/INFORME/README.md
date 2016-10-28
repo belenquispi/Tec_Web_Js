@@ -262,9 +262,93 @@ A continuación se proporciona una lista de los números con los cuales empiensa
   <p align="center">  <img src="IMAGENES/facebook.jpg" > </p>
  En la imagen anterior se puede ver:
  * La información que se observa en la sección `Body` corresponde al código HTML de la página.
- * También se puede ver que el Status Code devolvió `200 OK` y el tiempo que se demoró  fue `1192 ms`.
+ * También se puede ver en la parte superior que el Status Code devolvió `200 OK` y el tiempo que se demoró  fue de `583 ms`.
  
+  10. Ahora en la pestaña `Headers`, se encuentran las 15 cabeceras, las cuales nos muestra cierta información, tal como:
+   * `content-type` es una cabecera que muestra el tipo del documento, en este caso es un documento de texto HTML.
+    * `date` muestra la hora y fecha actual 
+    * `status` muestra el Status Code de HTTP.
+    <p align="center">  <img src="IMAGENES/facebook-H.jpg" > </p>
+  11. Si se cambia el método HTTP, no siempre se obtiene los mismos resultados. Por ejemplo si se cambia `GET` por `PATCH` nos muestra un código de error en el Status Code. Así como se ve en la siguiente imagen.
+  <p align="center">  <img src="IMAGENES/facebook-patch.jpg" > </p>
+  
+  12. Una vez entendido que elemntos puede tener una página web en HTML se procede a crear una. Para esto se crea un archivo con extensión `.html` y su nombre es `index`.
+  
+  <p align="center">  <img src="IMAGENES/indexHTML.jpg" > </p>
+  
+  13. Ahora se procede a escribir el código de la página HTML. En este caso el código de la página se encuentra en <a href="https://github.com/belenquispi/Tec_Web_Js/blob/01-HTML/HTML/index.html">Código HTML</a>. Al crear este código se han empleado los tags explicados en en <a href="#tagHtml">Etiquetas de HTML</a>
+  
+  ### Detalles del códifo HTML
+  ---
+  `<html lang="en" style="background-color: #aba">`
+   * `lang="en"` da entender que el lenguaje de la página es inglés.
+   *  `style="background-color: #aba"`permive saber que el color de fonfo de la páguina es:#aba.
+   
+---
+   
+  `<meta charset="UTF-8">`
+  - Da a entender que el código con el cual se esta codificando es UTF-8
+  
+---
+   
+  `<title>Aprendiendo HTML</title>`
+ - Muestra que el título de la página es: `Aprendiendo HTML`
+ 
+---
 
+   `<body style="background-color: #fefefe;">`
+   - Muestra que el color del body de la  página es: `#fefefe`
+    
+---
+
+   `<h1>Caballeros del Zodiaco</h1>`
+  * Es el título que tiene la fuente más de mayor tamaño.
+  
+---
+
+`<img src="https://static.betazeta.com/www.fayerwayer.com/up/2015/02/Armaduras-de-Caballeros-del-Zodiaco-en-tama%C3%B1o-real-llegar%C3%A1n-a-M%C3%A9xico-960x623.jpg" alt="Caballero"> `
+   * `<img>` permite insertar imágenes a la página HTML.
+   
+   * Y en `src` se escribe la dirección web de la imagen. 
+   * `alt` permite introducir u texto alternativo a la imagen. 
+   
+---
+`<p style="background-color: #fef999;">Saint Seiya (聖闘士星矢, Seinto Seiya?), conocido en español como Los Caballeros del Zodiaco, es un manga shōnen creado en 1986 por Masami Kurumada y publicado originalmente desde enero del mismo año en la revista Shūkan Shōnen Jump de la editorial Shūeisha hasta diciembre de 1990.</p>`
+
+* Es el párrafo que se va a encontrar en la página HTML.
+   
+---
+  `<ul>
+
+    <li>Saint Seiya</li>
+
+    <li>Aioria</li>
+
+    <li>Shiryu</li>
+</ul>`
+* Genera la lista con los datos recibidos , pero esta lista es no ordena.
+
+---
+<ol>
+
+    <li>Saint Seiya</li>
+
+    <li>Aioria</li>
+
+    <li>Shiryu</li>
+</ol>
+ * Genera una lista ordenada con los datos recibidos.
+
+---
+  14.  Levantamiento de un servidor HTTP en nuestra máquina, para ello se lleva a caso lo siguiente:  
+   * Dirigimos a la carpeta donde está index.html, presionamos SHIFT y hacemos clic derecho para seleccionar Abrir ventana de comandos aquí.
+   
+   <p align="center">  <img src="IMAGENES/abrirVentana.jpg" > </p>
+   
+   A continuación se escribe los siguiente comandos en la venta de comandos, con estos se levantará un servidor web. 
+    <p align="center">  <img src="IMAGENES/SERVER.jpg"> </p>
+     <p align="center">  <img src="IMAGENES/SERVER2.jpg" > </p>
+  
 <a name="conrec"></a>
 ## Conclusiones y Recomendaciónes 
 
