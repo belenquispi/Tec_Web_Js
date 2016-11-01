@@ -86,10 +86,34 @@
         var belen = {
             'nombre':'Belén',
             'apellido':'Quispi',
-            'edad': 22
+            'edad': 22,
+            mascotas:['Cachetes','Oso','Nena'],
+            hermanos:[{ nombre :'Nayeli', apellido :'Quispi'},
+                  {nombre:'Wilmer', apellido:'Quispi' }],
+            
+            getNombre : function() {
+                return this.nombre;
+            }
+            ,
+            
+            getApellido : function() {
+                return this.apellido;
+            },
+            
+            setApellido : function(nuevoApellido) {
+                this.apellido = nuevoApellido;
+            }
         }
         
-        console.log(belen);
+        // Funciones
+        console.log("Acceder a nombre");
+        console.log(belen.nombre);
+        console.log(belen.getNombre());
+        console.log(belen.getApellido());
+        console.log(belen.setApellido("Sotamba"));
+         console.log(belen.getApellido());
+        
+    //    console.log(belen);
         
         // Como deberia ir en XSL
 //        <<belen>
