@@ -443,7 +443,7 @@ En esta práctica se creará un archivo HTML, el cual va a ser modificado. En es
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
 ```
-* Los estilos de la página HTML se cambian a los estilos definidos por bootstrap. La página se ve de la siguiente manera con los nuevos estilos definidos.
+* Los estilos de la página HTML se cambian a los estilos definidos por Bootstrap. La página se ve de la siguiente manera con los nuevos estilos definidos.
 <p align="center"><img src="IMAGENES/PaginaHTML-bootstrap.jpg"> </p>
 
 8) Para realizar divisiones en un documento HTML, se usa el tag `<div> `.
@@ -643,8 +643,8 @@ Las columnas de tipo `sm` cambian su posición cuando el ancho es de 770 pixeles
 ## Conclusiones y Recomendaciones
 * CSS es una ayuda para dar estilos a las páginas HTML.
 * CSS puede estar en el mismo archivo `*.html` o fuera del archivo, pero con una referencia con la cual se pueda saber que estilos se va a usar.
-* Boostrap posee estilos ya definidos, lo uqe ahorra tiempo en escribir nuevos estilos.
-* La capacidad de poder cambiar la posición de las columnas de acuerdo al tamaño de la página, da una mejor presentación.
+* Bootstrap posee estilos ya definidos, lo que ahorra tiempo en escribir nuevos estilos.
+* La capacidad de poder cambiar la posición de las columnas de acuerdo al tamaño de la página, da una mejor presentación de la página.
 
 <br>
 <a href="#Cabecera">Ir a la cabecera</a>
