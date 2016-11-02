@@ -155,7 +155,21 @@ Cuando se tiene varios estilos para un mismo elemento, estos se aplican en casca
 <a name="desarrollo"></a>
 ## Desarrollo de la Práctica
 En esta práctica se creará un archivo HTML, el cual va a ser modificado. En este caso el archivo se llama *index.html*.
-1. En el archivo *index.html* se escribe un documento html básico. 
+  1. En el archivo *index.html* se escribe un documento html básico. 
+<p align="center">
+<img src="IMAGENES/html-basico.jpg"> </p>
+  2. Al archivo *index.html* se usará la inserción Interna CSS, para ello se crea un tag `style` dentro `head`. Como se puede ver en la siguiente imagen.
+  <p align="center">
+<img src="IMAGENES/html-CSSInterna.jpg"> </p>
+* Los estilos que se implemtaron se visualiza de la siguiente manera en la página web.
+ <p align="center">
+<img src="IMAGENES/PaginaHTML-CSSInterna.jpg"> </p>
+
+  3. 
+
+
+
+
 
 
 <br>
