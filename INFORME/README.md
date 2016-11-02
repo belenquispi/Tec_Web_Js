@@ -7,7 +7,7 @@
 ### Profesor: Tania Calle - Adrian Eguez
 ### Número de informe: 2
 
-<a name="cabacera"></a>
+<a name="cabecera"></a>
 ## Índice de contenidos
 
 * <a href="#tema">Tema</a>
@@ -168,14 +168,25 @@ En esta práctica se creará un archivo HTML, el cual va a ser modificado. En es
   <p align="center"><img src="IMAGENES/html-clases.jpg"> </p>
 * La página web se encuentra como se la puede ver en la siguiente imagen.
  <p align="center"><img src="IMAGENES/PaginaHTML-EjecucionClases.jpg"> </p>
-* Se puede observar que la página HTML tiene como fondo verde.
+* Se puede observar que la página HTML tiene un fondo verde.
 * El cuerpo de la página es beige.
-* El `h1` tiene que el color de letra es azul.
-* Los `h2` encambio tinen color de letra negro y un fondo violeta.
+* El `h1` tiene que el color de letra azul.
+* Todos `h2` encambio tinen color de letra negro y un fondo violeta.
 * Por otro lado los párrafos tienen un colo diferente cada uno. puesto que en cada tag `<p>`, se llama a una clase diferente. Cada clase posee un color diferente como: rojo, azul y amarillo. Las letras de los párrafos tiene un color blanco en las letras.
 
  
-  4. 
+  4. Una buena técnica es mantener los estilos de una página HTML en archivos fuera del archivo HTML. Para esto se va a crear un archivo llamado *estilos.css*, el cuál nos permite ser utilizado en otras páginas HTML. Entonces el nuevo archivo tendrá la siguiente información. 
+  <p align="center"><img src="IMAGENES/ArchivoCSS-1.jpg"> </p>
+  
+  * Como los estilos se movieron del archivo *index.html* al archivo *estilos.css*, la página HTML se vería de la siguiente forma.
+  <p align="center"><img src="IMAGENES/PaginaHTML-SinEstilos.jpg"> </p>
+  
+  5. Para que el archivo *estilos.css* cambie el formato del archivo *index.html*. Este debe ser referenciado en el archivo *index.html*. Para lo cual se usa el tag `<link>`, en cual va el nombre del archivo CSS. Entonces el archivo *index.html* quedaría de la siguiente manera.
+  <p align="center"><img src="IMAGENES/html-ReferenciaCSS.jpg"> </p>
+  * Mientras que en la página HTML se tendría así.
+  <p align="center"><img src="IMAGENES/PaginaHTML-ConEstilos.jpg"> </p>
+  
+  6. 
   
   
 
@@ -187,5 +198,3 @@ En esta práctica se creará un archivo HTML, el cual va a ser modificado. En es
 <br>
 <a href="#cabecera">Ir a la cabecera</a>
 <br>
-
-
