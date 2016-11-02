@@ -7,7 +7,7 @@
 ### Profesor: Tania Calle - Adrian Eguez
 ### Número de informe: 2
 
-<a name="cabecera"></a>
+<a name="Cabecera"></a>
 ## Índice de contenidos
 
 * <a href="#tema">Tema</a>
@@ -27,17 +27,18 @@
 ## Tema
 `CSS`
 <br>
-<a href="#cabecera">Ir a la cabecera</a>
+<a href="#Cabecera">Ir a la cabecera</a>
 <br>
+
 
 <a name="objetivos"></a>
 ## Objetivos
 * Desarrollar el conocimiento WEB
 * Implementar recursos CSS obtenidos del framework Bootstrap.
 * Aprender el uso de recursos CSS en la creación de páginas HTML.
-
+* Entender los beneficios de usar CSS.
 <br>
-<a href="#cabecera">Ir a la cabecera</a>
+<a href="#Cabecera">Ir a la cabecera</a>
 <br>
 
 
@@ -55,7 +56,7 @@
 <br>
 (Fuente: [W3School](http://www.w3schools.com/css/css_intro.asp))
 <br>
-<a href="#cabecera">Ir a la cabecera</a>
+<a href="#cCabecera">Ir a la cabecera</a>
 <br>
 
 
@@ -63,17 +64,22 @@
 #### Sintáxis de CSS
 Un conjunto de reglas CSS consta de un selector y un bloque de declaración.
 
- `h1 {color: blue; font-size:12px;}`
+```html 
 
-`h1`es el selector, es decir a que elemento HTML se le va dar ese estilo.
+    h1 {color: blue; font-size:12px;}
+    
+```
+
+* `h1` es el selector, es decir a que elemento HTML se le va dar ese estilo.
 `{color: blue; font-size:12px;}` es el bloque de declaración, el cuál consta de una o varias declaraciones. 
-Cada declaración es una propiedad CSS y un valor, los cuales son separados por dos puntos.
-Cada declaración debe terminar con punto y coma.
+* Cada declaración es una propiedad CSS y un valor, los cuales son separados por dos puntos.
+* Cada declaración debe terminar con punto y coma.
 <br>
 (Fuente: [W3School](http://www.w3schools.com/css/css_syntax.asp))
 <br>
-<a href="#cabecera">Ir a la cabecera</a>
+<a href="#Cabecera">Ir a la cabecera</a>
 <br>
+
 
 <a name="formasInsertarCss"></a>
 #### Formas de insertar CSS
@@ -84,8 +90,9 @@ Hay tres maneras de insertar una hoja de estilo:
 <br>
 (Fuente: [W3School](http://www.w3schools.com/css/css_howto.asp))
 <br>
-<a href="#cabecera">Ir a la cabecera</a>
+<a href="#Cabecera">Ir a la cabecera</a>
 <br>
+
 
 <a name="hojaEstilosExterna"></a>
 #### Hoja de Estilos Externa
@@ -103,13 +110,13 @@ Hay tres maneras de insertar una hoja de estilo:
 <br>
 (Fuente: [W3School](http://www.w3schools.com/css/css_howto.asp))
 <br>
-<a href="#cabecera">Ir a la cabecera</a>
+<a href="#Cabecera">Ir a la cabecera</a>
 <br>
+
 
 <a name="hojaEstiloInterna"></a>
 #### Hoja de Estilos Interna
 * Una hoja de estilo interna puede ser usado si una sola página tiene un estilo único.
-
 * Los estilos internos se definen dentro del elemento `<style>`, dentro de la sección `<head>` de una página HTML.
 
 ##### Ejemplo
@@ -130,15 +137,14 @@ Hay tres maneras de insertar una hoja de estilo:
 <br>
 (Fuente: [W3School](http://www.w3schools.com/css/css_howto.asp))
 <br>
-<a href="#cabecera">Ir a la cabecera</a>
+<a href="#Cabecera">Ir a la cabecera</a>
 <br>
+
 
 <a name="estiloLinea"></a>
 #### Estilo en línea
 * Un estilo en línea se puede utilizar para aplicar un estilo único para un solo elemento.
-
 * Para utilizar los estilos en línea, añadir el atributo de estilo al elemento relevante. El atributo de estilo puede contener cualquier propiedad CSS.
-
 * El siguiente ejemplo muestra cómo cambiar el color y el margen izquierdo de un elemento `<h1>`
 
 ##### Ejemplo
@@ -151,7 +157,7 @@ Cuando se tiene varios estilos para un mismo elemento, estos se aplican en casca
 <br>
 (Fuente: [W3School](http://www.w3schools.com/css/css_howto.asp))
 <br>
-<a href="#cabecera">Ir a la cabecera</a>
+<a href="#Cabecera">Ir a la cabecera</a>
 <br>
 
 
@@ -161,55 +167,286 @@ Cuando se tiene varios estilos para un mismo elemento, estos se aplican en casca
 * Gracias a Bootstrap es posible escalar sitios web y aplicaciones de: teléfonos a tabletas y a computadores de escritorio es más fácil y eficiente.
 (Fuente: [Bootstrap](http://getbootstrap.com))
 <br>
-<a href="#cabecera">Ir a la cabecera</a>
+<a href="#Cabecera">Ir a la cabecera</a>
 <br>
 
 <a name="desarrollo"></a>
 ## Desarrollo de la Práctica
 En esta práctica se creará un archivo HTML, el cual va a ser modificado. En este caso el archivo se llama *index.html*.
 
-  1. En el archivo *index.html* se escribe un documento html básico. 
-  <p align="center"><img src="IMAGENES/html-basico.jpg"> </p>
+1) En el archivo *index.html* se escribe un documento html básico. 
+  
+```html
+    
+    <!doctype html>
+    <html lang="en">
+    <head>
+    	<meta charset="UTF-8">
+    	<title>Aprendiendo CSS</title>
+    </head>
+    <body>
+	<h1>CSS</h1>
+    </body>
+    </html>
 
-  2. Al archivo *index.html* se usará la inserción Interna CSS, para ello se crea un tag `style` dentro `head`. Como se puede ver en la siguiente imagen.
-  <p align="center"><img src="IMAGENES/html-CSSInterna.jpg"> </p>
-    * Los estilos que se implementaron se visualiza de la siguiente manera en la página web.
-     <p align="center"><img src="IMAGENES/PaginaHTML-CSSInterna.jpg"> </p>
+```
 
-  3. También se puede implementar clases dentro del tag `<style>`. Las clases también permiten dar un formato a los elementos de HTML, en los cuales se use las clases. La clases se crean de la sigiuente manera.
-  <p align="center"><img src="IMAGENES/html-clases.jpg"> </p>
-    * La página web se encuentra como se la puede ver en la siguiente imagen.
+2) Al archivo *index.html* se usará la inserción Interna CSS, para ello se crea un tag `style` dentro `head`. Como se puede ver en la siguiente imagen.
+  
+```html
+
+    <!doctype html>
+    <html lang="en">
+    <head>
+    	<meta charset="UTF-8">
+    	<title>Aprendiendo CSS</title>
+	<style>
+        	html{
+            
+            		background-color: #4de2a5;    
+	        }
+        
+        	body{
+            
+            		background-color: #fffddd;
+        	}
+		
+		h1 {
+			color: #111fff;
+			margin-bottom: 50px;
+		}
+        
+    	</style>
+    </head>
+    <body>
+	<h1>CSS</h1>
+    </body>
+    </html>
+
+```
+* Los estilos que se implementaron se visualiza de la siguiente manera en la página web.
+<p align="center"><img src="IMAGENES/PaginaHTML-CSSInterna.jpg"> </p>
+
+3) También se puede implementar clases dentro del tag `<style>`. Las clases también permiten dar un formato a los elementos de HTML, en los cuales se use las clases. La clases se crean de la sigiuente manera.
+  
+```html
+
+        <!doctype html>
+    <html lang="en">
+    <head>
+    	<meta charset="UTF-8">
+    	<title>Aprendiendo CSS</title>
+	<style>
+        	html{
+            	background-color: #4de2a5;    
+	        }
+        
+        	body{
+            	background-color: #fffddd;
+        	}
+		
+            h1 {
+			     color: #111fff;
+			     font-size: 45px;
+       	    }
+        
+        	h2 {
+        		color: #000000;
+         		font-size: 35px;
+		        background-color: blueviolet;
+	        }
+		
+		/* 	ESTRUCTURA DE LAS CLASES
+	        .nombreClase
+	        {
+        	}
+        	*/
+        	
+            .nombreClaseRojo  {
+             		background-color:#F11717;
+        	}
+
+	        .nombreClaseAzul  {
+                    background-color:#19089A;
+        	}
+
+	       .nombreClaseAmarillo  {
+                    background-color:#FFFF00;
+        	}
+
+        
+    	</style>
+    </head>
+    <body>
+	<h1>CSS</h1>
+	<h2>Primer párrafo</h2>
+	<p class="nombreClaseRojo">Párrafo rojo</p>
+	<h2>Segundo párrafo</h2>
+	<p class="nombreClaseAzul">Párrafo azul</p>
+	<h2>Tercero párrafo</h2>
+	<p class="nombreClaseAmarillo">Párrafo Amarillo</p>
+    </body>
+    </html>
+
+```
+
+ * La página web se encuentra como se la puede ver en la siguiente imagen.
      <p align="center"><img src="IMAGENES/PaginaHTML-EjecucionClases.jpg"> </p>
-    * Se puede observar que la página HTML tiene un fondo verde.
-    * El cuerpo de la página es beige.
-    * El `h1` tiene que el color de letra azul.
-    * Todos `h2` encambio tinen color de letra negro y un fondo violeta.
-    * Por otro lado los párrafos tienen un colo diferente cada uno. puesto que en cada tag `<p>`, se llama a una clase diferente. Cada clase posee un color diferente como: rojo, azul y amarillo. Las letras de los párrafos tiene un color blanco en las letras.
-  4. Una buena técnica es mantener los estilos de una página HTML en archivos fuera del archivo HTML. Para esto se va a crear un archivo llamado *estilos.css*, el cuál nos permite ser utilizado en otras páginas HTML. Entonces el nuevo archivo tendrá la siguiente información. 
+ * Se puede observar que la página HTML tiene un fondo verde.
+ * El cuerpo de la página es beige.
+ * El `h1` tiene que el color de letra azul.
+ * Todos `h2` encambio tinen color de letra negro y un fondo violeta.
+ * Por otro lado los párrafos tienen un colo diferente cada uno. puesto que en cada tag `<p>`, se llama a una clase diferente. Cada clase posee un color diferente como: rojo, azul y amarillo. Las letras de los párrafos tiene un color blanco en las letras.
+ 
+4) Una buena técnica es mantener los estilos de una página HTML en archivos fuera del archivo HTML. Para esto se va a crear un archivo llamado *estilos.css*, el cuál nos permite ser utilizado en otras páginas HTML. Entonces el nuevo archivo tendrá la siguiente información. 
   <p align="center"><img src="IMAGENES/ArchivoCSS-1.jpg"> </p>
+
+```html
+
+            html{
+            background-color: #4de2a5;
+        }
+        body
+        {
+            background-color: #fffddd;
+        }
+        
+        h1 {
+            color: #111fff;
+            font-size: 50px;
+        }
+        
+        p {
+            color: #ffffff;
+            font-size: 45px;
+        }
+        
+        h2 {
+            color: #000000;
+            font-size: 35px;
+            background-color: blueviolet;
+        }
+
+        
+         /* 
+        ESTRUCTURA DE LAS CLASES
+        .nombreClase
+        {
+        }
+        */
+        .nombreClaseRojo  {
+             background-color:#F11717;
+        }
+
+          .nombreClaseAzul  {
+             background-color:#19089A;
+        }
+
+          .nombreClaseAmarillo  {
+             background-color:#FFFF00;
+        }
+
+```
   
-   * Como los estilos se movieron del archivo *index.html* al archivo *estilos.css*, la página HTML se vería de la siguiente forma.
+* Como los estilos se movieron del archivo *index.html* al archivo *estilos.css*, la página HTML se vería de la siguiente forma.
    <p align="center"><img src="IMAGENES/PaginaHTML-SinEstilos.jpg"> </p>
-  5. Para que el archivo *estilos.css* cambie el formato del archivo *index.html*. Este debe ser referenciado en el archivo *index.html*. Para lo cual se usa el tag `<link>`, en cual va el nombre del archivo CSS. Entonces el archivo *index.html* quedaría de la siguiente manera.
-  <p align="center"><img src="IMAGENES/html-ReferenciaCSS.jpg"> </p>
+
+5) Para que el archivo *estilos.css* cambie el formato del archivo *index.html*. Este debe ser referenciado en el archivo *index.html*. Para lo cual se usa el tag `<link>`, en cual va el nombre del archivo CSS. Entonces el archivo *index.html* quedaría de la siguiente manera.
   
-   * Mientras que en la página HTML se tendría así.
+  
+```html
+
+    <!doctype html>
+    <html lang="en">
+    <head>
+    	<meta charset="UTF-8">
+    	<title>Aprendiendo CSS</title>
+	   <link rel="stylesheet" href="estilos.css">
+    </head>
+    <body>
+        <h1>CSS</h1>
+        <h2>Primer párrafo</h2>
+        <p class="nombreClaseRojo">Párrafo rojo</p>
+        <h2>Segundo párrafo</h2>
+        <p class="nombreClaseAzul">Párrafo azul</p>
+        <h2>Tercero párrafo</h2>
+        <p class="nombreClaseAmarillo">Párrafo Amarillo</p>
+    </body>
+    </html>
+
+```
+  
+* Mientras que en la página HTML se tendría así.
    <p align="center"><img src="IMAGENES/PaginaHTML-ConEstilos.jpg"> </p>
   
-  6. Ahora se verá otra manera de manejar los estilos. Todos los elementos pueden tener un ID. El ID es un indicador que nos permitirá aplicar los estilos en los elementos en los cuales se los llama. La declaración de ID's se lo hace en el archivo *estilos.css* y se puede ver en la siguiente figura.
-    <p align="center"><img src="IMAGENES/ArchivoCSS-IDs.jpg"> </p>
-   * Para indicar en donde van actuar los ID´s, se debe referenciar en el archivo *index.html*.
-    <p align="center"><img src="IMAGENES/html-ID.jpg"> </p>
-   
-   * La página HTML se vería de la siguiente manera. Hay que tener en cuenta que los estilos se ejecutan en cascada, es decir, que el último estilo que modifica un elemento es el visualizado. 
+6) Ahora se verá otra manera de manejar los estilos. Todos los elementos pueden tener un ID. El ID es un indicador que nos permitirá aplicar los estilos en los elementos en los cuales se los llama. La declaración de ID's se lo hace en el archivo *estilos.css* y se puede ver en la siguiente figura.
+  
+```html
+
+     /* IMPLEMENTACIÓN DE ID's*/
+        
+        #parrafoAnaranjado
+        {
+            background-color: darkorange;
+        }
+
+        #parrafoGris
+        {
+            background-color: gray
+        }
+
+
+```
+
+* Para indicar en donde van actuar los ID´s, se debe referenciar en el archivo *index.html*.
+
+```html
+
+    
+    <!doctype html>
+    <html lang="en">
+    <head>
+    	<meta charset="UTF-8">
+    	<title>Aprendiendo CSS</title>
+	<link rel="stylesheet" href="estilos.css">
+    </head>
+    <body>
+        <h1>CSS</h1>
+        <h2>Primer párrafo</h2>
+        <p class="nombreClaseRojo">Párrafo rojo</p>
+        <h2 id="parrafoGris">Segundo párrafo</h2>
+        <p class="nombreClaseAzul">Párrafo azul</p>
+        <h2>Tercero párrafo</h2>
+        <p id="parrafoAnaranjado" class="nombreClaseAmarillo">Párrafo Amarillo</p>
+    </body>
+    </html>
+
+```
+* La página HTML se vería de la siguiente manera. Hay que tener en cuenta que los estilos se ejecutan en cascada, es decir, que el último estilo que modifica un elemento es el visualizado. 
    <p align="center"><img src="IMAGENES/PaginaHTML-ID.jpg"> </p>
 
-  7. No solo se puede crear un External CSS, en internet se encuentran External CSS ya definidos, para lo cual solo se necesita copiar las referencias. Esto se lo realiza en el archivo *index.html*, tal como se puede ver en la siguiente figura. Donde los estilos son los que ha definido Bootstrap.
-   <p align="center"><img src="IMAGENES/html-bootstrap.jpg"> </p>
+7) No solo se puede crear un External CSS, en internet se encuentran External CSS ya definidos, para lo cual solo se necesita copiar las referencias. Esto se lo realiza en el archivo *index.html*, tal como se puede ver en la siguiente figura. Donde los estilos son los que ha definido Bootstrap.
    
-   * Los estilos de la página HTML se cambian a los estilos definidos por bootstrap. La página se ve de la siguiente manera con los nuevos estilos definidos.
-    <p align="center"><img src="IMAGENES/PaginaHTML-bootstrap.jpg"> </p>
-  8. Para realizar divisiones en un documento HTML, se usa el tag `<div> `.
+```html
+
+    <!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Aprendiendo CSS</title>
+<!--<link rel="stylesheet" href="estilos.css">-->
+
+    <!-- Referenciar archivos de estilo-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+```
+* Los estilos de la página HTML se cambian a los estilos definidos por bootstrap. La página se ve de la siguiente manera con los nuevos estilos definidos.
+<p align="center"><img src="IMAGENES/PaginaHTML-bootstrap.jpg"> </p>
+
+8) Para realizar divisiones en un documento HTML, se usa el tag `<div> `.
   
 ```html
         <body>
@@ -242,12 +479,12 @@ En esta práctica se creará un archivo HTML, el cual va a ser modificado. En es
         </body>
     
 ```
- * Las divisiones en la página HTML se ven así:
+* Las divisiones en la página HTML se ven así:
   <p align="center"><img src="IMAGENES/PaginaHTML-Columnas.jpg"> </p>
   
- * Se puede observar que los textos han tomado un nuevo estilo, ya sea en el tamaño y tipo de letra. Este estilo lo definio Bootstrap.
- * A demás se usa la clase container del tag `<div>`, la cual permite cambiar el color, en este caso es amarillo.
- * El contenedor se encuentra formado por 4 `<div>` que pertenece en a la clase `row`. Esta permite crear tablas, en este caso se crearon tres filas. A cada fila se le asigna un color diferente.
+* Se puede observar que los textos han tomado un nuevo estilo, ya sea en el tamaño y tipo de letra. Este estilo lo definio Bootstrap.
+* A demás se usa la clase container del tag `<div>`, la cual permite cambiar el color, en este caso es amarillo.
+* El contenedor se encuentra formado por 4 `<div>` que pertenece en a la clase `row`. Esta permite crear tablas, en este caso se crearon tres filas. A cada fila se le asigna un color diferente.
 
 9) También se puede crear columnas dentro de cada fila, para realizar esto hay que tener en cuenta que la suma del ancho de como resultado 12. Para realizar esto se ingresa el siguiente código.
 ```html
@@ -402,6 +639,13 @@ Las columnas de tipo `sm` cambian su posición cuando el ancho es de 770 pixeles
 <br>
 <a href="#cabecera">Ir a la cabecera</a>
 <br>
+
+<a name="conrec"></a>
+## Conclusiones y Recomendaciones
+* CSS es una ayuda para dar estilos a las páginas HTML.
+* CSS puede estar en el mismo archivo `*.html` o fuera del archivo, pero con una referencia con la cual se pueda saber que estilos se va a usar.
+* Boostrap posee estilos ya definidos, lo uqe ahorra tiempo en escribir nuevos estilos.
+* La capacidad de poder cambiar la posición de las columnas de acuerdo al tamaño de la página, da una mejor presentación.
 
 
 ___ 
