@@ -635,9 +635,8 @@ Las columnas de tipo `sm` cambian su posición cuando el ancho es de 770 pixeles
 * El archivo HTML se encuentra disponible en 
 <a href="https://github.com/belenquispi/Tec_Web_Js/blob/02.CSS/INFORME/index.html">index.html</a>
 
-
 <br>
-<a href="#cabecera">Ir a la cabecera</a>
+<a href="#Cabecera">Ir a la cabecera</a>
 <br>
 
 <a name="conrec"></a>
@@ -647,8 +646,13 @@ Las columnas de tipo `sm` cambian su posición cuando el ancho es de 770 pixeles
 * Boostrap posee estilos ya definidos, lo uqe ahorra tiempo en escribir nuevos estilos.
 * La capacidad de poder cambiar la posición de las columnas de acuerdo al tamaño de la página, da una mejor presentación.
 
-
+<br>
+<a href="#Cabecera">Ir a la cabecera</a>
+<br>
 ___ 
 
 Autor: <a href="https://github.com/belenquispi">Belén Quispi</a>
+<br>
+<a href="#Cabecera">Ir a la cabecera</a>
+<br>
 
