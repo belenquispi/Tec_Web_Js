@@ -155,17 +155,29 @@ Cuando se tiene varios estilos para un mismo elemento, estos se aplican en casca
 <a name="desarrollo"></a>
 ## Desarrollo de la Práctica
 En esta práctica se creará un archivo HTML, el cual va a ser modificado. En este caso el archivo se llama *index.html*.
-  1. En el archivo *index.html* se escribe un documento html básico. 
-<p align="center">
-<img src="IMAGENES/html-basico.jpg"> </p>
-  2. Al archivo *index.html* se usará la inserción Interna CSS, para ello se crea un tag `style` dentro `head`. Como se puede ver en la siguiente imagen.
-  <p align="center">
-<img src="IMAGENES/html-CSSInterna.jpg"> </p>
-* Los estilos que se implemtaron se visualiza de la siguiente manera en la página web.
- <p align="center">
-<img src="IMAGENES/PaginaHTML-CSSInterna.jpg"> </p>
 
-  3. 
+  1. En el archivo *index.html* se escribe un documento html básico. 
+  <p align="center"><img src="IMAGENES/html-basico.jpg"> </p>
+
+  2. Al archivo *index.html* se usará la inserción Interna CSS, para ello se crea un tag `style` dentro `head`. Como se puede ver en la siguiente imagen.
+  <p align="center"><img src="IMAGENES/html-CSSInterna.jpg"> </p>
+* Los estilos que se implementaron se visualiza de la siguiente manera en la página web.
+ <p align="center"><img src="IMAGENES/PaginaHTML-CSSInterna.jpg"> </p>
+
+  3. También se puede implementar clases dentro del tag `<style>`. Las clases también permiten dar un formato a los elementos de HTML, en los cuales se use las clases. La clases se crean de la sigiuente manera.
+  <p align="center"><img src="IMAGENES/html-clases.jpg"> </p>
+* La página web se encuentra como se la puede ver en la siguiente imagen.
+ <p align="center"><img src="IMAGENES/PaginaHTML-EjecucionClases.jpg"> </p>
+* Se puede observar que la página HTML tiene como fondo verde.
+* El cuerpo de la página es beige.
+* El `h1` tiene que el color de letra es azul.
+* Los `h2` encambio tinen color de letra negro y un fondo violeta.
+* Por otro lado los párrafos tienen un colo diferente cada uno. puesto que en cada tag `<p>`, se llama a una clase diferente. Cada clase posee un color diferente como: rojo, azul y amarillo. Las letras de los párrafos tiene un color blanco en las letras.
+
+ 
+  4. 
+  
+  
 
 
 
