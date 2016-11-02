@@ -7,9 +7,9 @@
 ### Profesor: Tania Calle - Adrian Eguez
 ### Número de informe: 2
 
-<a name="cabecera"></a>
-## Índice de contenidos
 
+## Índice de contenidos
+<a name="cabecera"></a>
 * <a href="#tema">Tema</a>
 * <a href="#objetivos">Objetivos</a>
 * <a href="#marcoTeorico">Marco Teórico</a>
@@ -111,18 +111,17 @@ Hay tres maneras de insertar una hoja de estilo:
 * Los estilos internos se definen dentro del elemento `<style>`, dentro de la sección `<head>` de una página HTML.
 
 ##### Ejemplo
-`<head>`
-`<style>`
-`body {`
-    `background-color: linen;`
-`}`
-
-`h1 {`
-   ` color: maroon;`
-    `margin-left: 40px;`
-`}` 
-`</style>`
-`</head>`
+`<head>
+<style>
+body {
+    background-color: linen;
+}
+h1 {
+    color: maroon;
+   margin-left: 40px;
+}
+</style>
+</head>`
 <br>
 (Fuente: [W3School](http://www.w3schools.com/css/css_howto.asp))
 <br>
