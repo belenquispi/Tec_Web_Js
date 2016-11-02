@@ -21,6 +21,7 @@
             font-size: 35px;
             background-color: blueviolet;
         }
+
         
          /* 
         ESTRUCTURA DE LAS CLASES
@@ -39,3 +40,17 @@
           .nombreClaseAmarillo  {
              background-color:#FFFF00;
         }
+
+
+        /* IMPLEMENTACIÓN DE ID's*/
+        
+        #parrafoAnaranjado
+        {
+            background-color: darkorange;
+        }
+
+        #parrafoGris
+        {
+            background-color: gray
+        }
+
