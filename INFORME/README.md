@@ -21,7 +21,7 @@
   * <a href="#valWeb">Validación web</a>
   * <a href="#seoWeb">SEO web</a>
 - <a href="#desarrollo">Desarrollo de la Práctica</a>
-- <a href="#conRec">Conclusiones y Recomendaciones</a>
+- <a href="#conRe">Conclusiones y Recomendaciones</a>
 
 <a name="tema"></a>
 ## Tema
@@ -42,7 +42,7 @@
 
 <a href="#cabecera">Ir a la cabecera</a>
 
-<a name="marcoteorico"></a>
+<a name="marcoTeorico"></a>
 ## Marco Teórico
 
 <a name="bootstrap"></a>
@@ -55,7 +55,7 @@
 <br>
 <a href="#cabecera">Ir a la cabecera</a>
 
-<a name="JavaScript"></a>
+<a name="javaScriptt"></a>
 ### JavaScript
 - JavaScript es el lenguaje de programación HTML y de la Web.
 - JavaScript es fácil de aprender.
@@ -184,7 +184,7 @@
 <br>
 <a href="#cabecera">Ir a la cabecera</a>
 
-<a name="SEO web"></a>
+<a name="seoWeb"></a>
 ### SEO web
 * SEO significa Search Engine Optimization (Optimización de buscador ).
 * Proceso de mejorar el ranking (visibilidad) de una página web en los motores de buscadores.
@@ -597,10 +597,9 @@ console.log(belen.getApellido());
 * Se aprendió a crear objetos con sus respectivas funciones en JS.
 * Una buena práctica de programación es utilizar `;` al finalizar una línea de código. 
 * Se recomienda utilizar la consola de las páginas web para verificar que la programación que se ha realizado sea la correcta.
-
-
 <br>
 <a href="#cabecera">Ir a la cabecera</a>
+
 ---
 
 Autor: [Belén Quispi](https://github.com/belenquispi)
