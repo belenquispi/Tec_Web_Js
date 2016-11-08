@@ -236,70 +236,96 @@
         //PROMPT
         
     //  var respuesta=prompt("Cuál es tu edad Amigo?");
-    // console.log(parseInt(respuesta));
-    
-//Funciones
+//    // console.log(parseInt(respuesta));
+//    
+////Funciones
+//        
+//        function multiplicacion3(x, y, z)
+//        {
+//            return x*y*z; 
+//        }
+//        
+//        console.log(multiplicacion3(2,3,4));
         
-        function multiplicacion3(x, y, z)
+//// Funcion mayor
+//          function mayor(x, y)
+//        {
+//            if(x>y)
+//                {
+//                    return x + " Es el mayor";
+//                }
+//            else
+//                if(y>x)
+//                    {
+//                        return y + " Es el mayor";;
+//                    }
+//            else
+//                //if(x===y)
+//                    {
+//                        return " Son iguales";
+//                    }
+//             
+//        }
+//        
+//        console.log(mayor(3,3));
+//
+////// Ejercicio de refactorización
+////        
+////        function mystery(x,y){
+//            var a= 4*x*y;
+//            var b= 3*y+5;
+//            var c= a+b;
+//            return c;
+//        }
+//         console.log(mystery(4,7));
+//        
+//           function mystery1(x,y){
+//            return (y*(4*x+3)+5);
+//        }
+//         console.log(mystery1(4,7));
+//        
+//        
+//        function feedPerRanger (poblacionSheep, rangers)
+//        {
+//            var comida = poblacionSheep*2;
+//            return (comida / rangers);
+//        }
+//         console.log('Each Park Ranger should load '+feedPerRanger(4,2)+' lbs of feed today');
+//        
+//    
+//    
+//        var movie1 = [16, "Candies"];
+//        var movie2 = [3, "Nen", "and", "a", "Baby"];
+//        var eightiesMovies =[movie1, movie2];
+//        
+//        var infant = eightiesMovies[1][4];
+//        console.log(infant);
+//        
+//// Type of
+//        
+//        console.log(typeof 1);
+//         console.log(typeof "1");
+//         console.log(typeof []);
+//         console.log(typeof {});
+//         console.log(typeof true);
+//         console.log(typeof false);
+//         console.log(typeof 1.2);
+        
+        function contarString(arreglo)
         {
-            return x*y*z; 
-        }
-        
-        console.log(multiplicacion3(2,3,4));
-        
-// Funcion mayor
-          function mayor(x, y)
-        {
-            if(x>y)
+            var contador =0;
+            for(var i=0; i<arreglo.length;i++)
                 {
-                    return x + " Es el mayor";
+                    if(typeof(arreglo[i])=="string")
+                        {
+                            contador++;
+                        }
                 }
-            else
-                if(y>x)
-                    {
-                        return y + " Es el mayor";;
-                    }
-            else
-                //if(x===y)
-                    {
-                        return " Son iguales";
-                    }
-             
+            return contador;
         }
         
-        console.log(mayor(3,3));
-
-// Ejercicio de refactorización
-        
-        function mystery(x,y){
-            var a= 4*x*y;
-            var b= 3*y+5;
-            var c= a+b;
-            return c;
-        }
-         console.log(mystery(4,7));
-        
-           function mystery1(x,y){
-            return (y*(4*x+3)+5);
-        }
-         console.log(mystery1(4,7));
-        
-        
-        function feedPerRanger (poblacionSheep, rangers)
-        {
-            var comida = poblacionSheep*2;
-            return (comida / rangers);
-        }
-         console.log('Each Park Ranger should load '+feedPerRanger(4,2)+' lbs of feed today');
-        
-    
-    
-        var movie1 = [16, "Candies"];
-        var movie2 = [3, "Nen", "and", "a", "Baby"];
-        var eightiesMovies =[movie1, movie2];
-        
-        var infant = eightiesMovies[1][4];
-        console.log(infant);
+        var arre = [1,'2',3,'4',5,'seis'];
+           console.log(contarString(arre));
     
     </script>
 
