@@ -211,27 +211,34 @@
         
         
                 // Bucle Ejercicio 4 
-                var numSheep = 4;
-                var monthNumber=1;
-                var monthsToPrint = 12;
-          
-                for(monthNumber=1; monthNumber<=monthsToPrint;monthNumber++)
-                    {
-                        numSheep*=4;
-                        console.log('There will be '+numSheep+ ' sheep after '+monthNumber+' month(s)!');
-                        if(monthNumber%4==0)
-                            {
-                                console.log('----Removing '+numSheep*0.75+ ' sheep from the population');
-                                numSheep*=0.25;
-                            }else if(numSheep>10000)
-                            {
-                                numSheep/=2;
-                                console.log('Removing '+numSheep+ ' sheep from the population');
-                                
-                            }
-                   
-                        
-                    }
+//                var numSheep = 4;
+//                var monthNumber=1;
+//                var monthsToPrint = 12;
+//          
+//                for(monthNumber=1; monthNumber<=monthsToPrint;monthNumber++)
+//                    {
+//                        numSheep*=4;
+//                        console.log('There will be '+numSheep+ ' sheep after '+monthNumber+' month(s)!');
+//                        if(monthNumber%4==0)
+//                            {
+//                                console.log('----Removing '+numSheep*0.75+ ' sheep from the population');
+//                                numSheep*=0.25;
+//                            }else if(numSheep>10000)
+//                            {
+//                                numSheep/=2;
+//                                console.log('Removing '+numSheep+ ' sheep from the population');
+//                                
+//                            }
+//                   
+//                        
+//                    }
+        
+        //PROMPT
+        
+        var respuesta=prompt("Cuál es tu edad Amigo?");
+        console.log(parseInt(respuesta));
+        
+        
 
     </script>
 
