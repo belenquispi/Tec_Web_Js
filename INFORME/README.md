@@ -375,3 +375,150 @@ La estructura de una tabla es la siguiente:
         console.log('Variable undefined');
         console.log(varUndefined);
 ```
+
+3) Una ventaja de JS es que no es necesario hacer ningún tipo de *cast* para cambiar el tipo de una variable.
+Ejemplo:
+ - Un *textoNumero* que es de tipo String e igual a 2 string. Este puede convertirse luego en un entero igual a 2.
+ - Este cambi se da automáticamente al realizar la nueva asignación.
+ 
+
+```javascript
+        var textoNumero="2";
+        console.log('Valor cuando es string');
+        console.log(textoNumero);
+        
+        textoNumero=2;
+        console.log('Valor cuando es número');
+        console.log(textoNumero);
+```
+
+4) Los *arreglos* de JS poseen la siguiente estructura:
+
+
+```javascript
+var nombreDelArreglo = [valor1, valor2,..., valorN ];
+```
+
+* JS permite la creación de varios tipos de arreglos.
+* Existe la facilidad de crear arreglos cuyas variables sean de distintos tipos.
+* Para manejar la longitud de un arreglo se utiliza la propiedad *length*.
+
+Ejemplos de arreglos:
+
+```javascript
+        var arregloString = ['Hola', '2', '5'];
+        console.log(arregloString);
+        
+        var arregloNumeros= [1, 2, 3];
+        console.log(arregloNumeros);
+        
+        var arregloFloat = [1.3, 2.15, 0.84];
+        console.log(arregloFloat);
+        
+        var arregloBooleano = [false,true,true];
+        console.log(arregloBooleano);
+        
+        var arregloNull = [null,null,null];
+        console.log(arregloNull);
+        
+        var arregloUndefined= [undefined,undefined,undefined];
+        console.log(arregloUndefined);
+        
+        var arregloTodo = ["Nombre", 123, 3.1416, true, false, undefined, null, "Apellido"];
+        console.log(arregloTodo);
+        
+        console.log('Longitud de arregloTodo');
+        console.log(arregloTodo.length);
+```
+
+5) Para crear *objetos*  en JS se utiliza el siguiente formato:
+
+```javascript
+
+var nombreObjeto = { 
+                'atributo1' : valorAtributo1 ,
+                'atributo2' : valorAtributo2 
+                ...
+
+                    }
+```
+* Dentro de un objeto se puede tener atributos, vectores, otros objetos. 
+* Para tener acceso a algún elemento de un objeto se escribe el nombres del objeto seguido de un punto y el nombre del elemento. 
+* Las propiedades de los objetos se separan con comas, una propiedad se escribe el nombre en comilla simples asi como el valor asignado.
+
+Ejemplo de creación de un objeto:
+
+```javascript
+
+ var belen = {
+            'nombre':'Belén',
+            'apellido':'Quispi',
+            'edad': 22,
+            mascotas:['Cachetes','Oso','Nena'],
+            hermanos:[
+                { nombre :'Nayeli', apellido :'Quispi'},
+                {nombre:'Wilmer', apellido:'Quispi' }
+            ]
+            
+        }
+        
+        console.log('Acceder Nombre');
+        console.log(belen.nombre);
+        console.log('Acceder Apellido');
+        console.log(belen.apellido);
+
+        console.log('Acceder Hermanos');
+        console.log(belen.hermanos);
+
+```
+
+6) Todos los objetos pueden tener sus propias *funciones*, las cuales pueden ser llamadas posteriormente. El formato de una función es:
+
+```javascript
+
+    nombreFunción : function ( parámetros ) {
+
+    return ___ ;
+
+    }
+```
+
+- Para llamar a una función se usa el siguiente formato: 
+
+```javascript
+    nombreObjeto.nombreFunción ( parámetros );
+    
+```
+- Ejemplos de implementación de las funciones:
+```javascript
+getNombre : function() {
+                return this.nombre;
+            }
+            ,
+            
+            getApellido : function() {
+                return this.apellido;
+            },
+            
+            setApellido : function(nuevoApellido) {
+                this.apellido = nuevoApellido;
+            }
+            
+```
+- Ejemplos de llamadas a las funciones:
+
+```javascript
+console.log('getNombre');
+console.log(belen.getNombre());
+console.log('getApellido');
+console.log(belen.getApellido());
+console.log('setApellido');
+belen.setApellido('Sotamba');
+console.log('Nuevo Apellido');
+console.log(belen.getApellido());
+ 
+```
+
+<p align="center">
+<img src="https://github.com/santy-101/Tec_Web/blob/04-JS/Informe/Imágenes/Funciones.png?raw=true">
+</p>

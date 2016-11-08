@@ -4,15 +4,132 @@
     <meta charset="UTF-8">
     <title>Aprendiendo JavaScript</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
+
     <script>
-    alert('Hola'); // Hola en mensaje de alerta
-    console.log('Hola desde la consola'); // enviar mensajes desde la consola
+//    alert('Hola'); // Hola en mensaje de alerta
+//    console.log('Hola desde la consola'); // enviar mensajes desde la consola
+        
+        
+            
+//    Definición de Variables
+    
+        var texto = "Texto";
+        console.log('Variable string');
+        console.log(texto);
+
+    
+        var numero = 1;
+        console.log('Variable entera');
+        console.log(numero);
+
+        
+        var float = 1.223;
+        console.log('Variable float');
+        console.log(float);
+
+      
+        var booleanTrue = true;
+        console.log('Variable booleanTrue');
+        console.log(booleanTrue);
+
+
+        var booleanFalse = false;
+        console.log('Variable booleanFalse');
+        console.log(booleanFalse);
+        
+
+        var varNull = null;
+        console.log('Variable null');
+        console.log(varNull);
+
+      
+        var varUndefined = undefined;
+        console.log('Variable undefined');
+        console.log(varUndefined);
+        
+        //CAST
+        var textoNumero="2";
+        console.log('Valor cuando es string');
+        console.log(textoNumero);
+        
+        textoNumero=2;
+        console.log('Valor cuando es número');
+        console.log(textoNumero);
+        
+        
+        //Arreglos
+         var arregloString = ['Casa', '22', '5.2'];
+        console.log(arregloString);
+        
+        var arregloNumeros= [1, 2, 3];
+        console.log(arregloNumeros);
+        
+        var arregloFloat = [1.3, 2.15, 0.84];
+        console.log(arregloFloat);
+        
+        var arregloBooleano = [false,true,true];
+        console.log(arregloBooleano);
+        
+        var arregloNull = [null,null,null];
+        console.log(arregloNull);
+        
+        var arregloUndefined= [undefined,undefined,undefined];
+        console.log(arregloUndefined);
+        
+        var arregloTodo = ["Belen", 123, 3.1416, true, false, undefined, null, "Quispi"];
+        console.log(arregloTodo);
+        
+        console.log('Longitud de todo el arreglo');
+        console.log(arregloTodo.length);
+        
+        
+        // Objetos
+        
+        var belen = {
+            'nombre':'Belén',
+            'apellido':'Quispi',
+            'edad': 22,
+            mascotas:['Cachetes','Oso','Nena'],
+            hermanos:[
+                { nombre :'Nayeli', apellido :'Quispi'},
+                {nombre:'Wilmer', apellido:'Quispi' }
+            ],
+            
+            //Funciones
+            getNombre : function() {
+                return this.nombre;
+            }
+            ,
+            
+            getApellido : function() {
+                return this.apellido;
+            },
+            
+            setApellido : function(nuevoApellido) {
+                this.apellido = nuevoApellido;
+            }
+        
+        
+        }
+        
+        console.log('Acceder Nombre');
+        console.log(belen.nombre);
+        console.log('Acceder Apellido');
+        console.log(belen.apellido);
+
+        console.log('Acceder Hermanos');
+        console.log(belen.hermanos);
+        
+
+        console.log('getNombre');
+        console.log(belen.getNombre());
+        console.log('getApellido');
+        console.log(belen.getApellido());
+        console.log('setApellido');
+        belen.setApellido('Sotamba');
+        console.log('Nuevo Apellido');
+        console.log(belen.getApellido());
+        
     </script>
 </head>
 <body>
@@ -75,41 +192,6 @@
         </div>
     </div>
 
-//    Definición de Variables
-    
-        var texto = "Texto";
-        console.log('Variable string');
-        console.log(texto);
-
-    
-        var numero = 1;
-        console.log('Variable entera');
-        console.log(numero);
-
-        
-        var float = 1.223;
-        console.log('Variable float');
-        console.log(float);
-
-      
-        var booleanTrue = true;
-        console.log('Variable booleanTrue');
-        console.log(booleanTrue);
-
-
-        var booleanFalse = false;
-        console.log('Variable booleanFalse');
-        console.log(booleanFalse);
-        
-
-        var varNull = null;
-        console.log('Variable null');
-        console.log(varNull);
-
-      
-        var varUndefined = undefined;
-        console.log('Variable undefined');
-        console.log(varUndefined);
     
 </body>
 </html>
