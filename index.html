@@ -53,78 +53,96 @@
         
         //Definicion de arreglos
         
-        var arregloString = ['1','2','3'];
-         console.log(arregloString);
-        
-        var arregloNumeros = [1,2,3];
-         console.log(arregloNumeros);
-        
-        var arregloFloat = [1.22, 2.33, 4.33];
-         console.log(arregloFloat);
-        var arregloTrue = [true,true,true];
-         console.log(arregloTrue);
-        
-        var arregloFalse = [false,false,false];
-         console.log(arregloFalse)
-         
-        var arregloNull = [null,null,null];
-         console.log(arregloNull);
-        var arregloUndifind =[undefined,undefined,undefined];
-         console.log(arregloUndifind);
-        var arregloTodo = ["Nombre",
-                          123,
-                          3.14,
-                          true,
-                          false,
-                          null,
-                          undefined]
-        console.log(arregloTodo);
-        
-       // OBJETOS
-        //Las propiedades se separan con comas, una propiedad se escribe el nombre en comilla simples asi como el valor asignado    
-        // Objetos Json
-        var belen = {
-            'nombre':'Belén',
-            'apellido':'Quispi',
-            'edad': 22,
-            mascotas:['Cachetes','Oso','Nena'],
-            hermanos:[{ nombre :'Nayeli', apellido :'Quispi'},
-                  {nombre:'Wilmer', apellido:'Quispi' }],
-            
-            getNombre : function() {
-                return this.nombre;
-            }
-            ,
-            
-            getApellido : function() {
-                return this.apellido;
-            },
-            
-            setApellido : function(nuevoApellido) {
-                this.apellido = nuevoApellido;
-            }
-        }
-        
-        // Funciones
-        console.log("Acceder a nombre");
-        console.log(belen.nombre);
-        console.log(belen.getNombre());
-        console.log(belen.getApellido());
-        console.log(belen.setApellido("Sotamba"));
-         console.log(belen.getApellido());
-        
-    //    console.log(belen);
-        
-        // Como deberia ir en XSL
-//        <<belen>
-//            <nombre>Belen</nombre>
-//            <apellido>Quispi</apellido>
-//            <edad>22</edad>
-//        </belen>
+//        var arregloString = ['1','2','3'];
+//         console.log(arregloString);
+//        
+//        var arregloNumeros = [1,2,3];
+//         console.log(arregloNumeros);
+//        
+//        var arregloFloat = [1.22, 2.33, 4.33];
+//         console.log(arregloFloat);
+//        var arregloTrue = [true,true,true];
+//         console.log(arregloTrue);
+//        
+//        var arregloFalse = [false,false,false];
+//         console.log(arregloFalse)
+//         
+//        var arregloNull = [null,null,null];
+//         console.log(arregloNull);
+//        var arregloUndifind =[undefined,undefined,undefined];
+//         console.log(arregloUndifind);
+//        var arregloTodo = ["Nombre",
+//                          123,
+//                          3.14,
+//                          true,
+//                          false,
+//                          null,
+//                          undefined]
+//        console.log(arregloTodo);
+//        
+//       // OBJETOS
+//        //Las propiedades se separan con comas, una propiedad se escribe el nombre en comilla simples asi como el valor asignado    
+//        // Objetos Json
+//        var belen = {
+//            'nombre':'Belén',
+//            'apellido':'Quispi',
+//            'edad': 22,
+//            mascotas:['Cachetes','Oso','Nena'],
+//            hermanos:[{ nombre :'Nayeli', apellido :'Quispi'},
+//                  {nombre:'Wilmer', apellido:'Quispi' }],
+//            
+//            getNombre : function() {
+//                return this.nombre;
+//            }
+//            ,
+//            
+//            getApellido : function() {
+//                return this.apellido;
+//            },
+//            
+//            setApellido : function(nuevoApellido) {
+//                this.apellido = nuevoApellido;
+//            }
+//        }
+//        
+//        // Funciones
+//        console.log("Acceder a nombre");
+//        console.log(belen.nombre);
+//        console.log(belen.getNombre());
+//        console.log(belen.getApellido());
+//        console.log(belen.setApellido("Sotamba"));
+//         console.log(belen.getApellido());
+//        
+//    //    console.log(belen);
+//        
+//        // Como deberia ir en XSL
+////        <<belen>
+////            <nombre>Belen</nombre>
+////            <apellido>Quispi</apellido>
+////            <edad>22</edad>
+////        </belen>
 //      
          
     
-      
+      // Bucles  Ejercicio 1
+    
+        var count=10;
+          console.log('Empieza');
+        while(count>0)
+            {
+                console.log(count)
+                if(count%2===0)
+                    {
+                        console.log('El número '+count+ ' es par');
+                    }
+                else
+                    {
+                        console.log('El número '+count+ ' es impar');
+                    }
+                count--;
+                
+            }
+        console.log('Se acaba');
         
         
     </script>
