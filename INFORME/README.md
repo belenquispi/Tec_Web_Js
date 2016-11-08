@@ -214,3 +214,164 @@ Para la presente práctica se creará el archivo *index.html*, el cual tendrá v
 
 ```
 
+3) Para mostrar instrucciones de teclado se usa el tag `<kbd></kbd>`
+
+```html
+
+<h2>Las instrucciones por teclado se pueden mostrar en pantalla usando <code>&lt;kbd&gt;</code></h2>
+    <h3>Ejemplo: <kbd>control </kbd><kbd>+</kbd><kbd> C </kbd><kbd>=</kbd><kbd> Usado para copiar</kbd></h3>
+
+```
+
+4) Para crear tablas se usa los tags `<table> </table>`, los cuales encierran toda la tabla.
+* Clases
+ - La clase *table* permite que exista divisiones horizontales.
+ - La clase *table.striped* permite que la tabla tenga divisiones en estilo zebra.
+ - La clase *table-hover* hace que cada fila se ilumune cuando el mouse pasa sobre alguna de ellas.
+* Tags internos.
+ - `<tr>` y `</tr>` indican una nueva fila. 
+ - `<th>` y `</th>` indican cabecera, es decir, los títulos de cada columna. (Compania, Contacto y País).
+ - `<td>` y `</td>` indican los valores que van en cada uno de los casilleros de la tabla.
+ 
+La estructura de una tabla es la siguiente:
+
+```html
+
+<h1>Tablas</h1>
+    <!--Tablas-->
+    <!--       table, table-bordered table-hover table-striped-->
+ <table class="table table-striped table-hover">
+        <!--Table Row-->
+        <tr class="active">
+
+            <!--Table Header-->
+            <th>Compania</th>
+            <th>Contacto</th>
+            <th>País</th>
+        </tr>
+
+        <tr class="warning">
+            <!--Table Detail-->
+            <td>Nestle</td>
+            <td>Maria Anders</td>
+            <td>Ecuador</td>
+        </tr>
+        <tr>
+            <td>Alkosto</td>
+            <td>Francisco Nuñez</td>
+            <td>Colombia</td>
+        </tr>
+    </table>
+    </table>
+
+```
+5) En Boostrap también se puede crear forms. Un *form/ consta de: 
+ - *Label* el cual indica el título del form.
+ - Primer *input-group-addon* muestra el texto a la izquiera de donde se realizará el ingreso de datos del usuario.
+ - *placeholder* es el texto predeterminado antes de que el usuario lo reemplace.
+ - Segundo *input-group-addon* muestra el texto a la derecha de donde se realizará el ingreso de datos del usuario.
+ - *button* crea un botón.
+ - En ejemplo de un form es el siguiente:
+
+```html
+<h2>Forms</h2>
+<div class="container">
+        <div class="row">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-6">
+                <form>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Correo Electrónico</label>
+                        <div class="input-group">
+                            <div class="input-group-addon">Correo:</div>
+                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                            <div class="input-group-addon">.ec</div>
+                        </div>
+                        
+                    </div>
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </form>
+            </div>
+            <div class="col-sm-3"></div>
+        </div>
+    </div>
+
+```
+
+### JavaScript
+
+- Todo el código JavaScript debe encontrarse entre los tags `<script> </script>`.
+- El código JavaScript va en la cabecera de la página web.
+
+1) Creación de una *ventana de alerta*, la cual se visualizará en el navegador, también se visulizará un *mensaje en consola*. Para lograr eso se usa:
+- `alert()` es una función que recibe como parámetro untexto, el cual va ser visualizado en el mensaje de alerta.
+* `console.log()` es otra función que muestra en consola los parámetros que recibe, en este caso es un texto.
+
+```html
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+    alert('Hola'); 
+    console.log('Hola desde la consola');
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
+
+```
+2) Creación de *variables* en Java Script.
+
+- La definición de las variables en JS tiene el siguiente formato.
+```javascript
+    var nombreVarible = valorVariable ; 
+```
+
+- Existen distintos tipos de variables en JS. Las varibles más usadas son:
+  * Las variables *string* van entre comillas dobles o simples.
+  * Las variables *enteras* son números enteros.
+  * Las variables *float* son números decimales, los cuales se separan con un punto.
+  * Las variables *boolean* pueden ser `true` o `false`.
+  * Las variables *null* son `null`.
+  * Las variables *undefined* son `undefined`.
+
+```javascript
+        var texto = "Texto";
+        console.log('Variable string');
+        console.log(texto);
+
+    
+        var numero = 1;
+        console.log('Variable entera');
+        console.log(numero);
+
+        
+        var float = 1.223;
+        console.log('Variable float');
+        console.log(float);
+
+      
+        var booleanTrue = true;
+        console.log('Variable booleanTrue');
+        console.log(booleanTrue);
+
+
+        var booleanFalse = false;
+        console.log('Variable booleanFalse');
+        console.log(booleanFalse);
+        
+
+        var varNull = null;
+        console.log('Variable null');
+        console.log(varNull);
+
+      
+        var varUndefined = undefined;
+        console.log('Variable undefined');
+        console.log(varUndefined);
+```

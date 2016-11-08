@@ -3,14 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <title>Aprendiendo JavaScript</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+    alert('Hola'); // Hola en mensaje de alerta
+    console.log('Hola desde la consola'); // enviar mensajes desde la consola
+    </script>
 </head>
 <body>
+<!--
     <h1>Primer título <small>Este título es más claro</small></h1>
     <h2>Segundo título</h2>
     
     <p>El tag para describir imágenes en HTML es: <code>&lt;img&gt;</code></p>
     
-    <h1>Las instrucciones por teclado se pueden mostrar en pantalla </h1>
+    <h2>Las instrucciones por teclado se pueden mostrar en pantalla usando <code>&lt;kbd&gt;</code></h2>
+    <h3>Ejemplo: <kbd>control </kbd><kbd>+</kbd><kbd> C </kbd><kbd>=</kbd><kbd> Usado para copiar</kbd></h3>
+    
+
+    <h1>Tablas</h1>
+    <!--Tablas-->
+    <!--       table, table-bordered table-hover table-striped-->
+ <table class="table table-striped table-hover">
+        <!--Table Row-->
+        <tr class="active">
+
+            <!--Table Header-->
+            <th>Compania</th>
+            <th>Contacto</th>
+            <th>País</th>
+        </tr>
+
+        <tr class="warning">
+            <!--Table Detail-->
+            <td>Nestle</td>
+            <td>Maria Anders</td>
+            <td>Ecuador</td>
+        </tr>
+        <tr>
+            <td>Alkosto</td>
+            <td>Francisco Nuñez</td>
+            <td>Colombia</td>
+        </tr>
+    </table>
+    
+    <h2>Forms</h2>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-6">
+                <form>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Correo Electrónico</label>
+                        <div class="input-group">
+                            <div class="input-group-addon">Correo:</div>
+                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                            <div class="input-group-addon">.ec</div>
+                        </div>
+                        
+                    </div>
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </form>
+            </div>
+            <div class="col-sm-3"></div>
+        </div>
+    </div>
+
+//    Definición de Variables
+    
+        var texto = "Texto";
+        console.log('Variable string');
+        console.log(texto);
+
+    
+        var numero = 1;
+        console.log('Variable entera');
+        console.log(numero);
+
+        
+        var float = 1.223;
+        console.log('Variable float');
+        console.log(float);
+
+      
+        var booleanTrue = true;
+        console.log('Variable booleanTrue');
+        console.log(booleanTrue);
+
+
+        var booleanFalse = false;
+        console.log('Variable booleanFalse');
+        console.log(booleanFalse);
+        
+
+        var varNull = null;
+        console.log('Variable null');
+        console.log(varNull);
+
+      
+        var varUndefined = undefined;
+        console.log('Variable undefined');
+        console.log(varUndefined);
     
 </body>
 </html>
