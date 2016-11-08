@@ -66,12 +66,14 @@
   2. CSS para especificar el diseño de las páginas web.
 
   3. JavaScript para programar el comportamiento de las páginas web.
-Fuente: [W3School](http://www.w3schools.com/js/default.asp))
+  <br>
+(Fuente: [W3School](http://www.w3schools.com/js/default.asp))
 
 - JavaScript (abreviado comúnmente JS) es un lenguaje de programación interpretado, dialecto del estándar ECMAScript. Se define como orientado a objetos,3 basado en prototipos, imperativo, débilmente tipado y dinámico.
 
 - Se utiliza principalmente en su forma del lado del cliente (client-side), implementado como parte de un navegador web permitiendo mejoras en la interfaz de usuario y páginas web dinámicas4 aunque existe una forma de JavaScript del lado del servidor(Server-side JavaScrip o SSJS). Su uso en aplicaciones externas a la web, por ejemplo en documentos PDF, aplicaciones de escritorio (mayoritariamente widgets) es también significativo.
-Fuente: [Wikipedia](https://es.wikipedia.org/wiki/JavaScript))
+<br>
+(Fuente: [Wikipedia](https://es.wikipedia.org/wiki/JavaScript))
 <br>
 <a href="#cabecera">Ir a la cabecera</a>
 
@@ -81,6 +83,7 @@ Fuente: [Wikipedia](https://es.wikipedia.org/wiki/JavaScript))
 - ECMAScript es una especificación de lenguaje de programación publicada por ECMA International. El desarrollo empezó en 1996 y estuvo basado en el popular lenguaje JavaScript propuesto como estándar por Netscape Communications Corporation. Actualmente está aceptado como el estándar ISO 16262.
 
 - ECMAScript define un lenguaje de tipos dinámicos ligeramente inspirado en Java y otros lenguajes del estilo de C. Soporta algunas características de la programación orientada a objetos mediante objetos basados en prototipos y pseudoclases.
+<br>
 (Fuente: [Wikipedia](https://es.wikipedia.org/wiki/ECMAScript))
 <br>
 <a href="#cabecera">Ir a la cabecera</a>
@@ -177,7 +180,7 @@ Fuente: [Wikipedia](https://es.wikipedia.org/wiki/JavaScript))
     * El validador retorna una lista de errores, de acuerdo al estándar escodigo.
     * Es importante validar las páginas web antes de publicarlas.
 
-(Fuente: [W3Schools](http://w3schools.bootcss.com/website/web_validate.html)
+(Fuente: [W3Schools](http://w3schools.bootcss.com/website/web_validate.html))
 <br>
 <a href="#cabecera">Ir a la cabecera</a>
 
@@ -204,8 +207,15 @@ Para la presente práctica se creará el archivo *index.html*, el cual tendrá v
 
 <h1>Primer título <small>Este título es más claro</small></h1>
     <h2>Segundo título</h2>
-
+    
 ```
+
+<p align="center">
+<img src="GRAFICOS/TagSmall.jpg">
+</p>
+<br>
+<a href="#cabecera">Ir a la cabecera</a>
+
 2) Para mostrar tags en HTML, se usa el formato `<code>&lt; nombreDelTag &gt;</code>`. 
 
 ```html
@@ -213,6 +223,12 @@ Para la presente práctica se creará el archivo *index.html*, el cual tendrá v
 <p>El tag para describir imágenes en HTML es: <code>&lt;img&gt;</code></p>
 
 ```
+
+<p align="center">
+<img src="GRAFICOS/TagHTML.jpg">
+</p>
+<br>
+<a href="#cabecera">Ir a la cabecera</a>
 
 3) Para mostrar instrucciones de teclado se usa el tag `<kbd></kbd>`
 
@@ -222,6 +238,11 @@ Para la presente práctica se creará el archivo *index.html*, el cual tendrá v
     <h3>Ejemplo: <kbd>control </kbd><kbd>+</kbd><kbd> C </kbd><kbd>=</kbd><kbd> Usado para copiar</kbd></h3>
 
 ```
+<p align="center">
+<img src="GRAFICOS/Tagkbd.jpg">
+</p>
+<br>
+<a href="#cabecera">Ir a la cabecera</a>
 
 4) Para crear tablas se usa los tags `<table> </table>`, los cuales encierran toda la tabla.
 * Clases
@@ -265,6 +286,11 @@ La estructura de una tabla es la siguiente:
     </table>
 
 ```
+<p align="center">
+<img src="GRAFICOS/Tablas.jpg">
+</p>
+<br>
+<a href="#cabecera">Ir a la cabecera</a>
 5) En Boostrap también se puede crear forms. Un *form/ consta de: 
  - *Label* el cual indica el título del form.
  - Primer *input-group-addon* muestra el texto a la izquiera de donde se realizará el ingreso de datos del usuario.
@@ -298,6 +324,12 @@ La estructura de una tabla es la siguiente:
 
 ```
 
+<p align="center">
+<img src="GRAFICOS/Form.jpg">
+</p>
+<br>
+<a href="#cabecera">Ir a la cabecera</a>
+
 ### JavaScript
 
 - Todo el código JavaScript debe encontrarse entre los tags `<script> </script>`.
@@ -325,6 +357,20 @@ La estructura de una tabla es la siguiente:
 </html>
 
 ```
+* Mensaje de Alerta
+<p align="center">
+<img src="GRAFICOS/MensajeAlerta.jpg">
+</p>
+
+* Mensaje en consola
+<p align="center">
+<img src="GRAFICOS/MensajeAlertaConsola.jpg">
+</p>
+
+
+<br>
+<a href="#cabecera">Ir a la cabecera</a>
+
 2) Creación de *variables* en Java Script.
 
 - La definición de las variables en JS tiene el siguiente formato.
@@ -376,6 +422,12 @@ La estructura de una tabla es la siguiente:
         console.log(varUndefined);
 ```
 
+<p align="center">
+<img src="GRAFICOS/TiposVariables.jpg">
+</p>
+<br>
+<a href="#cabecera">Ir a la cabecera</a>
+
 3) Una ventaja de JS es que no es necesario hacer ningún tipo de *cast* para cambiar el tipo de una variable.
 Ejemplo:
  - Un *textoNumero* que es de tipo String e igual a 2 string. Este puede convertirse luego en un entero igual a 2.
@@ -391,6 +443,11 @@ Ejemplo:
         console.log('Valor cuando es número');
         console.log(textoNumero);
 ```
+<p align="center">
+<img src="GRAFICOS/Cast.jpg">
+</p>
+<br>
+<a href="#cabecera">Ir a la cabecera</a>
 
 4) Los *arreglos* de JS poseen la siguiente estructura:
 
@@ -430,6 +487,11 @@ Ejemplos de arreglos:
         console.log('Longitud de arregloTodo');
         console.log(arregloTodo.length);
 ```
+<p align="center">
+<img src="GRAFICOS/Arreglos.jpg">
+</p>
+<br>
+<a href="#cabecera">Ir a la cabecera</a>
 
 5) Para crear *objetos*  en JS se utiliza el siguiente formato:
 
@@ -471,6 +533,11 @@ Ejemplo de creación de un objeto:
         console.log(belen.hermanos);
 
 ```
+<p align="center">
+<img src="GRAFICOS/Objetos.jpg">
+</p>
+<br>
+<a href="#cabecera">Ir a la cabecera</a>
 
 6) Todos los objetos pueden tener sus propias *funciones*, las cuales pueden ser llamadas posteriormente. El formato de una función es:
 
@@ -520,5 +587,30 @@ console.log(belen.getApellido());
 ```
 
 <p align="center">
-<img src="https://github.com/santy-101/Tec_Web/blob/04-JS/Informe/Imágenes/Funciones.png?raw=true">
+<img src="GRAFICOS/Funciones.jpg">
 </p>
+
+<br>
+* El archivo HTML está disponible en [Archivo HTML](https://github.com/belenquispi/Tec_Web_Js/blob/04.JavaScript-Parte1/INFORME/index.html).
+
+<br>
+<a href="#cabecera">Ir a la cabecera</a>
+
+<a name="concRe"></a>
+## Conclusiones y Recomendaciones
+
+* Se comprendió la importancia de adquirir conocimientos de web. 
+* Se aprendió a crear tablas y forms usando Bootstrap.
+* Se aprendió a crear y utilizar los distintos tipos de variables en JS.
+* Se aprendió a crear y utilizar vectores con elementos de distintos tipos en JS.
+* Se aprendió a crear objetos con sus respectivas funciones en JS.
+* Una buena práctica de programación es utilizar `;` al finalizar una línea de código. 
+* Se recomienda utilizar la consola de las páginas web para verificar que la programación que se ha realizado sea la correcta.
+
+
+<br>
+<a href="#cabecera">Ir a la cabecera</a>
+---
+
+Autor: [Belén Quispi](https://github.com/belenquispi)
+
