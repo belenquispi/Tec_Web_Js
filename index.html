@@ -124,25 +124,57 @@
 //      
          
     
-      // Bucles  Ejercicio 1
+// Bucles  Ejercicio 1
     
-        var count=10;
-          console.log('Empieza');
-        while(count>0)
+//        var count=10;
+//        var arregloNumero=[];
+//        var objetoVacío=[];
+//        
+//          console.log('Empieza');
+//          console.log(arregloNumero);
+//        
+//        while(count>0)
+//            {
+//                console.log(count)
+//                if(count%2===0)
+//                    {
+//                        console.log('El número '+count+ ' es par');
+//                    }
+//                else
+//                    {
+//                        console.log('El número '+count+ ' es impar');
+//                    }
+//                arregloNumero.push(count); // agrega al úlitmo
+//                //count++;
+//                count--;
+//                
+//            }
+//        arregloNumero.pop(); //Elimina el último
+//        arregloNumero.splice(0,1,11); // usado para borrar uno o mas elementos de un array solo dos valores, también puede reemplazar un dato se usa tres valores
+//        console.log('Se acaba');
+//        console.log(arregloNumero);
+//        
+        
+// Bucles Ejercicio 2
+        
+        var numSheep = 4;
+        var monthNumber=1;
+        var monthsToPrint = 12;
+        
+        while(monthNumber<=monthsToPrint)
             {
-                console.log(count)
-                if(count%2===0)
-                    {
-                        console.log('El número '+count+ ' es par');
-                    }
-                else
-                    {
-                        console.log('El número '+count+ ' es impar');
-                    }
-                count--;
+                numSheep*=4;
+                console.log('There will be '+numSheep+ ' sheep after '+monthNumber+' month(s)!');
+                monthNumber++;
                 
             }
-        console.log('Se acaba');
+        
+// Bucles Ejercio 3
+        
+        for(var  i=10; i>0; i--)
+            {
+                console.log(i);
+            }
         
         
     </script>
