@@ -213,8 +213,7 @@ Para la presente práctica se creará el archivo *index.html*, el cual tendrá v
 <p align="center">
 <img src="GRAFICOS/TagSmall.jpg">
 </p>
-<br>
-<a href="#cabecera">Ir a la cabecera</a>
+
 
 2) Para mostrar tags en HTML, se usa el formato `<code>&lt; nombreDelTag &gt;</code>`. 
 
@@ -227,8 +226,7 @@ Para la presente práctica se creará el archivo *index.html*, el cual tendrá v
 <p align="center">
 <img src="GRAFICOS/TagHTML.jpg">
 </p>
-<br>
-<a href="#cabecera">Ir a la cabecera</a>
+
 
 3) Para mostrar instrucciones de teclado se usa el tag `<kbd></kbd>`
 
@@ -241,8 +239,7 @@ Para la presente práctica se creará el archivo *index.html*, el cual tendrá v
 <p align="center">
 <img src="GRAFICOS/Tagkbd.jpg">
 </p>
-<br>
-<a href="#cabecera">Ir a la cabecera</a>
+
 
 4) Para crear tablas se usa los tags `<table> </table>`, los cuales encierran toda la tabla.
 * Clases
@@ -289,8 +286,7 @@ La estructura de una tabla es la siguiente:
 <p align="center">
 <img src="GRAFICOS/Tablas.jpg">
 </p>
-<br>
-<a href="#cabecera">Ir a la cabecera</a>
+
 5) En Boostrap también se puede crear forms. Un *form/ consta de: 
  - *Label* el cual indica el título del form.
  - Primer *input-group-addon* muestra el texto a la izquiera de donde se realizará el ingreso de datos del usuario.
@@ -327,8 +323,7 @@ La estructura de una tabla es la siguiente:
 <p align="center">
 <img src="GRAFICOS/Form.jpg">
 </p>
-<br>
-<a href="#cabecera">Ir a la cabecera</a>
+
 
 ### JavaScript
 
@@ -367,9 +362,6 @@ La estructura de una tabla es la siguiente:
 <img src="GRAFICOS/MensajeAlertaConsola.jpg">
 </p>
 
-
-<br>
-<a href="#cabecera">Ir a la cabecera</a>
 
 2) Creación de *variables* en Java Script.
 
@@ -426,7 +418,7 @@ La estructura de una tabla es la siguiente:
 <img src="GRAFICOS/TiposVariables.jpg">
 </p>
 <br>
-<a href="#cabecera">Ir a la cabecera</a>
+
 
 3) Una ventaja de JS es que no es necesario hacer ningún tipo de *cast* para cambiar el tipo de una variable.
 Ejemplo:
@@ -447,7 +439,7 @@ Ejemplo:
 <img src="GRAFICOS/Cast.jpg">
 </p>
 <br>
-<a href="#cabecera">Ir a la cabecera</a>
+
 
 4) Los *arreglos* de JS poseen la siguiente estructura:
 
@@ -463,7 +455,7 @@ var nombreDelArreglo = [valor1, valor2,..., valorN ];
 Ejemplos de arreglos:
 
 ```javascript
-        var arregloString = ['Hola', '2', '5'];
+           var arregloString = ['Casa', '22', '5.2'];
         console.log(arregloString);
         
         var arregloNumeros= [1, 2, 3];
@@ -481,17 +473,17 @@ Ejemplos de arreglos:
         var arregloUndefined= [undefined,undefined,undefined];
         console.log(arregloUndefined);
         
-        var arregloTodo = ["Nombre", 123, 3.1416, true, false, undefined, null, "Apellido"];
+        var arregloTodo = ["Belen", 123, 3.1416, true, false, undefined, null, "Quispi"];
         console.log(arregloTodo);
         
-        console.log('Longitud de arregloTodo');
+        console.log('Longitud de todo el arreglo');
         console.log(arregloTodo.length);
+        
 ```
 <p align="center">
 <img src="GRAFICOS/Arreglos.jpg">
 </p>
-<br>
-<a href="#cabecera">Ir a la cabecera</a>
+
 
 5) Para crear *objetos*  en JS se utiliza el siguiente formato:
 
@@ -536,8 +528,7 @@ Ejemplo de creación de un objeto:
 <p align="center">
 <img src="GRAFICOS/Objetos.jpg">
 </p>
-<br>
-<a href="#cabecera">Ir a la cabecera</a>
+
 
 6) Todos los objetos pueden tener sus propias *funciones*, las cuales pueden ser llamadas posteriormente. El formato de una función es:
 
