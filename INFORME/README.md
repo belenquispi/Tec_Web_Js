@@ -587,7 +587,7 @@ console.log(belen.getApellido());
 <br>
 <a href="#cabecera">Ir a la cabecera</a>
 
-<a name="concRe"></a>
+<a name="conRe"></a>
 ## Conclusiones y Recomendaciones
 
 * Se comprendió la importancia de adquirir conocimientos de web. 
