@@ -195,3 +195,22 @@ Fuente: [Wikipedia](https://es.wikipedia.org/wiki/JavaScript))
 <a name="desarrollo"></a>
 ## Desarrollo de la práctica
 
+Para la presente práctica se creará el archivo *index.html*, el cual tendrá varias modificaciones.
+
+### Bootstrap 
+1) Para crear un texto más claro, se coloca el texto en medio de los tags `<small></small>`.
+
+``` html
+
+<h1>Primer título <small>Este título es más claro</small></h1>
+    <h2>Segundo título</h2>
+
+```
+2) Para mostrar tags en HTML, se usa el formato `<code>&lt; nombreDelTag &gt;</code>`. 
+
+```html
+
+<p>El tag para describir imágenes en HTML es: <code>&lt;img&gt;</code></p>
+
+```
+
