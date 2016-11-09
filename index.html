@@ -326,17 +326,36 @@
 //    
 //}
         
-    var nombreFuncion = function(){
-    console.log('nombreFunción');
-}
-    
-    nombreFuncion();
+//    var nombreFuncion = function(){
+//    console.log('nombreFunción');
+//}
+//    
+//    nombreFuncion();
+//        
+//    function nombre(){
+//           console.log('nombre'); 
+//    }
+//   
+//    nombre();
         
-    function nombre(){
-           console.log('nombre'); 
-    }
-   
-    nombre();
+var passengers=[["Thomas","Meeks"],
+                ["Gregg","Pollack"],
+                ["Christine","Wong"],
+                ["Dan","McGav"]];
+        
+var modifiedNames = passengers.map(function(arrayNombreApellido){
+                                   return arrayNombreApellido[1]+" "+arrayNombreApellido[0];
+                                   
+                                   });
+        
+// la funcion map devuelve un arreglo, esta recibe como parámetro una funcion que haga algo
+        
+    console.log(modifiedNames);  
+        
+        
+        
+        
+        
     </script>
         
 </head>
