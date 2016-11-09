@@ -310,30 +310,35 @@
 //         console.log(typeof true);
 //         console.log(typeof false);
 //         console.log(typeof 1.2);
+ 
         
-        function contarString(arreglo)
-        {
-            var contador =0;
-            for(var i=0; i<arreglo.length;i++)
-                {
-                    if(typeof(arreglo[i])=="string")
-                        {
-                            contador++;
-                        }
-                }
-            return contador;
-        }
-        
-        var arre = [1,'2',3,'4',5,'seis'];
-           console.log(contarString(arre));
-    
-    </script>
+//        
+//Funcion declarativa
+//
+//function nombre()
+//        {
+//            
+//        }
 
-    <<belen>
-        <nombre>Belen</nombre>
-        <apellido>Quispi</apellido>
-        <edad>22</edad>
-        </belen>
+//Funcion anónima
+//var nombreFuncion = function()
+//{
+//    
+//}
+        
+    var nombreFuncion = function(){
+    console.log('nombreFunción');
+}
+    
+    nombreFuncion();
+        
+    function nombre(){
+           console.log('nombre'); 
+    }
+   
+    nombre();
+    </script>
+        
 </head>
 
 <body>
