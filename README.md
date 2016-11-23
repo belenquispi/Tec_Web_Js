@@ -1,6 +1,9 @@
 # NODE
 * Es un compilador JS
 
+### Gestionador de paquetes
+NOde tiene el gestionador de paquetes `nmp`, el cual permite  installar paquetes a ser usados en Node
+
 Pasos parra iniciar JS
 * En la consola se escribe la palabra `node`
 
@@ -18,3 +21,10 @@ npm install http server
 
 ### Paquete para enviar emails
 npm install nodemailer
+
+
+
+
+## Creacion de un paquete 
+se usa el comando `npm init 
+
