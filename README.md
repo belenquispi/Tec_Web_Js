@@ -1,6 +1,8 @@
 # NODE
 * Es un compilador JS
 
+Para ejecutar un paquete .js en consola se usa l comando node mas el nombre del archivo.  `node app.js` 
+
 ### Gestionador de paquetes
 NOde tiene el gestionador de paquetes `nmp`, el cual permite  installar paquetes a ser usados en Node
 
@@ -56,9 +58,27 @@ Luego se escribe el comando `npm publish ` para publicar el paquete.
 
 Primero se debe login en la consola para lo cual se escribe el comando  `npm login `, luego pide 
 
-## Para instalar un paquete existente
+## Para instalar un paquete localmente existente
 
 Se debe copiar las instrucciones que se encuentran en la página de donde se va a descargar el paquete.
 
 en este caso será `npm i tecnologiaswebqbelen` , esto se debe ejecutar en la consola de comandos, en la carpeta en la cual se desea que se descargue el paquete.
+
+
+## Para desinstalar un paquete localmente
+
+Para ello se usa el comando `npm uninstall nombrePaquete` en este caso el paquete es `tecnologiaswebqbelen` . Esto se debe ejecutar en la consola de comandos donde fue instalado el paquete.
+
+
+## Para instalar un paquete globalmente 
+Para ello se usa el comando `npm install -g nombrePaquete` se usa `-g` para que sea global. Es decir para todo el sistema.  Estos se almacenan en la carpeta en la que se encuentran todos los paquetes del sistema.
+
+Esta es la informacion que se muestra despues de la instalacion.
+
+`tecnologiaswebqbelen@1.0.1 C:\Users\USRGAM\AppData\Roaming\npm\node_modules\tecnologiaswebqbelen `
+
+## Importar un paquete
+¨Para importa el modulo que se desea, se usa la como en el siguiente código. 
+`var calculadora = require("tecnologiaswebqbelen");
+console.log(calculadora.imprimirSuma1y2()) `
 
