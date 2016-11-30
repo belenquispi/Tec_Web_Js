@@ -5,18 +5,17 @@ var usuarios = [{
         id: 1,
         nombre: 'Belen',
         cedula: '1724533417'
-    },
-    {
+    },{
 
         id: 2,
         nombre: 'Jose',
         cedula: '1712715489'
-    },
-    {
+    },{
         id: 2,
         nombre: 'Jose',
         cedula: '1712715489'
     }];
+var contador=usuarios.length;
 
 
 
@@ -54,7 +53,7 @@ app.post('/TecnologiasWeb', function (req, res) {
     var usuario = {
         nombre: 'Belen',
         ci: '1724533417'
-    }
+    };
     console.log(req.params.nombre);
 //usuario = {
     //    nombre:usuario.nombre,
@@ -96,4 +95,14 @@ app.post('/Usuario', function(req,res)
         {
             res.send('No envio la cedula');
         }
+    
+    var nuevoUsuarios= {
+        id:contador+1,
+        nombre:req.query.nombre,
+    cedula:req.query.cedula
+    }
+    usuarios.push(nuevoUsuarios);
+    contador++;
+    res.json(nuevoUsuarios);
+    
 })
