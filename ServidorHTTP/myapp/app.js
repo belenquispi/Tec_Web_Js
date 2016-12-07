@@ -17,21 +17,34 @@ var usuarios = [{
     }];
 var contador=usuarios.length;
 
-var fs =require('fs');
-fs.readFile('');
+var fs = require('fs');
+
+//fs.readFile('');
+
 app.get('/', function (req, res) {
     console.log('1 antes de leer'); 
     fs.readFile('./paginas/pagina.html',
             'utf8',
            function(error,archivoLeido){
-            console.log('3'+error)  ;
-               console.log('4'+archivoLeido)  
-               
-               res.send(archivoLeido);
+            console.log('3'+ error) ;
+            console.log('4'+ archivoLeido);
+          //  res.send(archivoLeido);
+            }
+    );
+    fs.readFile('./paginas/usuario.html',
+            'utf8',
+           function(error,archivoLeido){
+            console.log('3'+ error) ;
+            console.log('4'+ archivoLeido);
+            res.send(archivoLeido);
+            }
+    );
+    console.log('2 parece que termino de leer');
 });
-    console.log('2 parece que termino de leer')
-})
 
+app.listen(puerto, function () {
+    console.log('Example app listening on port ' + puerto)
+})
 /**
 app.get('/TecnologiasWeb', function (req, res) {
     res.send('con javascript !')
