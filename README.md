@@ -1,23 +1,9 @@
-var express=require('express');
-var app=express();
+# Callback
 
-var puerto=5050;
+Una funcion que se ejecuta antes de terminar. 
+Es más usado en web.
+Tiene como ventaja una programación asincrona, lo que permite que atienda a mas clientes.
 
-app.get('/',function(req,res){
-        res.send('Hello World!')
-        })
 
-`app.get('/TecnologiasWeb',function(req,res){`
-        
-        request => req
-        responde => res
-* funcion que permite enviar a mostrar en el brower
-`res.send('con javascript !')        })`
-`app.listen(puerto,function(){
-console.log('Example app listening on port '+puerto)
-})`
 
-`app.post('/TecnologiasWeb',function(req,res){
-res.send('con javascript con post!')
-}) `
-
+Node tiene sus propios paquetes, solo los que no son paquetes propios se requiere instalar.

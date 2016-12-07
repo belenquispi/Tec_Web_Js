@@ -17,12 +17,22 @@ var usuarios = [{
     }];
 var contador=usuarios.length;
 
-
-
+var fs =require('fs');
+fs.readFile('');
 app.get('/', function (req, res) {
-    res.send('Hello World!')
+    console.log('1 antes de leer'); 
+    fs.readFile('./paginas/pagina.html',
+            'utf8',
+           function(error,archivoLeido){
+            console.log('3'+error)  ;
+               console.log('4'+archivoLeido)  
+               
+               res.send(archivoLeido);
+});
+    console.log('2 parece que termino de leer')
 })
 
+/**
 app.get('/TecnologiasWeb', function (req, res) {
     res.send('con javascript !')
 })
@@ -35,17 +45,20 @@ app.listen(puerto, function () {
     console.log('Example app listening on port ' + puerto)
 })
 
-app.get('/Usuario/:idUsuario', function (req, res) {
+app.get('/Usuarios/:idUsuario', function (req, res) {
     var idActual = req.params.idUsuario;
+    console.log(idActual);
     for (var i =0; i < usuarios.length; i++) {
+        console.log(i);
         if (idActual == usuarios[i].id) {
+            console.log(idActual);
             //responde con el usuario con el idActual
             res.json(usuarios[i]);
         }
 
     }
     // si no lo encuentra en el arreglo
-    res.send('Error');
+    res.send('Error'); 
 })
 
 // con post 
@@ -54,7 +67,7 @@ app.post('/TecnologiasWeb', function (req, res) {
         nombre: 'Belen',
         ci: '1724533417'
     };
-    console.log(req.params.nombre);
+   // console.log(req.params.nombre);
 //usuario = {
     //    nombre:usuario.nombre,
     //    ci:usuario.ci,
@@ -83,7 +96,6 @@ app.post('/TecnologiasWeb', function (req, res) {
     res.send('con javascript con post!');
 });
 
-
 app.post('/Usuario', function(req,res)
         {
 //    console.log(req.query.nombre);
@@ -106,3 +118,30 @@ app.post('/Usuario', function(req,res)
     res.json(nuevoUsuarios);
     
 })
+
+
+
+
+
+fs.readFile('');
+// absolute path
+//paginas/pagina.html
+// > C:/paginas/pagina.htlm
+
+//
+
+// primer parámetro es el path, segundo parametro es la codificación, tercer parámetro una funcion 
+
+var quePasa='';
+quePasa='esta por leer el archivo';
+console.log(quePasa);
+
+fs.readFile('./paginas/pagina.html',
+            'utf8',
+           function(error,archivoLeido){
+            console.log(error)  ;
+               console.log(archivoLeido)  
+});
+
+quePasa='termino de leer el archivo';
+console.log(quePasa);**/
