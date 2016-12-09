@@ -1,0 +1,14 @@
+{
+  "name": "calcubquispi",
+  "version": "1.0.0",
+  "description": "ejemplo de uso de npm",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "calculadora"
+  ],
+  "author": "Belen Quispi",
+  "license": "MIT"
+}
