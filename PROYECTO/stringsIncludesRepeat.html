@@ -2,11 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Strings .includes() .repeat()</title>
+    <title>Strings </title>
        <link rel="stylesheet" href="kube-6.0.1/dist/css/kube.css">
     <link rel="stylesheet" href="kube-6.0.1/dist/css/kube.min.css">
+    <script src="kube-6.0.1/dist/js/kube.js"></script>
+    <script src="kube-6.0.1/dist/js/kube.min.js"></script>
 </head>
-<body>
+<body style="margin-left:25px;">
  <br>
     <h1 class="title text-center">EcmaScript 2015</h1>
    <nav id="breadcrumb-custom-separator" class="breadcrumb centered">
@@ -15,6 +17,45 @@
         <li class="active"><em><a href="stringsIncludesRepeat.html">Strings </a></em></li>
     </ul>
 </nav>
-    
+<h2 class="text-center">Strings</h2>
+<p></p>
+<blockquote >
+    <p>Con <b>ES6</b>, la biblioteca estándar ha crecido enormemente. Junto con estos cambios están los nuevos métodos que se pueden utilizar en <b>strings</b>, como: 
+    <Mark>.includes()</Mark> y <Mark>.repeat()</Mark>. 
+   </p>
+</blockquote>
+<h3>.includes()</h3>
+   <pre>
+var string = 'food';
+var substring = 'foo';
+
+console.log(string.indexOf(substring) > -1);
+   </pre>
+    <p>En lugar de buscar un valor de retorno <Mark> > -1 </Mark> para denotar contención de string, podemos simplemente usar <Mark>.includes () </Mark> que devolverá un booleano:</p>
+
+   <pre>
+const string = 'food';
+const substring = 'foo';
+
+console.log(string.includes(substring)); // true
+   </pre>
+
+<h3>.repeat()</h3>
+<pre>
+function repeat(string, count) {
+    var strings = [];
+    while(strings.length &lt; count) {
+        strings.push(string);
+    }
+    return strings.join('');
+}
+
+</pre>
+<p>En <b>ES6</b> ahora tenemos acceso a una implementación terser: </p>
+<pre>
+// String.repeat(numberOfRepetitions)
+'meow'.repeat(3); // 'meowmeowmeow'
+</pre>
+
 </body>
 </html>
