@@ -3,10 +3,10 @@
 ## ECMASCRIPT 2015
 
 ## PRIMER BIMESTRE
----
+
 ## Integrantes: Santiago Lema, Belén Quispi
 ## Fecha: 13/12/2016
----
+
 
 ### Definición del proyecto
 
