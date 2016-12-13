@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Template literals</title>
-       <link rel="stylesheet" href="kube-6.0.1/dist/css/kube.css">
-    <link rel="stylesheet" href="kube-6.0.1/dist/css/kube.min.css">
+    <link rel="stylesheet" href="kube-6.0.1/dist/css/kube.css">
+    <link rel="stylesheet" href="kube-6.0.1/dist/css/kube.min.css"> 
+    <script src="kube-6.0.1/dist/js/kube.js"></script>
+    <script src="kube-6.0.1/dist/js/kube.min.js"></script>
 </head>
 <body style="margin-left:25px;">
  <br>
@@ -15,7 +17,7 @@
         <li class="active"><em><a href="templateLiterals.html">Template literals</a></em></li>
     </ul>
 </nav>
-<h2>Template Literals</h2>
+<h2 class="text-center">Template Literals</h2>
     <p>Usando <b>Template Literals</b>, ahora podemos construir strings que tienen caracteres especiales en ellas sin necesidad de escaparlas explícitamente.</p>
 <pre>
 var text = "This string contains \"double quotes\" which are escaped.";    
@@ -66,6 +68,11 @@ nickelodeon`
 let today = new Date();
 let text = `The time and date is ${today.toLocaleString()}`;
 </pre>
-
+<nav id="breadcrumb-custom-separator" class="breadcrumb centered">
+    <ul>
+        <li><em><a href="index.html">Inicio</a></em></li>
+        <li class="active"><em><a href="templateLiterals.html">Template literals</a></em></li>
+    </ul>
+</nav>
 </body>
 </html>

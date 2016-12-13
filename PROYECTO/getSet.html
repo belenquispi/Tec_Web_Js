@@ -3,13 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <title>Getter and Setter in Classes</title>
-       <link rel="stylesheet" href="kube-6.0.1/dist/css/kube.css">
-    <link rel="stylesheet" href="kube-6.0.1/dist/css/kube.min.css">
+    <link rel="stylesheet" href="kube-6.0.1/dist/css/kube.css">
+    <link rel="stylesheet" href="kube-6.0.1/dist/css/kube.min.css"> 
+    <script src="kube-6.0.1/dist/js/kube.js"></script>
+    <script src="kube-6.0.1/dist/js/kube.min.js"></script>
 </head>
 <body style="margin-left:25px;">
  <br>
     <h1 class="title text-center">EcmaScript 2015</h1>
    <nav id="breadcrumb-custom-separator" class="breadcrumb centered">
+    <ul>
+        <li><em><a href="index.html">Inicio</a></em></li>
+        <li class="active"><em><a href="getSet.html">Getter and Setter in Classes</a></em></li>
+    </ul>
+</nav>
+<h2 class="text-center">Getter and setter functions</h2>
+<p>ES6 ha comenzado a soportar las funciones <b>getter</b> y <b>setter</b>. Como en el ejemplo siguiente:</p>
+<pre>
+class Employee {
+
+    constructor(name) {
+        this._name = name;
+    }
+
+    get name() {
+      if(this._name) {
+        return 'Mr. ' + this._name.toUpperCase();  
+      } else {
+        return undefined;
+      }  
+    }
+
+    set name(newName) {
+      if (newName == this._name) {
+        console.log('I already have this name.');
+      } else if (newName) {
+        this._name = newName;
+      } else {
+        return false;
+      }
+    }
+}
+
+var emp = new Employee("James Bond");
+
+// uses the get method in the background
+if (emp.name) {
+  console.log(emp.name);  // Mr. JAMES BOND
+}
+
+// uses the setter in the background
+emp.name = "Bond 007";
+console.log(emp.name);  // Mr. BOND 007 
+</pre>
+<p>Los últimos navegadores también están soportando funciones <b>getter / setter</b> en Objects y se puede usar para propiedades computadas, añadiendo oyentes y preprocesamiento antes de <b>setting/getting</b>:</p>
+<pre>
+ var person = {
+  firstName: 'James',
+  lastName: 'Bond',
+  get fullName() {
+      console.log('Getting FullName');
+      return this.firstName + ' ' + this.lastName;
+  },
+  set fullName (name) {
+      console.log('Setting FullName');
+      var words = name.toString().split(' ');
+      this.firstName = words[0] || '';
+      this.lastName = words[1] || '';
+  }
+}
+
+person.fullName; // James Bond
+person.fullName = 'Bond 007';
+person.fullName; // Bond 007
+</pre>
+<nav id="breadcrumb-custom-separator" class="breadcrumb centered">
     <ul>
         <li><em><a href="index.html">Inicio</a></em></li>
         <li class="active"><em><a href="getSet.html">Getter and Setter in Classes</a></em></li>

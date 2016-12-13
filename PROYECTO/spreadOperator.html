@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Spread Operator</title>
-       <link rel="stylesheet" href="kube-6.0.1/dist/css/kube.css">
-    <link rel="stylesheet" href="kube-6.0.1/dist/css/kube.min.css">
+    <link rel="stylesheet" href="kube-6.0.1/dist/css/kube.css">
+    <link rel="stylesheet" href="kube-6.0.1/dist/css/kube.min.css"> 
+    <script src="kube-6.0.1/dist/js/kube.js"></script>
+    <script src="kube-6.0.1/dist/js/kube.min.js"></script>
 </head>
 <body style="margin-left:25px;">
  <br>
@@ -15,6 +17,27 @@
         <li class="active"><em><a href="spreadOperator.html">Spread Operator</a></em></li>
     </ul>
 </nav>
-    
+<h2 class="text-center">Spread Operator</h2>
+    <p>Spread Operator u operador de propagación en español.<br>En ES5, se puede encontrar el máximo de valores en una matriz usando el método <Mark>apply</Mark> en <Mark>Math.max</Mark> como esto:</p>
+<pre>
+Math.max.apply(null, [-1, 100, 9001, -32]); // 9001
+</pre>
+<p>En ES6, ahora se puede utilizar el operador de propagación para pasar una matriz de valores para ser utilizados como parámetros de una función:</p>
+<pre>
+Math.max(...[-1, 100, 9001, -32]); // 9001
+</pre>
+<p>
+Se puede concatenar literales  de arrays fácilmente con esta sintaxis intuitiva:
+</p>
+<pre>
+let cities = ['San Francisco', 'Los Angeles'];
+let places = ['Miami', ...cities, 'Chicago']; // ['Miami', 'San Francisco', 'Los Angeles', 'Chicago']
+</pre>
+   <nav id="breadcrumb-custom-separator" class="breadcrumb centered">
+    <ul>
+        <li><em><a href="index.html">Inicio</a></em></li>
+        <li class="active"><em><a href="spreadOperator.html">Spread Operator</a></em></li>
+    </ul>
+</nav>
 </body>
 </html>

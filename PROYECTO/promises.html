@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Promises</title>
+    <link rel="stylesheet" href="kube-6.0.1/dist/css/kube.css">
+    <link rel="stylesheet" href="kube-6.0.1/dist/css/kube.min.css"> 
+    <script src="kube-6.0.1/dist/js/kube.js"></script>
+    <script src="kube-6.0.1/dist/js/kube.min.js"></script>
+</head>
+<body style="margin-left:25px;">
+ <br>
+    <h1 class="title text-center">EcmaScript 2015</h1>
+   <nav id="breadcrumb-custom-separator" class="breadcrumb centered">
+    <ul>
+        <li><em><a href="index.html">Inicio</a></em></li>
+        <li class="active"><em><a href="promises.html">Promises</a></em></li>
+    </ul>
+</nav>
+<h2 class="text-center">Promises</h2>
+<p>Las promises o promesas permiten convertir un código horizontal (callback hell):</p>
+<pre>
+func1(function (value1) {
+    func2(value1, function (value2) {
+        func3(value2, function (value3) {
+            func4(value3, function (value4) {
+                func5(value4, function (value5) {
+                    // Do something with value 5
+                });
+            });
+        });
+    });
+});
+</pre>
+<p>En código vertical:</p>
+<pre>
+func1(value1)
+    .then(func2)
+    .then(func3)
+    .then(func4)
+    .then(func5, value5 => {
+        // Do something with value 5
+    });
+</pre>
+<p>Antes de ES6, se usaba<a href="https://github.com/petkaantonov/bluebird"> bluebird</a> o <a href="https://github.com/kriskowal/q">Q</a>. Ahora se tiene promises nativas:</p>
+<pre>
+new Promise((resolve, reject) =>
+    reject(new Error('Failed to fulfill Promise')))
+        .catch(reason => console.log(reason));
+</pre>
+<p>Donde se tiene dos manejadores, <b>resolve</b>(una función llamada cuando se cumple la promise) y <b>reject</b> (una función llamada cuando la promise es rechazada).</p>
+<blockquote>
+    <p><b>Beneficios de las promises:</b> El manejo de errores utilizando un montón de callbacks anidados puede ser caótico. Usando las promises, se tiene un camino claro a los errores de burbujeo de arriba y manejándolos apropiadamente. Además, el valor de una Promise después de que ha sido resuelto / rechazado es inmutable - nunca cambiará.</p>
+</blockquote>
+<p>A continuación un ejemplo práctico de una promise </p>
+<pre>
+var request = require('request');
+
+return new Promise((resolve, reject) => {
+  request.get(url, (error, response, body) => {
+    if (body) {
+        resolve(JSON.parse(body));
+      } else {
+        resolve({});
+      }
+  });
+});
+</pre>
+<p>También podemos <b>paralelizar</b> Promises para manejar una matriz de operaciones asíncronas utilizando <Mark>Promise.all ()</Mark>:</p>
+<pre>
+let urls = [
+  '/api/commits',
+  '/api/issues/opened',
+  '/api/issues/assigned',
+  '/api/issues/completed',
+  '/api/issues/comments',
+  '/api/pullrequests'
+];
+
+let promises = urls.map((url) => {
+  return new Promise((resolve, reject) => {
+    $.ajax({ url: url })
+      .done((data) => {
+        resolve(data);
+      });
+  });
+});
+
+Promise.all(promises)
+  .then((results) => {
+    // Do something with results of all our promises
+ });
+</pre>
+   <nav id="breadcrumb-custom-separator" class="breadcrumb centered">
+    <ul>
+        <li><em><a href="index.html">Inicio</a></em></li>
+        <li class="active"><em><a href="promises.html">Promises</a></em></li>
+    </ul>
+</nav>
+</body>
+</html>

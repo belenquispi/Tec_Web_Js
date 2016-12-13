@@ -3,12 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <title>Classes</title>
-       <link rel="stylesheet" href="kube-6.0.1/dist/css/kube.css">
-    <link rel="stylesheet" href="kube-6.0.1/dist/css/kube.min.css">
+    <link rel="stylesheet" href="kube-6.0.1/dist/css/kube.css">
+    <link rel="stylesheet" href="kube-6.0.1/dist/css/kube.min.css"> 
+    <script src="kube-6.0.1/dist/js/kube.js"></script>
+    <script src="kube-6.0.1/dist/js/kube.min.js"></script>
 </head>
 <body style="margin-left:25px;">
  <br>
     <h1 class="title text-center">EcmaScript 2015</h1>
+   <nav id="breadcrumb-custom-separator" class="breadcrumb centered">
+    <ul>
+        <li><em><a href="index.html">Inicio</a></em></li>
+        <li class="active"><em><a href="classes.html">Classes</a></em></li>
+    </ul>
+</nav>
+<h2 class="text-center">Classes</h2>
+<p>Antes de ES6, se implementaba Clases creando una función constructora y añadiendo propiedades extendiendo el prototipo:</p>
+<pre>
+function Person(name, age, gender) {
+    this.name   = name;
+    this.age    = age;
+    this.gender = gender;
+}
+
+Person.prototype.incrementAge = function () {
+    return this.age += 1;
+}
+</pre>
+<p>Y se creaba clases extendidas como lo siguiente:</p>
+<pre>
+function Personal(name, age, gender, occupation, hobby) {
+    Person.call(this, name, age, gender);
+    this.occupation = occupation;
+    this.hobby = hobby;
+}
+
+Personal.prototype = Object.create(Person.prototype);
+Personal.prototype.constructor = Personal;
+Personal.prototype.incrementAge = function () {
+    Person.prototype.incrementAge.call(this);
+    this.age += 20;
+    console.log(this.age);
+};
+</pre>
+<p>ES6 proporciona una sintáxis muy necesaria para hacer esto bajo cubierta. Se puede crear Clases directamente:</p>
+<pre>
+class Person {
+    constructor(name, age, gender) {
+        this.name   = name;
+        this.age    = age;
+        this.gender = gender;
+    }
+
+    incrementAge() {
+      this.age += 1;
+    }
+}
+</pre>
+<p>Y se extiende la clase usando la palabra clave <Mark>extends</Mark></p>
+<pre>
+    constructor(name, age, gender, occupation, hobby) {
+        super(name, age, gender);
+        this.occupation = occupation;
+        this.hobby = hobby;
+    }
+
+    incrementAge() {
+        super.incrementAge();
+        this.age += 20;
+        console.log(this.age);
+    }
+}
+</pre>
+<blockquote>
+    <p><b>Buena práctica:</b>Aunque la sintaxis para crear clases en ES6 oscurece cómo la implementación y los prototipos funcionan bajo la cuebierta, es una buena característica para los principiantes y permite escribir un código más limpio.</p>
+</blockquote>
    <nav id="breadcrumb-custom-separator" class="breadcrumb centered">
     <ul>
         <li><em><a href="index.html">Inicio</a></em></li>

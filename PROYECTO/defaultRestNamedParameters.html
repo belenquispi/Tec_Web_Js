@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <title>Default Parameters, Rest Parameters, Named </title>
     <link rel="stylesheet" href="kube-6.0.1/dist/css/kube.css">
-    <link rel="stylesheet" href="kube-6.0.1/dist/css/kube.min.css">
+    <link rel="stylesheet" href="kube-6.0.1/dist/css/kube.min.css"> 
+    <script src="kube-6.0.1/dist/js/kube.js"></script>
+    <script src="kube-6.0.1/dist/js/kube.min.js"></script>
 </head>
 <body style="margin-left:25px;">
  <br>
@@ -16,22 +18,74 @@
     </ul>
 </nav>
 <h2 class="text-center">Parameters</h2>
-<h3>Destructuring</h3>
-<p>Destructuring o en español desestructuración permite extraer valores de arrays y objetos, incluso si se encuentran profundamente anidados. Los valores obtenidos pueden ser almacenacenados en variables con una sintaxis conveniente.</p>
-<h4>Un ejemplo de Destructuring de Objects es el siguiente: 
-</h4>
+<p>En ES5, se tiene diferentes maneras de manejar funciones que necesitaban <b>valores predeterminados, argumentos indefinidos y parámetros nombrados</b>. Con ES6, se puede lograr todo esto y más utilizando una sintaxis más concisa.</p>
+<h3>Default Parameters 
+</h3>
 <pre>
-var luke = { occupation: 'jedi', father: 'anakin' };
-var occupation = luke.occupation; // 'jedi'
-var father = luke.father; // 'anakin'
+function addTwoNumbers(x, y) {
+    x = x || 0;
+    y = y || 0;
+    return x + y;
+}'
 </pre>
 
+<p>En ES6, se puede simplemente suministrar valores por defecto para parámetros en una función:</p>
 <pre>
-let luke = { occupation: 'jedi', father: 'anakin' };
-let {occupation, father} = luke;
-
-console.log(occupation); // 'jedi'
-console.log(father); // 'anakin'
+function addTwoNumbers(x=0, y=0) {
+    return x + y;
+}
 </pre>
+<pre>
+addTwoNumbers(2, 4); // 6
+addTwoNumbers(2); // 2
+addTwoNumbers(); // 0
+</pre>
+<h3>Rest Parameters</h3>
+<p>En ES5, se maneja un número indefinido de argumentos como:</p>
+<pre>
+function logArguments() {
+    for (var i=0; i &lt; arguments.length; i++) {
+        console.log(arguments[i]);
+    }
+}
+
+</pre>
+<p>Utilizando el operador <b>rest</b>, se puede pasar una cantidad indefinida de argumentos:</p>
+<pre>
+function logArguments(...args) {
+    for (let arg of args) {
+        console.log(arg);
+    }
+}
+</pre>
+<h3>Named Parameters</h3>
+<p>Uno de los patrones en ES5 para manejar los parámetros nombrados fue usar el patrón de objetos de opciones, adoptado desde jQuery.</p>
+<pre>
+function initializeCanvas(options) {
+    var height = options.height || 600;
+    var width  = options.width  || 400;
+    var lineStroke = options.lineStroke || 'black';
+}
+</pre>
+<p>Se puede lograr la misma funcionalidad usando la desestructuración como un parámetro formal para una función:</p>
+<pre>
+function initializeCanvas(
+    { height=600, width=400, lineStroke='black'}) {
+        // Use variables height, width, lineStroke here
+    }
+</pre>
+<p>Si se quiere que todo el valor sea opcional, se lo puede hacerlo desestructurando un objeto vacío:</p>
+<pre>
+function initializeCanvas(
+    { height=600, width=400, lineStroke='black'} = {}) {
+        // ...
+    }
+</pre>
+ <nav id="breadcrumb-custom-separator" class="breadcrumb centered">
+    <ul>
+        <li><em><a href="index.html">Inicio</a></em></li>
+        <li class="active"><em><a href="defaultRestNamedParameters.html">Parameters</a></em></li>
+    </ul>
+</nav>
 </body>
 </html>
