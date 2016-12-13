@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IIFEs</title>
+       <link rel="stylesheet" href="kube-6.0.1/dist/css/kube.css">
+    <link rel="stylesheet" href="kube-6.0.1/dist/css/kube.min.css">
+</head>
+<body style="margin-left:25px;">
+ <br>
+    <h1 class="title text-center">EcmaScript 2015</h1>
+   <nav id="breadcrumb-custom-separator" class="breadcrumb centered">
+    <ul>
+        <li><em><a href="index.html">Inicio</a></em></li>
+        <li class="active"><em><a href="iifes.html">IIFEs</a></em></li>
+    </ul>
+</nav>
+<h2 class="text-center"> Remplazo de los IIFEs por Blocks</h2>
+    <blockquote >
+    <p>Un uso común de <b>Immediately Invoked Function Expressions</b> es incluir valores dentro de su ámbito de aplicación. En <b>ES6</b>, ahora tenemos la capacidad de crear ámbitos basados en bloques y por lo tanto no están limitados puramente a ámbito basado en funciones.
+   </p>
+</blockquote>
+   <p>Ejemplo usando <b>Immediately Invoked Function Expressions</b>:</p>
+  <pre>
+(function () {
+    var food = 'Meow Mix';
+}());
+
+console.log(food); // Reference Error
+
+  </pre>
+<p>Usando bloques en <b>ES6</b>: </p>
+<pre>
+{
+    let food = 'Meow Mix';
+};
+
+console.log(food); // Reference Error
+</pre>
+  
+    
+</body>
+</html>

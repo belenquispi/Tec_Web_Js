@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Var vs Let vs Const</title>
+       <link rel="stylesheet" href="kube-6.0.1/dist/css/kube.css">
+    <link rel="stylesheet" href="kube-6.0.1/dist/css/kube.min.css">
+    <script src="kube-6.0.1/dist/js/kube.js"></script>
+    <script src="kube-6.0.1/dist/js/kube.min.js"></script>
+</head>
+<body style="margin-left:25px;">
+ <br>
+    <h1 class="title text-center">EcmaScript 2015</h1>
+   <nav id="breadcrumb-custom-separator" class="breadcrumb centered">
+    <ul>
+        <li><em><a href="index.html">Inicio</a></em></li>
+        <li class="active"><em><a href="varLetConst.html">Var vs Let vs Cons</a></em></li>
+    </ul>
+</nav>
+<h2 class="text-center"> Var vs Let vs Const</h2>
+    <blockquote >
+    <p>Además de <Mark>var</Mark>, ahora hay acceso a dos nuevos identificadoes para almacenar valores, estos son: <Mark>let</Mark> y <Mark>const</Mark>.
+   <br>
+    A diferencia de las declaraciones de <Mark>var</Mark> con las de <Mark>let</Mark> y <Mark>const</Mark> estas no permiten <b>hoisted</b>, lo que significa que las declaraiones no serán vistas fuera del alcance en el cual fueron asignados.
+   </p>
+</blockquote>
+   <p>Ejemplo usando <Mark>var</Mark>:</p>
+  <pre>
+var snack = 'Meow Mix';
+
+function getFood(food) {
+    if (food) {
+        var snack = 'Friskies';
+        return snack;
+    }
+    return snack;
+}
+
+getFood(false); // undefined
+  </pre>
+<p>Ahora, si usamos <Mark>let</Mark> en vez de <Mark>var</Mark> el resultado va variar, como esto: </p>
+<pre>
+let snack = 'Meow Mix';
+
+function getFood(food) {
+    if (food) {
+        let snack = 'Friskies';
+        return snack;
+    }
+    return snack;
+}
+
+getFood(false); // 'Meow Mix'
+</pre>
+    <p>Este cambio en el comportamiento destaca que tenemos que tener cuidado al refactorizar el código heredado que utiliza <Mark>var</Mark>. Ciegamente reemplazar instancias de <Mark>var</Mark> con <Mark>let</Mark> puede conducir a un comportamiento inesperado. </p>
+
+    <blockquote>Nota: <Mark>let</Mark> y <Mark>const</Mark> tienen un ámbito de bloque. Por lo tanto, hacer referencia a identificadores de ámbito de bloque antes de que se definan producirá un <Mark>ReferenceError</Mark>.</blockquote>
+<pre>
+console.log(x); // ReferenceError: x is not defined
+
+let x = 'hi';
+</pre>
+
+    <blockquote>Buena práctica: Dejar las declaraciones <Mark>var</Mark> dentro del código heredado para indicar que necesita ser refactorizado cuidadosamente. Cuando se trabaja en una nueva base de código, utilice <Mark>let</Mark> para variables que cambiarán su valor en el tiempo y <Mark>const</Mark> para variables que no se pueden reasignar.
+    </blockquote>
+</body>
+</html>
