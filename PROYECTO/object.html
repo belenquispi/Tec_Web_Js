@@ -15,5 +15,23 @@
         <li class="active"><em><a href="object.html">Destructuring objects</a></em></li>
     </ul>
 </nav>
+<h2 class="text-center">Destructuring Objects</h2>
+<h3>Destructuring</h3>
+<p>Destructuring o en español desestructuración permite extraer valores de arrays y objetos, incluso si se encuentran profundamente anidados. Los valores obtenidos pueden ser almacenacenados en variables con una sintaxis conveniente.</p>
+<h4>Un ejemplo de Destructuring de Objects es el siguiente: 
+</h4>
+<pre>
+var luke = { occupation: 'jedi', father: 'anakin' };
+var occupation = luke.occupation; // 'jedi'
+var father = luke.father; // 'anakin'
+</pre>
+
+<pre>
+let luke = { occupation: 'jedi', father: 'anakin' };
+let {occupation, father} = luke;
+
+console.log(occupation); // 'jedi'
+console.log(father); // 'anakin'
+</pre>
 </body>
 </html>

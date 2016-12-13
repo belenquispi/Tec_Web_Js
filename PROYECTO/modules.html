@@ -15,6 +15,134 @@
         <li class="active"><em><a href="modules.html">Modules export and import</a></em></li>
     </ul>
 </nav>
-    
+<h2 class="text-center">Modules</h2>
+<p>
+    Antes de ES6, se utilizaba bibliotecas como <a href="http://browserify.org/">Browserify</a> para crear módulos en el lado del cliente, y requieren de <b>Node.js</b>. Con ES6, ahora se puede utilizar directamente módulos de todos los tipos como: AMD y CommonJS.
+</p>
+<h3>Exporting in CommonJS</h3>
+<pre>
+module.exports = 1;
+module.exports = { foo: 'bar' };
+module.exports = ['foo', 'bar'];
+module.exports = function bar () {};
+</pre>
+
+<h3>Exporting in ES6</h3>
+<p>Con ES6, se tiene varias formas de exportación. Se puede realizar <b>Named Exports</b>:</p>
+<pre>
+export let name = 'David';
+export let age  = 25;
+</pre>
+<p>Además se puede exportar una lista de objetos:</p>
+<pre>
+function sumTwo(a, b) {
+    return a + b;
+}
+
+function sumThree(a, b, c) {
+    return a + b + c;
+}
+
+export { sumTwo, sumThree };
+</pre>
+<p>
+    También se puede exportar funciones, objetos y valores (etc.) simplemente usando la palabra clave <Mark><b>export</b></Mark>:
+</p>
+<pre>
+export function sumTwo(a, b) {
+    return a + b;
+}
+
+export function sumThree(a, b, c) {
+    return a + b + c;
+}
+</pre>
+<p>
+Y por último, se puede exportar enlaces predeterminados:
+</p>
+<pre>
+function sumTwo(a, b) {
+    return a + b;
+}
+
+function sumThree(a, b, c) {
+    return a + b + c;
+}
+
+let api = {
+    sumTwo,
+    sumThree
+};
+
+export default api;
+
+/* Which is the same as
+ * export { api as default };
+ */
+</pre>
+<blockquote>
+    <p><b>Buena práctica:</b> Utilizar siempre el método predeterminado <b>export default</b> al final del módulo. Esto deja en claro que es lo que se está exportando y ahorra tiempo al tener que averiguar qué nombre exprtó un valor. Más aún, la práctica común en los módulos de CommonJS es exportar un solo valor u objeto. Siguiendo este paradigma, hacemos que nuestro código sea fácilmente legible y nos permitamos interpolar entre los módulos CommonJS y ES6.</p>
+</blockquote>
+
+<h3>Importing in ES6</h3>
+<p>ES6 proporciona diversas maneras de importación. Podemos importar un archivo completo:</p>
+<pre>
+import 'underscore';
+</pre>
+<blockquote>
+Es importante tener en cuenta que la simple importación de un archivo completo ejecutará todo el código en el nivel superior de ese archivo.
+</blockquote>
+<p>Similar a Python, se realizan las llamadas a las importaciones:</p>
+<pre>
+import { sumTwo, sumThree } from 'math/addition';
+</pre>
+<p>
+También se puede cambiar el nombre de las importaciones como se indican:
+</p>
+<pre>
+import {
+    sumTwo as addTwoNumbers,
+    sumThree as sumThreeNumbers
+} from 'math/addition';
+</pre>
+<p>
+Además, podemos importar todas las cosas (también llamadas namespace import):
+</p>
+<pre>
+import * as util from 'math/addition';
+</pre>
+<p>
+Por último, se puede importar una lista de valores de un módulo:
+</p>
+<pre>
+import * as additionUtil from 'math/addition';
+const { sumTwo, sumThree } = additionUtil;
+</pre>
+<p>Ejemplo de un importación desde el enlace predeterminado como:</p>
+<pre>
+import api from 'math/addition';
+// Same as: import { default as api } from 'math/addition';
+</pre>
+<p>Si bien es mejor mantener las exportaciones simples, pero a veces podemos mezclar la importación por defecto y la importación mixta si es necesario. Cuando estamos exportando así por ejemplo:</p>
+<pre>
+// foos.js
+export { foo as default, foo1, foo2 };
+</pre>
+<p>Se puede también importar como los siguientes:</p>
+<pre>
+import foo, { foo1, foo2 } from 'foos';
+</pre>
+<p>Al importar un módulo exportado usando la sintaxis commonjs (como React) se puede hacer:</p>
+<pre>
+import React from 'react';
+const { Component, PropTypes } = React;
+</pre>
+<p>Esto también se puede simplificar más, usando:</p>
+<pre>
+import React, { Component, PropTypes } from 'react';
+</pre>
+<blockquote>
+    <p><b>Nota:</b> Los valores que se exportan son <b>enlaces</b>, no referencias. Por lo tanto, cambiar el enlace de una variable en un módulo afectará al valor dentro del módulo exportado. Evite cambiar la interfaz pública de estos valores exportados.</p>
+</blockquote>
 </body>
 </html>

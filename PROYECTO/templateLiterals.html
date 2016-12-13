@@ -16,19 +16,55 @@
     </ul>
 </nav>
 <h2>Template Literals</h2>
-    <p>Usando <b>Template Literals</b>, ahora podemos construir cadenas que tienen caracteres especiales en ellas sin necesidad de escaparlas explícitamente.</p>
+    <p>Usando <b>Template Literals</b>, ahora podemos construir strings que tienen caracteres especiales en ellas sin necesidad de escaparlas explícitamente.</p>
 <pre>
 var text = "This string contains \"double quotes\" which are escaped.";    
 </pre>
 <pre>
  let text = `This string contains "double quotes" which don't need to be escaped anymore.`;   
 </pre>
-<p>Los <b>Template Literals</b> también admiten interpolación, lo que hace que la tarea de concatenar cadenas y valores:</p>
+<p>Los <b>Template Literals</b> también admiten interpolación, lo que permite la tarea de concatenar strings y valores:</p>
 <pre>
 var name = 'Tiger';
 var age = 13;
 
 console.log('My cat is named ' + name + ' and is ' + age + ' years old.');
+</pre>
+<p>Mucho más simple que lo anterior se puede tener lo siguiente:</p>
+<pre>
+const name = 'Tiger';
+const age = 13;
+
+console.log(`My cat is named ${name} and is ${age} years old.`);</pre>
+<p>En <b>ES6</b> se manejan nuevas lineas de la siguiente manera:</p>
+<pre>
+var text = (
+    'cat\n' +
+    'dog\n' +
+    'nickelodeon'
+);
+</pre>
+<p>O también así:</p>
+<pre>
+var text = [
+    'cat',
+    'dog',
+    'nickelodeon'
+].join('\n');    
+</pre>
+<p>Los <b>Template Literals</b> conservarán las nuevas líneas sin tener que expresarlas explicitamente: </p>
+<pre>
+let text = ( `cat
+dog
+nickelodeon`
+);
+</pre>
+<p>
+    los <b>Template Literals</b> también pueden aceptar expresiones como la siguiente:
+</p>
+<pre>
+let today = new Date();
+let text = `The time and date is ${today.toLocaleString()}`;
 </pre>
 
 </body>
