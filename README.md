@@ -51,4 +51,40 @@ luego se crean los archivos de las nuevas vistas en el directorio views
 cada archivodebe tener el mismo nombre que se puso en la creación de las vistas. Cada archivo tiene como extensión .ejs
 
 
+## Generar controladores Sailsja
+
+Para generar constroladores se utiliza el siguiente comando:
+```
+< sails  generate controller NombreDelControlador
+```
+
+Para la editar el controlador que se ha creado nos dirigimos a la carpeta api/controllers 
+
+En esa carpeta se encuentra el nombre del controlador. 
+
+Dentro de ello se edita el objeto para las respuestas.
+
+```javascript
+module.exports = {
+    hola:function(req,res){
+        res.send('Hola');
+        
+    },
+     adios:function(req,res){
+        res.send('Adios');
+        
+    },
+ hora:function(req,res){
+        res.send('Hora');
+        
+    }
+	
+};
+```
+Para la verificación se dirige al la página web y en el url se escribe lo siguiente:
+
+```
+http://localhost:1337/saludo/adios
+```
+
     
