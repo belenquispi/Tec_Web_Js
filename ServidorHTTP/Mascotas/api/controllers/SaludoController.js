@@ -7,7 +7,23 @@
 
 module.exports = {
     hola:function(req,res){
-        res.send('Hola');
+        //res.send('Hola');
+        if(req.method=='GET')
+            {
+                res.json({nombre:'hola get'});
+            }
+        else
+            if(req.method=='POST')
+            {
+                res.json({nombre:'hola post'});
+            }
+        else
+            {
+                res.json({nombre:'hola todos'});
+            }
+    
+            
+    
         
     },
      adios:function(req,res){
@@ -17,7 +33,9 @@ module.exports = {
  hora:function(req,res){
         res.send('Hora');
         
-    }
+ },
+
+        
 	
 };
 
