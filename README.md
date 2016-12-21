@@ -87,4 +87,48 @@ Para la verificación se dirige al la página web y en el url se escribe lo sigu
 http://localhost:1337/saludo/adios
 ```
 
+
+///////////////////////////////////////
+## Generar modelos en Sailsjs
+
+```
+>sails generate model nombreModelo
+
+```
+
+
+## Generar APIs en Sailsjs
+
+```
+>sails generate api NombreAPI
+
+```
+
+Un Api es la fusión de un **controlador ** y un modelo.
+
+
+
+## API REST
+
+### Modelo de usuario
+Crear
+URL:
+
+```
+http://localhost:1337/
+```
+
+Metodo HTTP:
+´post´
+Datos:
+```javascript
+{
+nombre:'Belen',
+apellido:'Quispi´,
+correo:'mbaqs_24@live.com'
+}
+```
+     
+     
+     
      
