@@ -130,8 +130,34 @@
 <a name="desarrollo"></a>
 ## Desarrollo de la Práctica
 
-<p align="center"><img src="IMAGENES/comprobacionExportacion.jpg"> </p>
-<br>
+1)  Instalar *Sails.js*. Para lo cual se abre una consola de comandos, luego se ejecuta el siguiente comando:
+> npm install -g sails 
+
+<p align="center"><img src="Imagenes/instalarSails.jpg"> </p>
+
+2)  Ahora se procede a crear un proyecto con Sails, para lo cual hay que movilizarse al directorio en el cual se va  a crear el proyecto. En este caso se va ha crear en el directorio ServidorHTTP2. 
+
+3)  Para la crear el proyecto se lo hace mediante el siguiente comando:
+> sails new nombreProyecto
+
+En este caso el proyecto se va a llamar Proyecto1.
+<p align="center"><img src="Imagenes/instalarSails.jpg"> </p>
+
+4)  A continuación, se puede observar que se ha creado una carpeta denominada Proyecto1, la cual se creó en el directorio seleccionado. 
+
+<p align="center"><img src="Imagenes/instalarSails.jpg"> </p>
+
+5)  Ahora se levanta el servidor, para lo cual se cambia a la carpeta *Proyecto1*, y se ejecuta el siguiente comando para levantar el servidor:
+> sails lift
+
+<p align="center"><img src="Imagenes/instalarSails.jpg"> </p>
+
+6)  Para verificar que el servidor se ha levantado se accede a la siguiente URL ```
+7)
+
+
+
+
 
 <br>
 <a href="#Cabecera">Ir a la cabecera</a>
