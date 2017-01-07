@@ -141,23 +141,80 @@
 > sails new nombreProyecto
 
 En este caso el proyecto se va a llamar Proyecto1.
-<p align="center"><img src="Imagenes/instalarSails.jpg"> </p>
+<p align="center"><img src="Imagenes/crearProyectoSails.jpg"> </p>
+<p align="center"><img src="Imagenes/finalizacionProyectoSails.jpg"> </p>
 
 4)  A continuación, se puede observar que se ha creado una carpeta denominada Proyecto1, la cual se creó en el directorio seleccionado. 
 
-<p align="center"><img src="Imagenes/instalarSails.jpg"> </p>
+<p align="center"><img src="Imagenes/carpetaProyecto1.jpg"> </p>
 
 5)  Ahora se levanta el servidor, para lo cual se cambia a la carpeta *Proyecto1*, y se ejecuta el siguiente comando para levantar el servidor:
 > sails lift
 
-<p align="center"><img src="Imagenes/instalarSails.jpg"> </p>
+<p align="center"><img src="Imagenes/levantarServidor.jpg"> </p>
 
-6)  Para verificar que el servidor se ha levantado se accede a la siguiente URL ```
-7)
+6)  Para verificar que el servidor se ha levantado se accede a la siguiente URL 
+``` localhost:1337 ``` 
 
+<p align="center"><img src="Imagenes/verificacionServidor.jpg"> </p>
 
+7)En la carpeta *assets* se crea otra carpeta denomina *App*, la cual va a tener los tres siguientes archivos:
+*   index.html
+*   estilos.css
+*   app.js
 
+<p align="center"><img src="Imagenes/archivosApp.jpg"> </p>
 
+8) Modificar el archivo index.html, con el siguiente código, en el cual se realiza un enlace a los archivos estilos.css y app.js:
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+   <h1>¡¡¡Ya estoy aquí!!!</h1>
+   <script src="app.js"></script>
+    
+</body>
+</html>
+
+```
+
+9) Modificar el archivo estilos.css, el cual va a permitir que la página html tenga de fondo un color violeta y las letras de color blanco.
+```css
+body{
+    background-color: blueviolet;
+    color: white;
+}
+
+```
+
+10) Modificar el archivo app.js, el cual va a enviar un mensaje de alerta al momento de abrir la página. 
+```javascript
+alert("No es bueno usar alertas");
+
+```
+
+11) Para verificar que los archivos css y js realizan su efecto en la página html que se ha sido escrito en el archivo index.html se debe ingresar a la siguiente URL ```http://localhost:1337/App/index.html``` y aparecerá una página como la siguiente:
+
+<p align="center"><img src="Imagenes/paginaHTML.jpg"> </p>
+
+12) Crear una carpeta denominada *fotos* en la carpeta *App*, en la cual se va ha almacenar las fotos a ser usadas en la página. 
+
+<p align="center"><img src="Imagenes/carpetaFotos.jpg"> </p>
+
+13) Se puede acceder a la carpeta *fotos* y a los archivos de esta. Esto se puede realizar accediendo a partir de la URL  de la siguiente forma ``` http://localhost:1337/App/fotos/gatos.jpg ```
+
+<p align="center"><img src="Imagenes/carpetaProyecto1.jpg"> </p>
+
+*   También se puede agregar la imagen a la página *HTML*, para ello se usa el tag ```<img>```. Entonces la imagen aparecerá en la página de la siguiente URL: ``` http://localhost:1337/App/index.html ``` 
+
+<p align="center"><img src="Imagenes/fotoEnHTML.jpg"> </p>
+
+14) En la carpeta *tasks* se encuentra un archivo denominado *pipeline.js*, en el cual se encuentran la referencia de los archivos *css * que modifican al proyecto. 
 
 <br>
 <a href="#Cabecera">Ir a la cabecera</a>
