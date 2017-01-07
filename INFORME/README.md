@@ -214,7 +214,225 @@ alert("No es bueno usar alertas");
 
 <p align="center"><img src="Imagenes/fotoEnHTML.jpg"> </p>
 
-14) En la carpeta *tasks* se encuentra un archivo denominado *pipeline.js*, en el cual se encuentran la referencia de los archivos *css * que modifican al proyecto. 
+14) En la carpeta *tasks* se encuentra un archivo denominado *pipeline.js*, en el cual se encuentran la referencia de los archivos *css* que son inyectados en el proyecto que se ha creado. 
+```
+// CSS files to inject in order
+//
+// (if you're using LESS with the built-in default config, you'll want
+//  to change `assets/styles/importer.less` instead.)
+var cssFilesToInject = [
+  'styles/**/*.css'
+];
+```
+
+15) Si se desea que un archivo *css* sea inyectado en el proyecto este debe estar en la carpeta *style* de la carpeta *assets*. Crear un archivo denominado *estilos.css*, en este se va a definir ciertos estilos para el proyecto.
+
+<p align="center"><img src="Imagenes/archivosDeStyles.jpg"> </p>
+
+*   En el archivo *estilos.css* se definen ciertos estilos, tal como se muestra en el siguiente código
+```css
+body {
+    background-color: fuchsia;
+    color: green;
+}
+```
+
+16) Si se referencia el archivo *css* que se creo anteriormente en el archivo *pipeline.js*, este cambiará los estilos de la página de inicio del proyecto, tal como se muestra en la siguiente imagen.
+
+<p align="center"><img src="Imagenes/paginaNuevosEstilos.jpg"> </p>
+
+*   Para que la página anterior se pueda ver de esa nueva manera, el archivo *pipeline.js* tendría el siguiente código:
+```// CSS files to inject in order
+//
+// (if you're using LESS with the built-in default config, you'll want
+//  to change `assets/styles/importer.less` instead.)
+var cssFilesToInject = [
+  //'styles/**/*.css'
+    'styles/estilos.css'
+];
+```
+
+17) Manejar las vistas, las cuales se encuentran en la carpeta *views* y cada archivo cuenta con un formato *.ejs*, tal como se puede ver en la siguiente imagen.
+
+<p align="center"><img src="Imagenes/carpetaViews.jpg"> </p>
+
+18) En la vista denominada *homepage* se encuentra toda la información que es visualizada en la página de inicio del proyecto. Para ello se se procede a cambiar su contenido ingresando el siguiente código en la vista *homepage*.
+```
+<style>
+    .rojo{
+
+        background-color:red;
+        color: white;
+
+    }
+</style>
+<div class ="rojo">
+
+<h1>Aquí empieza el homepage</h1>
+
+
+<h1>!!!Hola a todos¡¡¡</h1>
+
+
+<h1>Aquí finaliza el homepage</h1>
+</div>
+```
+*   Al actualizar la página web se tendría de la siguiente manera.
+
+<p align="center"><img src="Imagenes/homepage.jpg"> </p>
+
+19) En cambio las demás vistas como: *403* , *404* y *500* son mostradas al usuario en el navegador si se presento algún tipo de error. 
+
+*   Un ejemplo podría ser querer ingresar a un archivo que no se encuentra disponible, por lo cual nos saldría la siguiente view.
+
+<p align="center"><img src="Imagenes/error404.jpg"> </p>
+
+20) Crear vistas, las cuales mántendran la información en este caso una de Quito y la otra de Guayaquil. Para ello se crean dos archivos dentro de la carpeta *views*, con el nombre de *Quito* y *Guayaquil*.
+
+<p align="center"><img src="Imagenes/crearViews.jpg"> </p>
+
+21) Para de mostración del uso de las vistas, se ingresará un código muy simple en cada una de las vistas creadas.
+*   **Quito**
+```html
+<h1>Quito</h1>
+```
+
+*   **Guayaquil**
+```html
+<h1>Guayaquil</h1>
+```
+
+22) Para acceder a las *views* es necesario configurar el archivo *routes.js*, el cual se encuentra en la carpeta *config*.
+
+<p align="center"><img src="Imagenes/carpetaConfig.jpg"> </p>
+
+23) El archivo *roues.js* debe se modificado para que se vea de la siguiente manera. Donde ya se hace referencia a las dos vistas que fueron creadas ultimamente. 
+
+```
+module.exports.routes = {
+
+  /***************************************************************************
+  *                                                                          *
+  * Make the view located at `views/homepage.ejs` (or `views/homepage.jade`, *
+  * etc. depending on your default view engine) your home page.              *
+  *                                                                          *
+  * (Alternatively, remove this and add an `index.html` file in your         *
+  * `assets` directory)                                                      *
+  *                                                                          *
+  ***************************************************************************/
+
+  '/': {
+    view: 'homepage'
+  },
+    '/Quito': {
+    view:'quito'
+  },
+     '/Guayaquil': {
+    view:'guayaquil'
+  }
+```
+
+24) Como se ha modificados archivos de configuración del servidor es necesario que se reinicie el sails. Luego ya se podrá acceder a las nuevas vistas que se han creado. Los URLs a ser usados serían los siguientes: ```http://localhost:1337/Quito``` y ```http://localhost:1337/Guayaquil```
+*   **Quito**
+<p align="center"><img src="Imagenes/viewQuito.jpg"> </p>
+
+*   **Guayaquil**
+<p align="center"><img src="Imagenes/viewGuayaquil.jpg"> </p>
+
+25) Modificar la vista *layout.ejs* , el cual cambiará la manera en como se muestra la vista *homepage*. Para lo que se cambia el códgo que posee por el siguiente.
+```
+ <!--STYLES-->
+    <link rel="stylesheet" href="/styles/estilos.css">
+    <!--STYLES END-->
+  </head>
+
+
+  <body>
+  <h1>Hola</h1>
+  <ul>
+      <li><a href="/Quito">Quito</a>
+      </li>
+      <li>
+          <a href="/Guayaquil">Guayaquil</a>
+      </li>
+
+  </ul>
+  <%- body %>
+      <h1>Adiós</h1>
+```
+
+*   Los cambios realizados se visualizan de la sigueinte manera:
+
+<p align="center"><img src="Imagenes/modificacionPipeline.jpg"> </p>
+
+26) Ahora se crea un controlador, para lo cual se usa el siguiente comando.
+> sails generate controller nombreControlador.
+
+En este caso el controlador se llamará *Saludo*.
+
+<p align="center"><img src="Imagenes/crearControlador.jpg"> </p>
+
+27) Para verificar que se ha creado el controlador, se procede a verificar que se haya creado un archivo del controlador con el nombre del controlador dentro de la carpeta */api/controllers*. Tal como se muestra en la siguiente imagen.
+
+<p align="center"><img src="Imagenes/controllerSaludo.jpg"> </p>
+
+28) Modificar el archivo *SaludoController*, en el cual se ingresa el siguiente código, el cual permite manejar las peticiones que se realizan hacia el servidor web.
+
+```
+module.exports = {
+
+    hola: function (req, res) {
+        var parametros = req.allParams();
+
+        if (req.method == 'GET') {
+
+            res.json({
+                    nombre: 'Hola get',
+                    para:parametros
+                });
+
+
+        } else {
+
+            if (req.method == 'POST') {
+                res.json({
+                    nombre: 'Hola post'
+                });
+            } else {
+                res.json({
+                    nombre: 'Hola a todos'
+                });
+            }
+
+        }
+
+    },
+    adios: function (req, res) {
+        res.send('Adios');
+    },
+    queTal: function (req, res) {
+        res.send('Quetal');
+    }
+
+
+};
+```
+29) Para verificar que los controladores funcionen correctamente se los verifica usando el navegador y con la opción GET.
+* Si se usa la URL ```http://localhost:1337/Saludo/queTal```el servidor nos responde de la siguiente manera.
+
+<p align="center"><img src="Imagenes/queTal.jpg"> </p>
+
+* Similar si se usa la URL ```http://localhost:1337/Saludo/adios```.
+
+<p align="center"><img src="Imagenes/adios.jpg"> </p>
+
+* En cambio si se usa la URL ```http://localhost:1337/Saludo/hola```el servidor nos responde usando un objeto json.
+
+<p align="center"><img src="Imagenes/hola.jpg"> </p>
+
+30) Para verificar el comportamiento con la petición POST, se lo realiza usando Postman.
+
+<p align="center"><img src="Imagenes/post.jpg"> </p>
 
 <br>
 <a href="#Cabecera">Ir a la cabecera</a>
@@ -222,7 +440,12 @@ alert("No es bueno usar alertas");
 
 <a name="conrec"></a>
 ## Conclusiones y Recomendaciones
-*
+*   Sails.js permite crear servidores web, usando el gestor de paquetes npm.
+*   La carpeta assets mantiene todos los archivos que van a poder ser vistos por los usuarios en los navegadores.
+*   Se puede crear vistas tanto como se crean necesarias, y se las pueden vincular como se vio en la presente práctica.
+*   Los controladores permiten manejar los tipos de peticiones que se las realizan el servidor y como este responde.
+*   Se recomienda revisar el correcto uso de los comando a ser ejecutados y en que directorios se los ejecuta para obtener los resultados deseados.
+
 
 <br>
 <a href="#Cabecera">Ir a la cabecera</a>
