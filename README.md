@@ -147,4 +147,7 @@ elimina un usuario
 actualiza un usuario.     
      
 Si se desea desactivar esta opcion se lo debe hacer en el archivo **blueprints.js** que se encuentra en directorio **config**     
-     
+
+## Crear en modelos
+
+http://sailsjs.com/documentation/reference/waterline-orm/models/create

@@ -10,7 +10,8 @@ module.exports = {
     attributes: {
         nombre: {
             type: 'string',
-            minLength: 5
+            minLength: 5,
+            require:true
         },
         apellido: {
             type: 'string',
