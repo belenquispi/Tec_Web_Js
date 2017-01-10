@@ -128,7 +128,23 @@ apellido:'Quispi´,
 correo:'mbaqs_24@live.com'
 }
 ```
+
+
+# BLUEPRINTS
+
+
+Mediante la URL el sails permite implementar métodos en los modelos creados, usando GET, los cuales se denomina shortcuts. 
+Esto funciona siempre que se encuentre habilitado
+
+``` http://localhost:1337/Usuario/create?nombres=Jaime&apellidos=Sotamba
+ ``` crea un nuevo usuario.
+ 
+ ```   http://localhost:1337/Usuario/destroy/42
+```
+elimina un usuario
+
+```    http://localhost:1337/Usuario/update/41?nombres=Rositaa ```
+actualiza un usuario.     
      
-     
-     
+Si se desea desactivar esta opcion se lo debe hacer en el archivo **blueprints.js** que se encuentra en directorio **config**     
      
