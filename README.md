@@ -151,3 +151,24 @@ Si se desea desactivar esta opcion se lo debe hacer en el archivo **blueprints.j
 ## Crear en modelos
 
 http://sailsjs.com/documentation/reference/waterline-orm/models/create
+
+
+## Crear relaciones 
+Crear un nuevo modelo, para lo cual se usa los comandos
+> sails generate api Raza
+> sails generate api Mascota
+
+al generar el api, este cre tanto el modelo como el controlador.
+
+
+```http://sailsjs.com/documentation/concepts/models-and-orm/associations
+```
+``` //Mascotas es el nombre en plural del modelo a relacionarse.
+        mascotas: {
+            //Collection es el nombre dl Medelo en Sails
+            collection: 'Mascota',
+            // Via es el campo por el cual se vaa a relacionar
+            via: 'idRaza'
+        }
+``` 
+
