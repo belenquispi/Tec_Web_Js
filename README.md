@@ -172,3 +172,27 @@ al generar el api, este cre tanto el modelo como el controlador.
         }
 ``` 
 
+# Renderización de las vistas
+
+```http://sailsjs.com/documentation/reference/response-res/res-view ```
+
+Crear un nuevo controlador denomindado **Rutas**
+Tiene la siguiente información
+ ```
+module.exports = {
+    
+    home: function(res,req)
+    {
+        // res.view (String: Nombre vista, Datos JSON)
+        return res.view('vista/home');
+    }
+	
+};
+```
+Crear una carpeta denominada **vistas** dentro de la carpeta **views** 
+Luego crear el archivo **home.js**  que tendría la siguiente información
+
+```<h1>Home<h1>```
+
+
+Ahora definir las rutas para la vista **home.js**
