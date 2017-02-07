@@ -31,10 +31,23 @@ module.exports = {
                 });
             } else {
                 // bad Request
-                return res.badRequest('No envia todos los parametros');
+                  return res.view ('vistas/Error', {
+            error:{
+                descripcion:"Llenar todos los parámetros, apellidos y nombres ",
+                rawError: "Fallo en el envío de parametros",
+                url:"/Usuario/crearUsuario"
+            }
+        })
+              
             }
         } else {
-            return res.badRequest('Metodo invalido');
+              return res.view ('vistas/Error', {
+            error:{
+                descripcion:"Error en el uso del metodo HTTP",
+                rawError: "HTTP Invalido",
+                url:"/Usuario/crearUsuario"
+            }
+        })
         }
 
     },
