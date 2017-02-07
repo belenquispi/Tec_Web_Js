@@ -23,18 +23,19 @@ module.exports = {
     },
     
   crearUsuario: function (req, res) {
-    return res.view('vistas/crearUsuario', {
+    return res.view('vistas/Usuario/crearUsuario', {
       title: 'Crear Usuarios'
     })
   },
     error:function(req,res)
     {
-        return res.view 'vistas/Error', {
+        return res.view ('vistas/Error', {
             error:{
                 descripcion:"Usted esta por error en esra Ruta dirifase a Inicio",
-                rawError: "Ruta equivocada"
+                rawError: "Ruta equivocada",
+                url:"/Inicio"
             }
-        }
+        })
     }
 
 };
