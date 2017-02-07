@@ -20,15 +20,28 @@ module.exports = {
         if (req.method == 'POST') {
             if (parametros.nombres && parametros.apellidos) {
                 //creo el usuario
-                Usuario.create({
-                    nombres: parametros.nombres,
+               
+                var usuarioCrear = {
+                     nombres: parametros.nombres,
                     apellidos: parametros.apellidos,
                     correo: parametros.correo
-                }).exec(function (error, usuarioCreado) {
-                    if (error) return res.serverError()
-                    sails.log.info(usuarioCreado);
-                    return res.ok(usuarioCreado);
-                });
+                }
+                
+                 if(usuarioCrear.correo=="")
+                    {
+                        delete usuarioCrear.correo;
+                    }
+                
+                Usuario.create(usuarioCrear).exec(function (error, usuarioCreado) {
+                    if (error) 
+                         return res.view ('vistas/Error', {
+            error:{
+                descripcion:"Fallo al crear un usuario ",
+                rawError: error,
+                url:"/Usuario/crearUsuario"
+                }
+        })
+                })
             } else {
                 // bad Request
                   return res.view ('vistas/Error', {
@@ -45,10 +58,12 @@ module.exports = {
             error:{
                 descripcion:"Error en el uso del metodo HTTP",
                 rawError: "HTTP Invalido",
-                url:"/Usuario/crearUsuario"
+                url:"/CrearUsuario"
             }
         })
         }
+        
+         return res.view ('vistas/Usuario/crearUsuario');
 
     },
     crearUsuarioForm: function (req, res) {
