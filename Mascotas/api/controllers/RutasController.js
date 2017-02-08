@@ -27,6 +27,29 @@ module.exports = {
       title: 'Crear Usuarios'
     })
   },
+    
+    
+ listarUsuarios:function(req,res)
+    {
+        Usuario.find()
+            .exe(function(error,usuariosEncontrados){
+            if(error) {
+                 res.view ('vistas/Error', {
+                error:{
+                descripcion:"Hubo en problema cargando los usuarios",
+                rawError: error,
+                url:"/ListarUsuarios"
+            }
+            } );
+                 }
+        res.view ('vistas/Usuario/listarUsuarios', {
+            usuarios:usuariosEncontrados;  
+        });
+        })
+    },    
+    
+    
+    
     error:function(req,res)
     {
         return res.view ('vistas/Error', {
