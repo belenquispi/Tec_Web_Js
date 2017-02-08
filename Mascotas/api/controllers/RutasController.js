@@ -29,23 +29,25 @@ module.exports = {
   },
     
     
- listarUsuarios:function(req,res)
-    {
+ listarUsuarios: function (req, res) {
+
         Usuario.find()
-            .exe(function(error,usuariosEncontrados){
-            if(error) {
-                 res.view ('vistas/Error', {
-                error:{
-                descripcion:"Hubo en problema cargando los usuarios",
-                rawError: error,
-                url:"/ListarUsuarios"
-            }
-            } );
-                 }
-        res.view ('vistas/Usuario/listarUsuarios', {
-            usuarios:usuariosEncontrados;  
-        });
-        })
+            .exec(function (errorIndefinido, usuariosEncontrados) {
+
+                if (errorIndefinido) {
+                    res.view('vistas/Error', {
+                        error: {
+                            desripcion: "Hubo un problema cargando los Usuarios",
+                            rawError: errorIndefinido,
+                            url: "/ListarUsuarios"
+                        }
+                    });
+                }
+            
+                res.view('vistas/Usuario/ListarUsuarios', {
+                    usuarios:usuariosEncontrados
+                });
+            })
     },    
     
     
