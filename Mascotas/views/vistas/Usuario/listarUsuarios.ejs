@@ -5,7 +5,7 @@
         <p>Aqui se listan todos los usuarios del sistema de mascotas.</p>
     </div>
     <div class="col-sm-3">
-        <a href="/CrearUsuario" class="btn btn-block btn-success">
+       <a href="/CrearUsuario" class="btn btn-block btn-success">
            Crear Usuario
        </a>
     </div>
@@ -14,22 +14,14 @@
 
 
 <% for(var i=0; i<usuarios.length; i++) {%>
-
     <div class="row ma-margen-top-bottom">
         <div class="col-sm-1"></div>
-
         <div class="col-sm-4">
-
             <div class="text-center ma-borde ma-padding-top-bottom">
                 <h1> <%= usuarios[i].apellidos %></h1>
             </div>
-
         </div>
-
-
-
         <div class="col-sm-1"></div>
-
         <div class="col-sm-5 text-center">
             <div class="text-center ma-borde" style="margin-top: 40px;">
                 <p>
@@ -41,12 +33,11 @@
                 </p>
             </div>
         </div>
-
         <div class="col-sm-1">
             <a href="/Usuario/BorrarUsuario?id=<%= usuarios[i].id %>" class="btn btn-danger btn-block">X</a>
-            <a href="EditarUsuario?id=<%= usuarios[i].id %>" class="btn btn-info btn-block">Edit</a>
-
+            <a href="/EditarUsuario?id=<%= usuarios[i].id %>" class="btn btn-info btn-block">Edit</a>
+            
         </div>
     </div>
-
     <% }%>
+    
