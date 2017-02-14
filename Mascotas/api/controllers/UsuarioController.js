@@ -144,7 +144,8 @@ module.exports = {
             var usuarioAEditar = {
                 nombres: parametros.nombres,
                 apellidos: parametros.apellidos,
-                correo: parametros.correo
+                correo: parametros.correo,
+                password: parametros.password
             }
 
             if (usuarioAEditar.nombres == "") {

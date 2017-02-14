@@ -33,6 +33,9 @@ module.exports.routes = {
      ***************************************************************************/
 
     'get /': 'RutasController.home',
+    '/': 'login',
+    'get /': {
+    viem:'login' },
 
     'get /Inicio': 'RutasController.home',
 
