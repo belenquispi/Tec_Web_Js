@@ -25,7 +25,7 @@ module.exports = {
                         error: {
                             desripcion: "Error inesperado del servidor",
                             rawError: errorInesperado,
-                            url: "/Login"
+                            url: "/login"
                         }
                     });
                 }
@@ -40,23 +40,24 @@ module.exports = {
                                 error: {
                                     desripcion: "Error Inesperado",
                                     rawError: err,
-                                    url: "/Login"
+                                    url: "/login"
                                 }
                             });
                         },
                         incorrect: function () {
-                            
+
                             return res.view('vistas/Error', {
                                 error: {
                                     desripcion: "Ingrese su password correctamente",
                                     rawError: "Password Incorrecta",
-                                    url: "/Login"
+                                    url: "/login"
                                 }
                             });
 
                         },
                         success: function () {
-                            return res.ok("Credencial Segura")
+                            req.session.credencialSegura = true;
+                            return res.view("vistas/home");
                         },
                     });
 
@@ -68,7 +69,7 @@ module.exports = {
                         error: {
                             desripcion: "No se encontro al Usuario",
                             rawError: "No existe Usuario",
-                            url: "/Login"
+                            url: "/login"
                         }
                     });
                 }
@@ -78,7 +79,7 @@ module.exports = {
                 error: {
                     desripcion: "Necesitamos su correo y password",
                     rawError: "No envia Parametros",
-                    url: "/Login"
+                    url: "/"
                 }
             });
         }
@@ -88,7 +89,15 @@ module.exports = {
 
 
 
+    },
+    credenciales: function (req, res) {
+        if (req.session.credencialSegura) {
+            return res.ok("Si tiene la credencial Segura");
+        } else {
+            return res.forb
+        }
     }
+
 
     //    DONE - Validar si envian parametros
 

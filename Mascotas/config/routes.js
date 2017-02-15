@@ -33,7 +33,7 @@ module.exports.routes = {
      ***************************************************************************/
 
     'get /': 'RutasController.home',
-    '/': 'login',
+    'get /login':'login',
     'get /': {
     view:'login' },
 
