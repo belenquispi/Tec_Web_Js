@@ -39,6 +39,6 @@ module.exports.policies = {
          error: true,
          crearUsuario: ['autenticado'],
          listarUsuarios: ['autenticado'],
-         editarUsuario: ['autenticado'],
+         editarUsuario: ['autenticado', 'esElMismoUsuario'],
 	 }
 };
