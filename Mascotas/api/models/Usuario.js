@@ -7,6 +7,7 @@
 
 var Passwords = require('machinepack-passwords');
 
+
 module.exports = {
 
     attributes: {
@@ -23,54 +24,42 @@ module.exports = {
         correo: {
             type: 'string',
             email: true,
-            required: true,
+            required:true,
             unique:true
         },
         password: {
             type: 'string',
             defaultsTo: "123456"
-
         }
     },
-
     beforeCreate: function (values, cb) {
-        sails.log.info(values);
-        var Passwords = require('machinepack-passwords');
 
-        // Encrypt a string using the BCrypt algorithm.
+        sails.log.info(values);
+
+        //         cb("hola") //Error
+        //        cb() //OK
+
         Passwords.encryptPassword({
             password: values.password,
         }).exec({
-            // An unexpected error occurred.
             error: function (err) {
-
+                cb(err)
             },
-            // OK.
             success: function (result) {
                 values.password = result;
                 cb()
             },
         });
-
     },
+    beforeUpdate: function (values, cb) {
 
-
-    beforeUpdare: function (values, cb) {
         if (values.password) {
-
-
-            sails.log.info(values);
-            var Passwords = require('machinepack-passwords');
-
-            // Encrypt a string using the BCrypt algorithm.
             Passwords.encryptPassword({
                 password: values.password,
             }).exec({
-                // An unexpected error occurred.
                 error: function (err) {
-
+                    cb(err)
                 },
-                // OK.
                 success: function (result) {
                     values.password = result;
                     cb()
@@ -80,6 +69,11 @@ module.exports = {
             cb()
         }
 
+
     }
+
+
+
+
 
 };

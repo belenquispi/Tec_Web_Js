@@ -25,7 +25,7 @@ module.exports = {
                         error: {
                             desripcion: "Error inesperado del servidor",
                             rawError: errorInesperado,
-                            url: "/login"
+                            url: "/Login"
                         }
                     });
                 }
@@ -40,7 +40,7 @@ module.exports = {
                                 error: {
                                     desripcion: "Error Inesperado",
                                     rawError: err,
-                                    url: "/login"
+                                    url: "/Login"
                                 }
                             });
                         },
@@ -50,14 +50,19 @@ module.exports = {
                                 error: {
                                     desripcion: "Ingrese su password correctamente",
                                     rawError: "Password Incorrecta",
-                                    url: "/login"
+                                    url: "/Login"
                                 }
                             });
 
                         },
                         success: function () {
-                            req.session.credencialSegura = true;
+
+                            req.session.credencialSegura = UsuarioEncontrado;
+
                             return res.view("vistas/home");
+
+
+
                         },
                     });
 
@@ -69,7 +74,7 @@ module.exports = {
                         error: {
                             desripcion: "No se encontro al Usuario",
                             rawError: "No existe Usuario",
-                            url: "/login"
+                            url: "/Login"
                         }
                     });
                 }
@@ -79,7 +84,7 @@ module.exports = {
                 error: {
                     desripcion: "Necesitamos su correo y password",
                     rawError: "No envia Parametros",
-                    url: "/"
+                    url: "/Login"
                 }
             });
         }
@@ -90,22 +95,28 @@ module.exports = {
 
 
     },
-    credenciales: function (req, res) {
+    tieneSesion: function (req, res) {
         if (req.session.credencialSegura) {
-            return res.ok("Si tiene la credencial Segura");
+            return res.ok("Si tiene la credencial Segura")
         } else {
-            return res.forb
+            return res.forbidden();
         }
+    },
+    logout: function (req, res) {
+        req.session.credencialSegura = undefined;
+
+        return res.view("login");
     }
+
 
 
     //    DONE - Validar si envian parametros
 
     //    DONE - Buscar por correo al usuario
 
-    //    Comparar el password
+    //    DONE - Comparar el password
 
-    //    Entregar credencial
+    //    DONE - Entregar credencial
 
 
 

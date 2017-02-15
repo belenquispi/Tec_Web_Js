@@ -22,18 +22,19 @@
 
 
                 <input type="email" class="form-control" placeholder="Ingrese su correo" name="correo" value="<%= usuarioAEditar.correo %>">
-               
-                   <div class="form-group">
-                   <label>Password</label>
-                 <input type="password" class="form-control" placeholder="Ingrese su password" name="password" value="<%= usuarioAEditar.password %>">
-                </div>
 
                 <input type="hidden" name="idUsuario" value="<%= usuarioAEditar.id %>">
-                
 
 
 
             </div>
+            
+            
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" class="form-control" placeholder="Ingrese su nuevo Password" name="password">
+            </div>
+            
             <button type="submit" class="btn btn-success btn-block">Editar Usuario :)</button>
         </form>
 

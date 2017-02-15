@@ -157,7 +157,9 @@ module.exports = {
             if (usuarioAEditar.correo == "") {
                 delete usuarioAEditar.correo
             }
-            
+            if (usuarioAEditar.password == "") {
+                delete usuarioAEditar.password
+            }
             
 
             Usuario.update({
