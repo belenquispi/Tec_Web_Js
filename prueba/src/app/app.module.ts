@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 
+// Decorador
 @NgModule({
   declarations: [
     AppComponent
