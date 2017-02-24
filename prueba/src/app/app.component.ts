@@ -19,13 +19,15 @@ export class AppComponent implements OnInit {
   constructor(private _http: Http,
               private _masterURL: MasterURLService) {
   }
-
   ngOnInit() {
     this._http.get(this._masterURL.url+"Tienda")
       .subscribe(
         (res:Response)=>{
-          console.log(res.json())
-          this.tiendas=res.json()
+          console.log(res.json());
+          this.tiendas=res.json().map((value)=>{
+            value.formularioCerrado=true;
+            return value;
+          });
         },
         (err)=>{
           console.log(err)
@@ -42,21 +44,20 @@ export class AppComponent implements OnInit {
       // .subscribe(respuesta => console.log("respuesta", respuesta));
       .subscribe(
         (res)=>{
-          console.log("No hubo Errores")
+          console.log("No hubo Errores");
           console.log(res);
-          this.tiendas.push(res.json())
+          this.tiendas.push(res.json());
           this.nuevaTienda={};
-          this.disabledButtons.NuevaTiendaFormSubmitButton=true;
+          this.disabledButtons.NuevaTiendaFormSubmitButton=false;
         },
         (err)=>{
+          this.disabledButtons.NuevaTiendaFormSubmitButton=false;
           console.log("Ocurrio un error",err);
-          this.disabledButtons.NuevaTiendaFormSubmitButton=true;
         },
         ()=>{
-          console.log("Terminamos la función vamos a las casas");
-          this.disabledButtons.NuevaTiendaFormSubmitButton=true;
+          console.log("Termino la función vamos a las casas");
         }
-      )
+      );
 
     //
     // .post("http://localhost:1337/Tienda", formulario.valores)
@@ -80,5 +81,19 @@ export class AppComponent implements OnInit {
         }
       )
   }
-
+  actualizartienda(tienda:any){
+    let parametros = {
+      nombre:tienda.nombre
+    };
+    this._http.put(this._masterURL.url+"Tienda/"+tienda.id,parametros)
+      .subscribe(
+        (res)=>{
+          tienda.formularioCerrado=!tienda.formularioCerrado;
+          console.log("Respuesta", res.json());
+        },
+        (err)=>{
+          console.log("Error"+err);
+        }
+      )
+  }
 }

@@ -16,8 +16,8 @@
         <div class="form-group">
 
           <label>Tienda</label>
-          <div class="animated slideInUp" [hidden]="!nombre.errors"  >
-               <span class="bg-primary "  *ngIf="nombre.errors && (nombre.dirty || nombre.touched)"> Ingrese un nombre mínimo con 4 caracteres</span>
+          <div class="animated slideInUp" [hidden]="!nombre.errors">
+            <span class="bg-primary " *ngIf="nombre.errors && (nombre.dirty || nombre.touched)"> Ingrese un nombre mínimo con 4 caracteres</span>
           </div>
           <input required
                  minlength="5"
@@ -26,44 +26,62 @@
                  placeholder="digite un nombre de la Tienda como: Adidas"
                  name="nombre"
                  [(ngModel)]="nuevaTienda.nombre"
-                  #nombre="ngModel"
-                  #nombreEle>
-        </div>
-        <button [disabled]="disabledButtons.NuevaTiendaFormSubmitButton ||!NuevaTiendaForm.valid" type="submit"  [class]="classes">Crear</button>
-      </form>
-    </div>
-    <div class="col-sm-6">
-      <h1>{{nuevaTienda.nombre}}</h1>
-    </div>
-
-   <!--<pre>-->
-      <!--{{tiendas | json}}-->
-   <!--</pre>-->
-  </div>
-  <div class="row">
-    <div class="col-sm-3 " *ngFor="let tiendaa of tiendas">
-      <h3>{{tiendaa.nombre}}</h3>
-      <p>ID: {{tiendaa.id}}</p>
-      <button class="btn btn-block btn-danger" (click)="borrartienda(tiendaa.id)">Borrar</button>
-      <form class="animated bounceIn" (ngSubmit)="crearTienda(NuevaTiendaForm)" #NuevaTiendaForm="ngForm">
-        <div class="form-group">
-
-          <label>Tienda</label>
-          <div class="animated slideInUp" [hidden]="!nombre.errors"  >
-            <span class="bg-primary "  *ngIf="nombre.errors && (nombre.dirty || nombre.touched)"> Ingrese un nombre mínimo con 4 caracteres</span>
-          </div>
-          <input required
-                 minlength="5"
-                 type="text"
-                 class="form-control"
-                 placeholder="digite un nombre de la Tienda como: Adidas"
-                 name="nombre"
-                 [(ngModel)]="tiendaa.nombre"
                  #nombre="ngModel"
                  #nombreEle>
         </div>
-        <button [disabled]="disabledButtons.NuevaTiendaFormSubmitButton ||!NuevaTiendaForm.valid" type="submit"  [class]="classes">Crear</button>
+        <button [disabled]="disabledButtons.NuevaTiendaFormSubmitButton ||!NuevaTiendaForm.valid" type="submit"
+                class="btn btn-success btn-default">Crear
+        </button>
       </form>
+    </div>
+  <div class="row" >
+
+    <div class="col-sm-12 animated bounceInUp" *ngFor="let tiendaa of tiendas">
+          <pre>
+      {{tiendaa|json}}
+    </pre>
+      <div class="text-center">
+        <h3>{{tiendaa.nombre}}</h3>
+        <p>ID: {{tiendaa.id}}</p>
+      </div>
+
+        <div class="col-sm-5">
+          <button class="btn btn-block btn-primary" (click)="tiendaa.formularioCerrado=!tiendaa.formularioCerrado" >Actualizar</button>
+        </div>
+        <div class="col-sm-2"></div>
+        <div class="col-sm-5">
+          <button class="btn btn-block btn-warning" (click)="borrartienda(tiendaa.id)">Borrar</button>
+        </div>
+
+      <div class="div" [hidden]="tiendaa.formularioCerrado">
+        <form class="animated bounceIn" (ngSubmit)="actualizartienda(tiendaa)" #NuevaTiendaForm="ngForm">
+          <div class="form-group">
+
+            <label>Tienda</label>
+            <div class="animated slideInUp" [hidden]="!nombre.errors">
+              <span class="bg-primary " *ngIf="nombre.errors && (nombre.dirty || nombre.touched)"> Ingrese un nombre mínimo con 4 caracteres</span>
+            </div>
+            <input required
+                   minlength="5"
+                   type="text"
+                   class="form-control"
+                   placeholder="digite un nombre de la Tienda como: Adidas"
+                   name="nombre"
+                   [(ngModel)]="tiendaa.nombre"
+                   #nombre="ngModel"
+                   #nombreEle>
+          </div>
+          <button [disabled]="disabledButtons.NuevaTiendaFormSubmitButton ||!NuevaTiendaForm.valid" type="submit"
+                  class="btn btn-success btn-default">Actualizar
+          </button>
+          <button type= "button"
+                  class="btn btn-warning"
+                  (click)="tiendaa.formularioCerrado=!formularioCerrado"
+          >Cancelar
+          </button>
+        </form>
+      </div>
+
     </div>
 
   </div>
