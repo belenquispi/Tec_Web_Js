@@ -1,32 +1,46 @@
 <h1>
   {{title}}
-
 </h1>
-<p>
-  {{nombre}} - {{apellido}}
-</p>
-
+<!--<p>-->
+<!--{{nombre}} - {{apellido}}-->
+<!--</p>-->
 <h3 [innerHTML]="nombrecompleto()"
     [hidden]="false"
     (click)="hizoclick()"
     [style.backgroundColor]="colorH3"
-    [style.fontSize]="'50px'"
+    [style.fontSize]="tamano"
     (mouseenter)="hizofocus()"
-    #nombre
->
-
+    #nombre>
 </h3>
 <div class="container">
-<input type="text" [placeholder]="nombrecompleto()">
+  <input type="text" [placeholder]="nombrecompleto()">
 </div>
-
 <div class="container">
-  <form (ngSubmit)="crearTienda(NuevaTiendaForm)" #NuevaTiendaForm="ngForm">
-    <div class="form-group">
-      <label >Tienda</label>
-      <input type="text" class="form-control" placeholder="digite un nombre de la Tienda como: Adidas" name="nombre" [(ngModel)]="nuevaTienda.nombre">
+  <div class="row">
+    <div class="col-sm-12">
+      <pre>
+        {{nuevaTienda|json}}
+      </pre>
     </div>
-         <button type="submit" class="btn btn-default">Submit</button>
-  </form>
+    <div class="col-sm-6">
+      <form (ngSubmit)="crearTienda(NuevaTiendaForm)" #NuevaTiendaForm="ngForm">
+        <div class="form-group">
+          <label>Tienda</label>
+          <input required
+                 minlength="5"
+                 type="text"
+                 class="form-control"
+                 placeholder="digite un nombre de la Tienda como: Adidas"
+                 name="nombre"
+                 [(ngModel)]="nuevaTienda.nombre">
+        </div>
+        <button [disabled]="disabledButtons.NuevaTiendaFormSubmitButton ||!NuevaTiendaForm.valid" type="submit"  [class]="classes">Crear</button>
+      </form>
+    </div>
+    <div class="col-sm-6">
+      <h1>{{nuevaTienda.nombre}}</h1>
+    </div>
+  </div>
+
 
 </div>

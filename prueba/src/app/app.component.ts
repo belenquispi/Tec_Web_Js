@@ -1,69 +1,89 @@
 import {Component, OnInit} from "@angular/core";
-import {Http} from "@angular/http";
+import {Response, Http} from "@angular/http";
 import {MasterURLService} from "./services/master-url.service";
+import {NgForm} from "@angular/forms";
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+// CTRL A +  -  CTRL + ALT + L
 export class AppComponent implements OnInit {
-  title: string = 'Hola Amigos';
+  title: string = "Hola Amigos";
   nombre: string = "";
   apellido: string = "";
   colorH3 = "red";
+  tamano = "52px";
+  classes = "btn btn-block btn-success";
+  error:string="No hay error";
+
   nuevaTienda: any = {};
-
-  //Datos publicos no es necesario definirlo con la palabra public
-// Datos privados es necesarios definirlos con la palabra privatepri
-  //Ya no es necesario declarar, puesto que en la funcion se realizan las declaraciones
-  // private nombre1: string;
-  // apellido1: string;
-  // Constructor
-//   constructor() {
-//     this.apellido = "Quispi";
-//     this.nombre = "Belen";
-// // ya no es necesario
-//     // this.nombre1=this.nombreConstructor;
-//     // this.apellido1=this.apellidoConstructor;
-//     console.log("Inicio el constructor");
-//   }
-  constructor(private _http:Http,
-              private _masterURL:MasterURLService)
-{
+  disabledButtons={
+    NuevaTiendaFormSubmitButton:false
+  }
 
 
-)
-}
-
+  constructor(private _http: Http,
+              private _masterURL: MasterURLService) {
+    this.apellido = "Quispi";
+    this.nombre = "Belen";
+    console.log("Inicio el construcor")
+  }
 
   ngOnInit() {
-    console.log("OnInit");
     this.apellido = "Sotamba";
     this.nombre = "Aracely";
+    console.log("On Init")
   }
 
   nombrecompleto(): string {
-    return `${this.nombre} ${this.apellido}`;
+    return `${this.nombre} y ${this.apellido}`
   }
 
   hizoclick() {
-    console.log("Hizo click")
+    console.log("Hizo Click");
+    console.log()
   }
 
   hizofocus() {
-    console.log("Hizo focus")
+    console.log("Hizo focus");
   }
 
-  crearTienda(formulario) {
+
+  crearTienda(formulario:NgForm) {
+    this.disabledButtons.NuevaTiendaFormSubmitButton=true;
     console.log(formulario);
 
-  this._http.post(this._masterURL.url, {} )
-    .subscribe(respuesta=>console.log("respuesta", respuesta));
+    this._http.post(this._masterURL.url + "Tienda", {
+      nombre: formulario.value.nombre
+    })
+      // .subscribe(respuesta => console.log("respuesta", respuesta));
+      .subscribe(
+        (res)=>{
+          console.log("No hubo Errores")
+          console.log(res);
+          this.nuevaTienda={};
+          this.disabledButtons.NuevaTiendaFormSubmitButton=true;
+        },
+        (err)=>{
+          console.log("Ocurrio un error",err);
+          this.disabledButtons.NuevaTiendaFormSubmitButton=true;
+        },
+        ()=>{
+          console.log("Terminamos la función vamos a las casas");
+          this.disabledButtons.NuevaTiendaFormSubmitButton=true;
+        }
+      )
 
+    //
+    // .post("http://localhost:1337/Tienda", formulario.valores)
+    // .subscribe(
+    //   res=>console.log('Respuesta: ',res),
+    //   err=>console.log('Error: ',err),
+    //   ()=>{
+    //     console.log("Se completo la accion")
+    //   }
+    // );
   }
-
-  //Funciones se definen
-  // title = 'app works!';
-
-
 }
