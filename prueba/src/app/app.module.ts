@@ -4,16 +4,22 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import {MasterURLService} from "./services/master-url.service";
+import { HomeComponent } from './home/home.component';
+import {routing} from "./app.routes";
+import { TiendaComponent } from './tienda/tienda.component';
 
 // Decorador
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
+    TiendaComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    routing,
   ],
   // Los servicios que se desea usar
   providers: [
