@@ -38,9 +38,7 @@
   <div class="row">
 
     <div class="col-sm-12 animated bounceInUp" *ngFor="let tiendaa of tiendas">
-          <pre>
-              {{tiendaa|json}}
-          </pre>
+
       <div class="text-center">
         <h3>{{tiendaa.nombre}}</h3>
         <p>ID: {{tiendaa.id}}</p>
@@ -54,6 +52,9 @@
       <div class="col-sm-2"></div>
       <div class="col-sm-5">
         <button class="btn btn-block btn-warning" (click)="borrartienda(tiendaa.id)">Borrar</button>
+      </div>
+      <div class="col-sm-12">
+        <a [routerLink]="[tiendaa.id,'producto']">Ir a productos</a>
       </div>
 
       <div class="div" [hidden]="tiendaa.formularioCerrado">

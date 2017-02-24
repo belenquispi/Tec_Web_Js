@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {NgForm} from "@angular/forms";
 import {MasterURLService} from "../services/master-url.service";
-import {Http} from "@angular/http";
+import {Http, Response} from "@angular/http";
 
 @Component({
   selector: 'app-tienda',
