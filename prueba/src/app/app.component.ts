@@ -10,47 +10,28 @@ import {NgForm} from "@angular/forms";
 })
 // CTRL A +  -  CTRL + ALT + L
 export class AppComponent implements OnInit {
-  title: string = "Hola Amigos";
-  nombre: string = "";
-  apellido: string = "";
-  colorH3 = "red";
-  tamano = "52px";
-  classes = "btn btn-block btn-success";
-  error:string="No hay error";
-
+  title: string = "Bienvenidos a Ingresar Tiendas";
   nuevaTienda: any = {};
+  tiendas = [];
   disabledButtons={
     NuevaTiendaFormSubmitButton:false
-  }
-
-
+  };
   constructor(private _http: Http,
               private _masterURL: MasterURLService) {
-    this.apellido = "Quispi";
-    this.nombre = "Belen";
-    console.log("Inicio el construcor")
   }
 
   ngOnInit() {
-    this.apellido = "Sotamba";
-    this.nombre = "Aracely";
-    console.log("On Init")
+    this._http.get(this._masterURL.url+"Tienda")
+      .subscribe(
+        (res:Response)=>{
+          console.log(res.json())
+          this.tiendas=res.json()
+        },
+        (err)=>{
+          console.log(err)
+        }
+      )
   }
-
-  nombrecompleto(): string {
-    return `${this.nombre} y ${this.apellido}`
-  }
-
-  hizoclick() {
-    console.log("Hizo Click");
-    console.log()
-  }
-
-  hizofocus() {
-    console.log("Hizo focus");
-  }
-
-
   crearTienda(formulario:NgForm) {
     this.disabledButtons.NuevaTiendaFormSubmitButton=true;
     console.log(formulario);
@@ -63,6 +44,7 @@ export class AppComponent implements OnInit {
         (res)=>{
           console.log("No hubo Errores")
           console.log(res);
+          this.tiendas.push(res.json())
           this.nuevaTienda={};
           this.disabledButtons.NuevaTiendaFormSubmitButton=true;
         },
@@ -86,4 +68,17 @@ export class AppComponent implements OnInit {
     //   }
     // );
   }
+  borrartienda(id:number){
+       this._http.delete(this._masterURL.url+"Tienda/" +id)
+      .subscribe(
+        (res)=>{
+          let tiendaBorrada=res.json();
+          this.tiendas=this.tiendas.filter(value=>tiendaBorrada.id!=value.id)
+        },
+        (err)=>{
+          console.log(err);
+        }
+      )
+  }
+
 }
