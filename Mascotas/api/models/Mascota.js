@@ -13,7 +13,8 @@ module.exports = {
       required: true
     },
     fechaNacimiento: {
-      type: 'date'
+      type: 'date',
+      required: true
     },
     paisNacimiento: {
       type: 'string',
