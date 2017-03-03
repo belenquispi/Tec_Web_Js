@@ -7,19 +7,27 @@
 
 module.exports = {
   attributes: {
-        nombre: {
-            type: 'string',
-            enum: ['Bulldog', 'Chihuahua', 'Pitbull'],
-            required: true
-        },
-        //Mascotas -> es el nombre en plural del modelo a relacionarse
-        mascotas: {
-            // Collection -> Nombre del Modelo en Sails
-            collection: 'Mascota',
-            // Via-> Es el campo por el cual vamos a relacionar FOREIGN KEY
-            via: 'idRaza'
-        }
-
+    nombre: {
+      type: 'string',
+      enum: ['Bulldog', 'Chihuahua', 'Pitbull'],
+      required: true
+    },
+    temperamento: {
+      type: 'string',
+      required: true
+    },
+    regionOrigen:{
+      type: 'string',
+      required: true
+    },
+    //Mascotas -> es el nombre en plural del modelo a relacionarse
+    mascotas: {
+      // Collection -> Nombre del Modelo en Sails
+      collection: 'Mascota',
+      // Via-> Es el campo por el cual vamos a relacionar FOREIGN KEY
+      via: 'idRaza'
     }
+
+  }
 
 };
