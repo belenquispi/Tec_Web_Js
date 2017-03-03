@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2a2b680e-2e16-4fb6-b060-756b1dc7b191" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/Imagenes/adios.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/Imagenes/archivosApp.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/Imagenes/archivosDeStyles.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/Imagenes/assets.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/Imagenes/carpetaConfig.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/Imagenes/carpetaFotos.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/Imagenes/carpetaProyecto1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/Imagenes/carpetaViews.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/Imagenes/controller.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/Imagenes/controllerSaludo.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/Imagenes/crearControlador.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/Imagenes/crearProyectoSails.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/Imagenes/crearViews.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/Imagenes/error404.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/Imagenes/finalizacionProyectoSails.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/Imagenes/fotoEnHTML.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/Imagenes/grunt.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/Imagenes/hola.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/Imagenes/homepage.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/Imagenes/instalarSails.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/Imagenes/levantarServidor.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/Imagenes/modificacionPipeline.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/Imagenes/paginaHTML.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/Imagenes/paginaNuevosEstilos.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/Imagenes/post.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/Imagenes/queTal.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/Imagenes/routes.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/Imagenes/sails.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/Imagenes/verificacionServidor.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/Imagenes/view.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/Imagenes/viewGuayaquil.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/Imagenes/viewQuito.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/ServidorHTTP2/Proyecto1/.editorconfig" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/ServidorHTTP2/Proyecto1/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/ServidorHTTP2/Proyecto1/.sailsrc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/ServidorHTTP2/Proyecto1/Gruntfile.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/ServidorHTTP2/Proyecto1/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/ServidorHTTP2/Proyecto1/api/controllers/.gitkeep" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/ServidorHTTP2/Proyecto1/api/controllers/SaludoController.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/ServidorHTTP2/Proyecto1/api/models/.gitkeep" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/ServidorHTTP2/Proyecto1/api/policies/sessionAuth.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/ServidorHTTP2/Proyecto1/api/responses/badRequest.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/ServidorHTTP2/Proyecto1/api/responses/created.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/ServidorHTTP2/Proyecto1/api/responses/forbidden.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/ServidorHTTP2/Proyecto1/api/responses/notFound.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/ServidorHTTP2/Proyecto1/api/responses/ok.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/ServidorHTTP2/Proyecto1/api/responses/serverError.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/ServidorHTTP2/Proyecto1/api/services/.gitkeep" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/ServidorHTTP2/Proyecto1/app.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/ServidorHTTP2/Proyecto1/assets/App/app.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/ServidorHTTP2/Proyecto1/assets/App/estilos.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/ServidorHTTP2/Proyecto1/assets/App/fotos/gatos.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/ServidorHTTP2/Proyecto1/assets/App/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/ServidorHTTP2/Proyecto1/assets/favicon.ico" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/ServidorHTTP2/Proyecto1/assets/images/.gitkeep" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/ServidorHTTP2/Proyecto1/assets/js/dependencies/sails.io.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/ServidorHTTP2/Proyecto1/assets/robots.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/ServidorHTTP2/Proyecto1/assets/styles/estilos.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/ServidorHTTP2/Proyecto1/assets/styles/importer.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/ServidorHTTP2/Proyecto1/assets/templates/.gitkeep" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/ServidorHTTP2/Proyecto1/config/blueprints.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/ServidorHTTP2/Proyecto1/config/bootstrap.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/ServidorHTTP2/Proyecto1/config/connections.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/ServidorHTTP2/Proyecto1/config/cors.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/ServidorHTTP2/Proyecto1/config/csrf.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/ServidorHTTP2/Proyecto1/config/env/development.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/ServidorHTTP2/Proyecto1/config/env/production.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/ServidorHTTP2/Proyecto1/config/globals.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/ServidorHTTP2/Proyecto1/config/http.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/ServidorHTTP2/Proyecto1/config/i18n.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/ServidorHTTP2/Proyecto1/config/locales/_README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/ServidorHTTP2/Proyecto1/config/locales/de.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/ServidorHTTP2/Proyecto1/config/locales/en.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/ServidorHTTP2/Proyecto1/config/locales/es.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/ServidorHTTP2/Proyecto1/config/locales/fr.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/ServidorHTTP2/Proyecto1/config/log.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/ServidorHTTP2/Proyecto1/config/models.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/ServidorHTTP2/Proyecto1/config/policies.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/ServidorHTTP2/Proyecto1/config/routes.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/ServidorHTTP2/Proyecto1/config/session.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/ServidorHTTP2/Proyecto1/config/sockets.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/ServidorHTTP2/Proyecto1/config/views.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/ServidorHTTP2/Proyecto1/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/ServidorHTTP2/Proyecto1/tasks/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/ServidorHTTP2/Proyecto1/tasks/config/clean.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/ServidorHTTP2/Proyecto1/tasks/config/coffee.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/ServidorHTTP2/Proyecto1/tasks/config/concat.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/ServidorHTTP2/Proyecto1/tasks/config/copy.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/ServidorHTTP2/Proyecto1/tasks/config/cssmin.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/ServidorHTTP2/Proyecto1/tasks/config/jst.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/ServidorHTTP2/Proyecto1/tasks/config/less.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/ServidorHTTP2/Proyecto1/tasks/config/sails-linker.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/ServidorHTTP2/Proyecto1/tasks/config/sync.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/ServidorHTTP2/Proyecto1/tasks/config/uglify.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/ServidorHTTP2/Proyecto1/tasks/config/watch.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/ServidorHTTP2/Proyecto1/tasks/pipeline.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/ServidorHTTP2/Proyecto1/tasks/register/build.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/ServidorHTTP2/Proyecto1/tasks/register/buildProd.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/ServidorHTTP2/Proyecto1/tasks/register/compileAssets.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/ServidorHTTP2/Proyecto1/tasks/register/default.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/ServidorHTTP2/Proyecto1/tasks/register/linkAssets.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/ServidorHTTP2/Proyecto1/tasks/register/linkAssetsBuild.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/ServidorHTTP2/Proyecto1/tasks/register/linkAssetsBuildProd.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/ServidorHTTP2/Proyecto1/tasks/register/prod.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/ServidorHTTP2/Proyecto1/tasks/register/syncAssets.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/ServidorHTTP2/Proyecto1/views/403.ejs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/ServidorHTTP2/Proyecto1/views/404.ejs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/ServidorHTTP2/Proyecto1/views/500.ejs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/ServidorHTTP2/Proyecto1/views/guayaquil.ejs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/ServidorHTTP2/Proyecto1/views/homepage.ejs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/ServidorHTTP2/Proyecto1/views/layout.ejs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/INFORME/ServidorHTTP2/Proyecto1/views/quito.ejs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ServidorHTTP/Mascotas/.editorconfig" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ServidorHTTP/Mascotas/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ServidorHTTP/Mascotas/.sailsrc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ServidorHTTP/Mascotas/Gruntfile.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ServidorHTTP/Mascotas/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ServidorHTTP/Mascotas/api/controllers/.gitkeep" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ServidorHTTP/Mascotas/api/controllers/SaludoController.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ServidorHTTP/Mascotas/api/controllers/UsuarioController.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ServidorHTTP/Mascotas/api/models/.gitkeep" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ServidorHTTP/Mascotas/api/models/Administrador.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ServidorHTTP/Mascotas/api/models/Usuario.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ServidorHTTP/Mascotas/api/policies/sessionAuth.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ServidorHTTP/Mascotas/api/responses/badRequest.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ServidorHTTP/Mascotas/api/responses/created.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ServidorHTTP/Mascotas/api/responses/forbidden.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ServidorHTTP/Mascotas/api/responses/notFound.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ServidorHTTP/Mascotas/api/responses/ok.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ServidorHTTP/Mascotas/api/responses/serverError.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ServidorHTTP/Mascotas/api/services/.gitkeep" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ServidorHTTP/Mascotas/app.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ServidorHTTP/Mascotas/assets/App/app.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ServidorHTTP/Mascotas/assets/App/estilos.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ServidorHTTP/Mascotas/assets/App/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ServidorHTTP/Mascotas/assets/favicon.ico" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ServidorHTTP/Mascotas/assets/imagenes/1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ServidorHTTP/Mascotas/assets/images/.gitkeep" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ServidorHTTP/Mascotas/assets/js/dependencies/sails.io.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ServidorHTTP/Mascotas/assets/robots.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ServidorHTTP/Mascotas/assets/styles/estilos.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ServidorHTTP/Mascotas/assets/styles/estilos2.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ServidorHTTP/Mascotas/assets/styles/importer.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ServidorHTTP/Mascotas/assets/templates/.gitkeep" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ServidorHTTP/Mascotas/config/blueprints.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ServidorHTTP/Mascotas/config/bootstrap.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ServidorHTTP/Mascotas/config/connections.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ServidorHTTP/Mascotas/config/cors.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ServidorHTTP/Mascotas/config/csrf.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ServidorHTTP/Mascotas/config/env/development.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ServidorHTTP/Mascotas/config/env/production.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ServidorHTTP/Mascotas/config/globals.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ServidorHTTP/Mascotas/config/http.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ServidorHTTP/Mascotas/config/i18n.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ServidorHTTP/Mascotas/config/locales/_README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ServidorHTTP/Mascotas/config/locales/de.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ServidorHTTP/Mascotas/config/locales/en.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ServidorHTTP/Mascotas/config/locales/es.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ServidorHTTP/Mascotas/config/locales/fr.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ServidorHTTP/Mascotas/config/log.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ServidorHTTP/Mascotas/config/models.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ServidorHTTP/Mascotas/config/policies.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ServidorHTTP/Mascotas/config/routes.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ServidorHTTP/Mascotas/config/session.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ServidorHTTP/Mascotas/config/sockets.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ServidorHTTP/Mascotas/config/views.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ServidorHTTP/Mascotas/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ServidorHTTP/Mascotas/tasks/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ServidorHTTP/Mascotas/tasks/config/clean.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ServidorHTTP/Mascotas/tasks/config/coffee.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ServidorHTTP/Mascotas/tasks/config/concat.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ServidorHTTP/Mascotas/tasks/config/copy.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ServidorHTTP/Mascotas/tasks/config/cssmin.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ServidorHTTP/Mascotas/tasks/config/jst.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ServidorHTTP/Mascotas/tasks/config/less.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ServidorHTTP/Mascotas/tasks/config/sails-linker.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ServidorHTTP/Mascotas/tasks/config/sync.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ServidorHTTP/Mascotas/tasks/config/uglify.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ServidorHTTP/Mascotas/tasks/config/watch.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ServidorHTTP/Mascotas/tasks/pipeline.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ServidorHTTP/Mascotas/tasks/register/build.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ServidorHTTP/Mascotas/tasks/register/buildProd.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ServidorHTTP/Mascotas/tasks/register/compileAssets.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ServidorHTTP/Mascotas/tasks/register/default.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ServidorHTTP/Mascotas/tasks/register/linkAssets.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ServidorHTTP/Mascotas/tasks/register/linkAssetsBuild.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ServidorHTTP/Mascotas/tasks/register/linkAssetsBuildProd.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ServidorHTTP/Mascotas/tasks/register/prod.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ServidorHTTP/Mascotas/tasks/register/syncAssets.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ServidorHTTP/Mascotas/views/403.ejs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ServidorHTTP/Mascotas/views/404.ejs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ServidorHTTP/Mascotas/views/500.ejs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ServidorHTTP/Mascotas/views/cuenca.ejs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ServidorHTTP/Mascotas/views/guayaquil.ejs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ServidorHTTP/Mascotas/views/homepage.ejs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ServidorHTTP/Mascotas/views/layout.ejs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ServidorHTTP/Mascotas/views/quito.ejs" afterPath="" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1378" />
+    <option name="height" value="744" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="ProjectPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Mascotas" />
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2a2b680e-2e16-4fb6-b060-756b1dc7b191" name="Default" comment="" />
+      <created>1488507332620</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1488507332620</updated>
+      <workItem from="1488507333935" duration="53000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="53000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1378" height="744" extended-state="0" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2496329" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3288889" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="processedProjectFiles" value="true" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
