@@ -16,9 +16,9 @@ module.exports = {
       type: 'date',
       required: true
     },
-    paisNacimiento: {
+      paisNacimiento: {
       type: 'string',
-      enum: ['Ecuador', 'Peru', 'Colombia']
+      enum: ['Ecuador', 'Peru', 'Colombia','Chile']
     },
     // idRaza es el nombre del Foreign Key
     idRaza: {

@@ -20,32 +20,26 @@
 module.exports.policies = {
 
   /***************************************************************************
-  *                                                                          *
-  * Default policy for all controllers and actions (`true` allows public     *
-  * access)                                                                  *
-  *                                                                          *
-  ***************************************************************************/
+   *                                                                          *
+   * Default policy for all controllers and actions (`true` allows public     *
+   * access)                                                                  *
+   *                                                                          *
+   ***************************************************************************/
 
   // '*': true,
 
   /***************************************************************************
-  *                                                                          *
-  * Here's an example of mapping some policies to run before a controller    *
-  * and its actions                                                          *
-  *                                                                          *
-  ***************************************************************************/
-	 RutasController: {
-		 home : true,
-         error : true,
-         listarUsuarios : ['autenticado'],
-         crearUsuario : ['autenticado'],
-         editarUsuario : ['autenticado','esElMismoUsuario'],
-	 }
-    
-    
-    
-    
-    
-    
-    
+   *                                                                          *
+   * Here's an example of mapping some policies to run before a controller    *
+   * and its actions                                                          *
+   *                                                                          *
+   ***************************************************************************/
+  RutasController: {
+    home: true,
+    Error: true,
+    crearMascota: ['autenticado'],
+    editarUsuario: ['autenticado','esElMismoUsuario']
+  }
+
+
 };

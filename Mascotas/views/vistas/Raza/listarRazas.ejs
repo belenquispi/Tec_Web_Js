@@ -1,4 +1,4 @@
-<h1>Lista de Razas</h1>
+<h1 class="text-center">Lista de Razas</h1>
 <div class="row">
   <div class="col-sm-9">
     <p>Aqui se listan todos las razas del sistema de mascotas.</p>
@@ -12,27 +12,27 @@
 <br>
 <% for(var i = 0; i < razas.length; i++) { %>
 <div class="row ma-margen-top-bottom">
-  <div class="col-sm-1"></div>
-
   <div class="col-sm-4">
-
     <div class="text-center ma-borde ma-padding-top-bottom">
       <h1> <%= razas[i].nombre %></h1>
     </div>
   </div>
   <div class="col-sm-1"></div>
-  <div class="col-sm-5 text-center">
-    <div class="text-center ma-borde" style="margin-top: 40px;">
+  <div class="col-sm-4 text-center">
+    <div class="text-center ma-borde ">
+      <h3><%= razas[i].nombre %></h3>
       <p>
-        Nombre: <%= razas[i].nombre%>
-        Temperamento: <%= razas[i].temperamento%>
-        Region de Origen: <%= razas[i].regionOrigen%>
+        Característica: <%= razas[i].temperamento %>
+        <br>
+        Region de Origen: <%= razas[i].regionOrigen %>
       </p>
     </div>
   </div>
-  <div class="col-sm-1">
+  <div class="col-sm-1"></div>
+  <div class="col-sm-2">
     <a href="/Raza/borrarRaza?id=<%= razas[i].id %>" class="btn btn-danger btn-block">X</a>
     <a href="/EditarRaza?id=<%= razas[i].id %>" class="btn btn-info btn-block">Editar</a>
+    <a href="/ListarMascotas?idRaza=<%= razas[i].id %>" class="btn btn-info btn-block">Ver Mascotas</a>
   </div>
 </div>
 <% } %>

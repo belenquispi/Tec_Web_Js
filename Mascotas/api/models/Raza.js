@@ -9,10 +9,10 @@ module.exports = {
   attributes: {
     nombre: {
       type: 'string',
-      enum: ['Bulldog', 'Chihuahua', 'Pitbull'],
+      unique: true,
       required: true
     },
-    temperamento: {
+    caracteristica: {
       type: 'string',
       required: true
     },
