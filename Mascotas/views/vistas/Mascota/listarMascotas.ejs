@@ -4,7 +4,7 @@
     <p>Aqui se listan las mascotas.</p>
   </div>
   <div class="col-sm-3">
-    <a href="/CrearMascota" class="btn btn-block btn-success">
+    <a href="/CrearMascota?idUsuario=<%= idUsuarios %>&idRaza=<%= idRazas %>" class="btn btn-block btn-success">
       Crear Mascota
     </a>
   </div>
@@ -19,7 +19,7 @@
   <div class="col-sm-1"></div>
   <div class="col-sm-4 text-center ma-borde">
     <h3> <%= mascotas[i].nombre %></h3>
-    <p >
+    <p>
       Fecha de Nacimiento: <%= mascotas[i].fechaNacimiento.toLocaleString() %>
       <br>
       Pais de Nacimiento: <%= mascotas[i].paisNacimiento %>
@@ -32,35 +32,10 @@
     <a href="/Mascota/BorrarMascota?id=<%= mascotas[i].id %>" class="btn btn-danger btn-block">X</a>
     <a href="/EditarMascota?id=<%= mascotas[i].id %>" class="btn btn-info btn-block">Editar</a>
   </div>
-
   <% } %>
 </div>
-<% } else { if(idUsuarios != undefined && idRazas == undefined) { %>
-<div class="row">
-  <% for(var i = 0; i < mascotas.length; i++){ %>
-  <div class="col-sm-4">
-    <h2 class="text-center"> <%= mascotas[i].nombre %></h2>
-  </div>
-  <div class="col-sm-1"></div>
-  <div class="col-sm-4">
-    <h3 class="text-center"> <%= mascotas[i].nombre %></h3>
-    <p class="text-center">
-      Fecha de Nacimiento: <%= mascotas[i].fechaNacimiento.toLocaleString() %>
-      <br>
-      Pais de Nacimiento: <%= mascotas[i].paisNacimiento %>
-      <br>
-      Raza: <%= mascotas[i].idRaza.nombre %>
-    </p>
-  </div>
-  <div class="col-sm-1"></div>
-  <div class="col-sm-2">
-    <a href="/Mascota/BorrarMascota?id=<%= mascotas[i].id %> &idUsuario=<%= mascotas[i].idUsuario%>" class="btn btn-danger btn-block">X</a>
-    <a href="/EditarMascota?id=<%= mascotas[i].id %>" class="btn btn-info btn-block">Editar</a>
-  </div>
-
-  <% } %>
-</div>
-<% }else { if(idUsuarios == undefined && idRazas != undefined){ %>
+<% } else {
+if(idUsuarios != undefined && idRazas == undefined) { %>
 <div class="row">
   <% for(var i = 0; i < mascotas.length; i++){ %>
   <div class="col-sm-4 ma-borde ma-padding-top-bottom">
@@ -79,12 +54,39 @@
   </div>
   <div class="col-sm-1"></div>
   <div class="col-sm-2">
-    <a href="/Mascota/BorrarMascota?id=<%= mascotas[i].id %>&idRaza=<%= mascotas[i].idRaza%>" class="btn btn-danger btn-block">X</a>
-    <a href="/EditarMascota?id=<%= mascotas[i].id %>" class="btn btn-info btn-block">Editar</a>
+    <a href="/Mascota/BorrarMascota?id=<%= mascotas[i].id %> &idUsuario=<%= mascotas[i].idUsuario %>"
+       class="btn btn-danger btn-block">X</a>
+    <a href="/EditarMascota?id=<%= mascotas[i].id %>&idUsuario=<%= mascotas[i].idUsuario %>" class="btn btn-info btn-block">Editar</a>
   </div>
 
   <% } %>
 </div>
-<% } else {
-  sails.log.info("Error")
-} } } %>
+<% }else {
+if(idUsuarios == undefined && idRazas != undefined){ %>
+<div class="row">
+  <% for(var i = 0; i < mascotas.length; i++){ %>
+  <div class="col-sm-4 ma-borde ma-padding-top-bottom">
+    <h2 class="text-center"> <%= mascotas[i].nombre %></h2>
+  </div>
+  <div class="col-sm-1"></div>
+  <div class="col-sm-4 ma-borde">
+    <h3 class="text-center"> <%= mascotas[i].nombre %></h3>
+    <p class="text-center">
+      Fecha de Nacimiento: <%= mascotas[i].fechaNacimiento.toLocaleString() %>
+      <br>
+      Pais de Nacimiento: <%= mascotas[i].paisNacimiento %>
+      <br>
+      Raza: <%= mascotas[i].idRaza.nombre %>
+    </p>
+  </div>
+  <div class="col-sm-1"></div>
+  <div class="col-sm-2">
+    <a href="/Mascota/BorrarMascota?id=<%= mascotas[i].id %>&idRaza=<%= mascotas[i].idRaza.id %>"
+       class="btn btn-danger btn-block">X</a>
+    <a href="/EditarMascota?id=<%= mascotas[i].id %>&idRaza=<%= mascotas[i].idRaza.id %>" class="btn btn-info btn-block">Editar</a>
+  </div>
+
+  <% } %>
+</div>
+<% }
+} } %>

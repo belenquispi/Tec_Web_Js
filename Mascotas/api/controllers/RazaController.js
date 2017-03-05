@@ -97,7 +97,7 @@ module.exports = {
         error: {
           desripcion: "Necesitamos el ID para borrar la raza",
           rawError: "No envia ID",
-          url: "/ListarRaza"
+          url: "/ListarRazas"
         }
       });
     }

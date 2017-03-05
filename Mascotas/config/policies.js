@@ -39,7 +39,10 @@ module.exports.policies = {
     Error: true,
     crearMascota: ['autenticado'],
     editarUsuario: ['autenticado','esElMismoUsuario']
+  },
+  MascotaController: {
+    borrarMascota: ['autenticado'],
+    editarMascota: ['autenticado','esElMismoDuenio']
   }
-
 
 };

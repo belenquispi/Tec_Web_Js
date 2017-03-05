@@ -43,6 +43,7 @@ module.exports.routes = {
   'get /Error': 'RutasController.error',
   'get /CrearMascota': 'RutasController.crearMascota',
   'get /ListarMascotas': 'RutasController.listarMascotas',
+  'get /EditarMascota': 'RutasController.editarMascota',
   'get /CrearRaza': 'RutasController.crearRaza',
   'get /ListarRazas': 'RutasController.listarRazas'
 
