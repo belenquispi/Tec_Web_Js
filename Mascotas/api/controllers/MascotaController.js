@@ -162,8 +162,8 @@ module.exports = {
   },
   borrarMascota: function (req, res) {
     var parametros = req.allParams();
-    console.log("Usuario"+parametros.idUsuario);
-    console.log("Raza"+parametros.idRaza);
+    console.log("Usuario" + parametros.idUsuario);
+    console.log("Raza" + parametros.idRaza);
     if (parametros.id) {
       if (parametros.idUsuario != undefined) {
         Mascota.destroy({
@@ -280,59 +280,179 @@ module.exports = {
       });
     }
   },
-  editarMascota: function (req,res) {
-    var parametros= req.allParams();
-    if (parametros.id &&(parametros.nombre || parametros.fechaNacimiento || parametros.paisNacimiento || parametros.idRaza)) {
-      var mascotaAEditar = {
-        nombre: parametros.nombre,
-        fechaNacimiento: parametros.fechaNacimiento,
-        paisNacimiento: parametros.paisNacimiento,
-        idRaza: parametros.idRaza,
-        idUsuario:idUsuarios
-      };
-      if (mascotaAEditar.nombre == "") {
-        delete mascotaAEditar.nombre
-      }
-      Mascota.update({
-        id: parametros.id
-      }, mascotaAEditar)
-        .exec(function (errorInesperado, mascotaRemovida) {
-          if (errorInesperado) {
-            return res.view('vistas/Error', {
-              error: {
-                desripcion: "Tuvimos un Error Inesperado",
-                rawError: errorInesperado,
-                url: "/ListarMascotas?"
+  editarMascota: function (req, res) {
+    var parametros = req.allParams();
+    if (parametros.idUsuarios != undefined) {
+      if (parametros.id && (parametros.nombre || parametros.fechaNacimiento || parametros.paisNacimiento || parametros.idRaza)) {
+        var mascotaAEditar = {
+          nombre: parametros.nombre,
+          fechaNacimiento: parametros.fechaNacimiento,
+          paisNacimiento: parametros.paisNacimiento,
+          idRaza: parametros.idRaza,
+          idUsuario: req.session.credencialSegura.id
+        };
+        if (mascotaAEditar.nombre == "") {
+          delete mascotaAEditar.nombre
+        }
+        Mascota.update({
+          id: parametros.id
+        }, mascotaAEditar)
+          .exec(function (errorInesperado, mascotaRemovida) {
+            if (errorInesperado) {
+              return res.view('vistas/Error', {
+                error: {
+                  desripcion: "Tuvimos un Error Inesperado",
+                  rawError: errorInesperado,
+                  url: "/ListarMascotas?idUsuarios=" +parametros.idUsuarios + "&idRazas=undefined"
+                }
+              });
+            }
+            Mascota.find({
+              where: {
+                idUsuario: parametros.idUsuarios
               }
-            });
+            })
+              .populate("idRaza")
+              .exec(function (errorIndefinido, mascotasEncontradas) {
+                if (errorIndefinido) {
+                  res.view('vistas/Error', {
+                    error: {
+                      desripcion: "Hubo un problema cargando las mascotas",
+                      rawError: errorIndefinido,
+                      url: "/ListarMascotas?idUsuarios=" + parametros.idUsuarios + "&idRazas=undefined"
+                    }
+                  });
+                }
+                res.view('vistas/Mascota/ListarMascotas', {
+                  mascotas: mascotasEncontradas,
+                  idUsuarios: parametros.idUsuarios,
+                  idRazas: undefined
+                });
+              })
+          })
+      } else {
+        return res.view('vistas/Error', {
+          error: {
+            desripcion: "Necesitamos que envies la nueva información de tu mascota",
+            rawError: "No envia Parametros",
+            url: "/ListarMascotas?idUsuarios=" + parametros.idUsuarios + "&idRazas=undefined"
           }
-          Mascota.find()
-            .exec(function (errorIndefinido, mascotasEncontradas) {
-              if (errorIndefinido) {
-                res.view('vistas/Error', {
+        });
+      }
+    } else {
+      if (parametros.idRazas != undefined) {
+        if (parametros.id && (parametros.nombre || parametros.fechaNacimiento || parametros.paisNacimiento || parametros.idRaza)) {
+          var mascotaAEditar = {
+            nombre: parametros.nombre,
+            fechaNacimiento: parametros.fechaNacimiento,
+            paisNacimiento: parametros.paisNacimiento,
+            idRaza: parametros.idRaza,
+            idUsuario: req.session.credencialSegura.id
+          };
+          if (mascotaAEditar.nombre == "") {
+            delete mascotaAEditar.nombre
+          }
+          Mascota.update({
+            id: parametros.id
+          }, mascotaAEditar)
+            .exec(function (errorInesperado, mascotaRemovida) {
+              if (errorInesperado) {
+                return res.view('vistas/Error', {
                   error: {
-                    desripcion: "Hubo un problema cargando las mascotas",
-                    rawError: errorIndefinido,
-                    url: "/ListarMascotas?"
+                    desripcion: "Tuvimos un Error Inesperado",
+                    rawError: errorInesperado,
+                    url: "/ListarMascotas?idUsuarios=undefined&idRazas=" + parametros.idRazas
                   }
                 });
               }
-              res.view('vistas/Mascota/ListarMascotas', {
-                mascotas: mascotasEncontradas,
-                idUsuarios:parametros.idUsuarios,
-                idRazas:parametros.idRazas
-              });
+              Mascota.find({
+                where: {
+                  idRaza: parametros.idRazas
+                }
+              })
+                .populate("idRaza")
+                .exec(function (errorIndefinido, mascotasEncontradas) {
+                  if (errorIndefinido) {
+                    res.view('vistas/Error', {
+                      error: {
+                        desripcion: "Hubo un problema cargando las mascotas",
+                        rawError: errorIndefinido,
+                        url: "/ListarMascotas?idUsuarios=undefined&idRazas=" + parametros.idRazas
+                      }
+                    });
+                  }
+                  res.view('vistas/Mascota/ListarMascotas', {
+                    mascotas: mascotasEncontradas,
+                    idUsuarios: undefined,
+                    idRazas: parametros.idRazas
+                  });
+                })
             })
-        })
-    } else {
-      return res.view('vistas/Error', {
-        error: {
-          desripcion: "Necesitamos que envies la nueva información de tu mascota",
-          rawError: "No envia Parametros",
-          url: "/ListarMascotas?"
+        } else {
+          return res.view('vistas/Error', {
+            error: {
+              desripcion: "Necesitamos que envies la nueva información de tu mascota",
+              rawError: "No envia Parametros",
+              url: "/ListarMascotas?idUsuario=undefined&idRazas=" + parametros.idRazas
+            }
+          });
         }
-      });
-   }
+      }
+      else {
+        if (parametros.id && (parametros.nombre || parametros.fechaNacimiento || parametros.paisNacimiento || parametros.idRaza)) {
+          var mascotaAEditar = {
+            nombre: parametros.nombre,
+            fechaNacimiento: parametros.fechaNacimiento,
+            paisNacimiento: parametros.paisNacimiento,
+            idRaza: parametros.idRaza,
+            idUsuario: req.session.credencialSegura.id
+          };
+          if (mascotaAEditar.nombre == "") {
+            delete mascotaAEditar.nombre
+          }
+          Mascota.update({
+            id: parametros.id
+          }, mascotaAEditar)
+            .exec(function (errorInesperado, mascotaRemovida) {
+              if (errorInesperado) {
+                return res.view('vistas/Error', {
+                  error: {
+                    desripcion: "Tuvimos un Error Inesperado",
+                    rawError: errorInesperado,
+                    url: "/ListarMascotas?idUsuarios=undefined&idRazas=undefined"
+                  }
+                });
+              }
+              Mascota.find()
+                .populate("idRaza")
+                .exec(function (errorIndefinido, mascotasEncontradas) {
+                  if (errorIndefinido) {
+                    res.view('vistas/Error', {
+                      error: {
+                        desripcion: "Hubo un problema cargando las mascotas",
+                        rawError: errorIndefinido,
+                        url: "/ListarMascotas?idUsuarios=undefined&idRazas=undefined"
+                      }
+                    });
+                  }
+                  res.view('vistas/Mascota/ListarMascotas', {
+                    mascotas: mascotasEncontradas,
+                    idUsuarios: parametros.idUsuarios,
+                    idRazas: parametros.idRazas
+                  });
+                })
+            })
+        } else {
+          return res.view('vistas/Error', {
+            error: {
+              desripcion: "Necesitamos que envies la nueva información de tu mascota",
+              rawError: "No envia Parametros",
+              url: "/ListarMascotas?idUsuarios=undefined&idRazas=undefined"
+            }
+          });
+        }
+      }
+    }
   }
 };
 

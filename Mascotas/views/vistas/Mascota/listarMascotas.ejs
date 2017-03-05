@@ -20,7 +20,7 @@
   <div class="col-sm-4 text-center ma-borde">
     <h3> <%= mascotas[i].nombre %></h3>
     <p>
-      Fecha de Nacimiento: <%= mascotas[i].fechaNacimiento.toLocaleString() %>
+      Fecha de Nacimiento: <%= mascotas[i].fechaNacimiento.toLocaleString().substr(0,10)  %>
       <br>
       Pais de Nacimiento: <%= mascotas[i].paisNacimiento %>
       <br>
@@ -45,7 +45,7 @@ if(idUsuarios != undefined && idRazas == undefined) { %>
   <div class="col-sm-4 ma-borde">
     <h3 class="text-center"> <%= mascotas[i].nombre %></h3>
     <p class="text-center">
-      Fecha de Nacimiento: <%= mascotas[i].fechaNacimiento.toLocaleString() %>
+      Fecha de Nacimiento: <%= mascotas[i].fechaNacimiento.toLocaleString().substr(0,10) %>
       <br>
       Pais de Nacimiento: <%= mascotas[i].paisNacimiento %>
       <br>
@@ -72,7 +72,7 @@ if(idUsuarios == undefined && idRazas != undefined){ %>
   <div class="col-sm-4 ma-borde">
     <h3 class="text-center"> <%= mascotas[i].nombre %></h3>
     <p class="text-center">
-      Fecha de Nacimiento: <%= mascotas[i].fechaNacimiento.toLocaleString() %>
+      Fecha de Nacimiento: <%= mascotas[i].fechaNacimiento.toLocaleString().substr(0,10) %>
       <br>
       Pais de Nacimiento: <%= mascotas[i].paisNacimiento %>
       <br>

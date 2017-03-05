@@ -168,6 +168,61 @@ module.exports = {
       }
     }
   },
+  editarMascota: function (req, res) {
+    var parametros = req.allParams();
+    Raza.find().exec(function (errorInesperado, razasEncontradas) {
+      if (errorInesperado) {
+        return res.view('vistas/Error', {
+          error: {
+            descripcion: "Se ha producido un error en la carga de las razas registradas",
+            rawError: errorInesperado,
+            url: "/"
+          }
+        })
+      }
+      if (parametros.id) {
+        Mascota.findOne({
+          id: parametros.id
+        }).populate("idRaza")
+          .exec(function (errorInesperado, mascotaEncontrada) {
+            if (errorInesperado) {
+              return res.view('vistas/Error', {
+                error: {
+                  descripcion: "Error Inesperado",
+                  rawError: errorInesperado,
+                  url: "/ListarMascotas?idUsuarios=" + parametros.idUsuario + "idRazas=" + parametros.idRaza
+                }
+              });
+            }
+            if (mascotaEncontrada) {
+              return res.view("vistas/Mascota/editarMascota", {
+                inicioSesion: true,
+                mascota: mascotaEncontrada,
+                idUsuarios: req.session.credencialSegura.id,
+                idRazas: parametros.idRaza,
+                razas: razasEncontradas
+              });
+            } else {
+              return res.view('vistas/Error', {
+                error: {
+                  descripcion: "La mascota con id: " + parametros.id + " no existe.",
+                  rawError: "No existe la mascota",
+                  url: "/ListarMascotas?idUsuarios=" + parametros.idUsuario + "idRazas=" + parametros.idRaza
+                }
+              });
+            }
+          })
+      } else {
+        return res.view('vistas/Error', {
+          error: {
+            descripcion: "No ha enviado el parametro ID",
+            rawError: "Faltan Parametros",
+            url: "/ListarMascotas?idUsuarios=" + parametros.idUsuario + "idRazas=" + parametros.idRaza
+          }
+        });
+      }
+    })
+  },
   crearRaza: function (req, res) {
     return res.view('vistas/Raza/crearRaza');
   },
@@ -188,34 +243,32 @@ module.exports = {
         });
       })
   },
-  editarMascota: function (req, res) {
+  editarRaza: function (req, res) {
     var parametros = req.allParams();
     if (parametros.id) {
-      Mascota.findOne({
+      Raza.findOne({
         id: parametros.id
-      }).exec(function (errorInesperado, mascotaEncontrada) {
+      }).exec(function (errorInesperado, razaEncontrada) {
         if (errorInesperado) {
           return res.view('vistas/Error', {
             error: {
               descripcion: "Error Inesperado",
               rawError: errorInesperado,
-              url: "/ListarMascotas?idUsuarios="+parametros.idUsuario+"idRazas="+parametros.idRaza
+              url: "/ListarRazas"
             }
           });
         }
-        if (mascotaEncontrada) {
-          return res.view("vistas/Mascota/editarMascota", {
-            mascota: mascotaEncontrada,
-            idUsuarios:parametros.idUsuario,
-            idRazas:parametros.idRaza,
+        if (razaEncontrada) {
+          return res.view("vistas/Raza/editarRaza", {
+            raza: razaEncontrada,
             inicioSesion: true
           });
         } else {
           return res.view('vistas/Error', {
             error: {
-              descripcion: "La mascota con id: " + parametros.id + " no existe.",
-              rawError: "No existe la mascota",
-              url: "/ListarMascotas?idUsuarios="+parametros.idUsuario+"idRazas="+parametros.idRaza
+              descripcion: "La raza con id: " + parametros.id + " no existe.",
+              rawError: "No existe la raza",
+              url: "/ListarRazas"
             }
           });
         }
@@ -225,9 +278,11 @@ module.exports = {
         error: {
           descripcion: "No ha enviado el parametro ID",
           rawError: "Faltan Parametros",
-          url: "/ListarMascotas?idUsuarios="+parametros.idUsuario+"idRazas="+parametros.idRaza
+          url: "/ListarRazas"
         }
       });
     }
+
   }
+
 };

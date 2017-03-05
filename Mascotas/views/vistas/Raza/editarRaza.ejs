@@ -1,21 +1,22 @@
 <div>
   <h1>Crear Razas</h1>
-  <form action="raza/actualizarRaza" method="post">
+  <form action="raza/editarRaza" method="post">
     <div class="form-group">
       <label>Nombre</label>
-      <input required type="text" class="form-control" placeholder="Nombre" name="nombreRaza"
+      <input required type="text" class="form-control" placeholder="Ingrese el nombre" name="nombre"
              value="<%= raza.nombre %>">
     </div>
     <div class="form-group">
-      <label>Temperamento</label>
-      <input required type="text" class="form-control" placeholder="Ingrese el temperamento" name="temperamento"
-             value="<%= raza.temperamento %>">
+      <label>Caracteristica</label>
+      <input required type="text" class="form-control" placeholder="Ingrese una caracteristica" name="caracteristica"
+             value="<%= raza.caracteristica %>">
     </div>
     <div class="form-group">
       <label>Región de origen</label>
       <input required type="text" class="form-control" placeholder="Ingrese la región de origen" name="regionOrigen"
              value="<%= raza.regionOrigen %>">
     </div>
+    <input type="hidden" name="id" value="<%=raza.id%>">
     <button type="submit" class="btn btn-success">Actualizar Raza</button>
     <br>
 

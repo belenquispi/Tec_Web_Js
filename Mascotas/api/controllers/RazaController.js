@@ -6,10 +6,10 @@
  */
 
 module.exports = {
-	crearRaza:function (req, res) {
+  crearRaza: function (req, res) {
     if (req.method == "POST") {
       var parametros = req.allParams();
-      if (parametros.nombre!="") {
+      if (parametros.nombre != "") {
         var razaCrear = {
           nombre: parametros.nombreRaza,
           caracteristica: parametros.caracteristica,
@@ -97,6 +97,62 @@ module.exports = {
         error: {
           desripcion: "Necesitamos el ID para borrar la raza",
           rawError: "No envia ID",
+          url: "/ListarRazas"
+        }
+      });
+    }
+  },
+  editarRaza: function (req, res) {
+    var parametros = req.allParams();
+    if (parametros.id && (parametros.nombre || parametros.caracteristica || parametros.regionOrigen)) {
+      var razaAEditar = {
+        nombre: parametros.nombre,
+        caracteristica: parametros.caracteristica,
+        paisOrigen: parametros.paisOrigen
+      };
+      if (razaAEditar.nombre == "") {
+        delete razaAEditar.nombre
+      }
+      if (razaAEditar.caracteristica == "") {
+        delete razaAEditar.caracteristica
+      }
+      if (razaAEditar.paisOrigen == "") {
+        delete razaAEditar.paisOrigen
+      }
+      Raza.update({
+        id: parametros.id
+      }, razaAEditar)
+        .exec(function (errorInesperado, razaRemovido) {
+          if (errorInesperado) {
+            return res.view('vistas/Error', {
+              error: {
+                desripcion: "Tuvimos un Error Inesperado",
+                rawError: errorInesperado,
+                url: "/ListarRazas"
+              }
+            });
+          }
+          Raza.find()
+            .exec(function (errorIndefinido, razasEncontradas) {
+              if (errorIndefinido) {
+                res.view('vistas/Error', {
+                  error: {
+                    desripcion: "Hubo un problema cargando las razas",
+                    rawError: errorIndefinido,
+                    url: "/ListarRazas"
+                  }
+                });
+              }
+              res.view('vistas/Raza/ListarRazas', {
+                razas: razasEncontradas
+              });
+            })
+        })
+    } else {
+      return res.view('vistas/Error', {
+        error: {
+          desripcion: "Necesitamos que envies el ID y el nombre, caracteristica o pais de origen",
+          rawError: "No envia Parametros",
           url: "/ListarRazas"
         }
       });
